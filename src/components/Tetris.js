@@ -1,5 +1,4 @@
 import React from 'react'
-import Cell from './Cell'
 import Display from './Display'
 import Stage from './Stage'
 import StartButton from './StartButton'
@@ -9,7 +8,6 @@ const Tetris = () => {
         <div>
             <p>I will be tetris</p>
             <StartButton />
-            <Cell />
             <Display />
             <Stage />
         </div>
