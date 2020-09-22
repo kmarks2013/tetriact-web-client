@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Stage = () => {
+const Stage = ({ stage }) => {
     return (
         <div>
             <p>ill set the stage.</p>
