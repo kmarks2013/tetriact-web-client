@@ -5,7 +5,8 @@ const Stage = ({ stage }) => {
     return (
         <div>
             <p>ill set the stage.</p>
-            <Cell/>
+            {/* <Cell/> */}
+            {stage.map(row => row.map((cell, x) => <Cell key={x} type={cell[0]} /> ))}
         </div>
     )
 }
