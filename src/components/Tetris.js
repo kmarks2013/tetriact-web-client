@@ -8,8 +8,8 @@ const Tetris = () => {
     return (
         <div>
             <p>I will be tetris</p>
-            <StartButton/>
-            <Cell/>
+            <StartButton />
+            <Cell />
             <Display />
             <Stage />
         </div>
