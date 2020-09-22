@@ -16,8 +16,6 @@ const Tetris = () => {
                 </div>
             </aside>
             <StartButton />
-            <Display />
-            <Stage />
         </div>
     )
 }
