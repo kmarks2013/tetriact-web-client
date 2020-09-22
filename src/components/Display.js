@@ -3,7 +3,7 @@ import React from 'react'
 const Display = ({ gameover, text }) => {
     return (
         <div>
-            <p>I display alll!!</p>
+            {text}
         </div>
     )
 }
