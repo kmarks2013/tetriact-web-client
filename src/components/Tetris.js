@@ -6,6 +6,7 @@ import StartButton from './StartButton'
 const Tetris = () => {
     return (
         <div>
+            <Stage />
             <p>I will be tetris</p>
             <StartButton />
             <Display />
