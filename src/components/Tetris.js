@@ -1,5 +1,6 @@
 import React from 'react'
 import Cell from './Cell'
+import Display from './Display'
 import StartButton from './StartButton'
 
 const Tetris = () => {
@@ -8,6 +9,7 @@ const Tetris = () => {
             <p>I will be tetris</p>
             <StartButton/>
             <Cell/>
+            <Display />
         </div>
     )
 }
