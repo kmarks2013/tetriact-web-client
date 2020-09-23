@@ -8,7 +8,6 @@ const Tetris = () => {
     return (
         <div>
             <Stage stage={createStage()} />
-            <p>I will be tetris</p>
             <aside>
                 <div>
                     <Display text="Score" />
