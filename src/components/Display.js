@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Display = ({ gameover, text }) => {
+const Display = ({ gameOver, text }) => {
     return (
         <div>
             {text}
