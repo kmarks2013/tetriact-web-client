@@ -7,7 +7,7 @@ import { StyledTetrisWrapper } from './styles/StyledTetris'
 
 const Tetris = () => {
     return (
-        <div>
+        <StyledTetrisWrapper>
             <Stage stage={createStage()} />
             <aside>
                 <div>
@@ -17,7 +17,7 @@ const Tetris = () => {
                 </div>
             </aside>
             <StartButton />
-        </div>
+        </StyledTetrisWrapper>
     )
 }
 
