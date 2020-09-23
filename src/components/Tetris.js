@@ -1,5 +1,5 @@
 import React from 'react'
-import Cell from './Cell'
+import { createStage } from '../gameHelpers'
 import Display from './Display'
 import Stage from './Stage'
 import StartButton from './StartButton'
@@ -7,11 +7,16 @@ import StartButton from './StartButton'
 const Tetris = () => {
     return (
         <div>
+            <Stage stage={createStage()} />
             <p>I will be tetris</p>
+            <aside>
+                <div>
+                    <Display text="Score" />
+                    <Display text="Rows"/>
+                    <Display text="Level" />
+                </div>
+            </aside>
             <StartButton />
-            <Cell />
-            <Display />
-            <Stage />
         </div>
     )
 }
