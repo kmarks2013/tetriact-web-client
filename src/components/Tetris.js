@@ -16,6 +16,11 @@ const Tetris = () => {
     const [stage, setStage] = useStage(player)
 
     console.log('re-render')
+
+    const movePlayer = dir => {
+
+    }
+
     return (
         <StyledTetrisWrapper>
             <StyledTetris>
