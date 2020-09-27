@@ -1,5 +1,4 @@
-import React from 'react'
-import { createStage } from '../gameHelpers'
+import React, {useState} from 'react'
 import Display from './Display'
 import Stage from './Stage'
 import StartButton from './StartButton'
