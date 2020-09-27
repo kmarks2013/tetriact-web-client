@@ -33,8 +33,10 @@ const Tetris = () => {
 
     }
 
-    const move = ({ keyCode }) = {
-
+    const move = ({ keyCode }) => {
+        if (!gameOver){
+            console.log(keyCode)
+        }
     }
 
     return (
