@@ -18,7 +18,7 @@ const Tetris = () => {
     console.log('re-render')
 
     const movePlayer = dir => {
-
+        console.log(dir)
     }
 
     const startGame = () => {
