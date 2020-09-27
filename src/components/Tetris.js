@@ -9,7 +9,7 @@ import { useStage } from '../hooks/useStage'
 
 
 const Tetris = () => {
-    console.log(createStage())
+    console.log('re-render')
     return (
         <StyledTetrisWrapper>
             <StyledTetris>
