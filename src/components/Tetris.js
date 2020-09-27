@@ -12,13 +12,13 @@ const Tetris = () => {
     const [ dropTime, setDropTime] = useState(null)
     const [ gameOver, setGameOver] = useState(false)
 
-    const [player] = usePlayer()
+    const [player, updatePlayerPos, resetPlayer] = usePlayer()
     const [stage, setStage] = useStage(player)
 
     console.log('re-render')
 
     const movePlayer = dir => {
-        console.log(dir)
+        console.log(player.pos.x, 'fire')
         updatePlayerPos({ x: dir, y:0})
     }
 
@@ -27,7 +27,7 @@ const Tetris = () => {
      }
 
      const drop = () => {
-   
+        updatePlayerPos({ x: 0 , y: 1, collided: false})
     }
 
      const dropPlayer = () => {
