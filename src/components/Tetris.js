@@ -41,6 +41,7 @@ const Tetris = () => {
                 movePlayer(-1)
             } else if (keyCode === 39){
                 console.log('right')
+                movePlayer(1)
             } else if (keyCode === 40){
                 console.log('down')
             }  else if (keyCode === 38){
