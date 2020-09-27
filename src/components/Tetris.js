@@ -21,6 +21,10 @@ const Tetris = () => {
 
     }
 
+    const startGame = () => {
+        
+     }
+
     return (
         <StyledTetrisWrapper>
             <StyledTetris>
