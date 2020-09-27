@@ -9,6 +9,8 @@ import { useStage } from '../hooks/useStage'
 
 
 const Tetris = () => {
+    const [ dropTime, setDropTime] = useState(null)
+
     console.log('re-render')
     return (
         <StyledTetrisWrapper>
