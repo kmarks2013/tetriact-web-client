@@ -30,7 +30,11 @@ const Tetris = () => {
     }
 
      const dropPlayer = () => {
-   
+
+    }
+
+    const move = ({ keyCode }) = {
+
     }
 
     return (
