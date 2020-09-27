@@ -9,6 +9,4 @@ export const usePlayer = () => {
     })
 
     return [player]
-
-
 }
