@@ -20,11 +20,15 @@ const Tetris = () => {
             <StyledTetris>
             <Stage stage={stage} />
             <aside>
+            j   {gameOver ? (
+                    <Display gameOver={gameOver} text = "Game Over" />
+            ): (
                 <div>
                     <Display text="Score" />
                     <Display text="Rows"/>
                     <Display text="Level" />
                 </div>
+            )}
                 <StartButton  callback={ () => console.log('hi')} />
             </aside>
             </StyledTetris>
