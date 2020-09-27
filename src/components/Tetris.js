@@ -10,6 +10,7 @@ import { useStage } from '../hooks/useStage'
 
 const Tetris = () => {
     const [ dropTime, setDropTime] = useState(null)
+    const [ gameOver, setGaemOver] = useState(false)
 
     console.log('re-render')
     return (
