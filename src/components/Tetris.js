@@ -25,6 +25,10 @@ const Tetris = () => {
         
      }
 
+     const drop = () => {
+   
+    }
+
     return (
         <StyledTetrisWrapper>
             <StyledTetris>
