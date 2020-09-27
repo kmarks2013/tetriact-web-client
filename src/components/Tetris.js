@@ -12,6 +12,8 @@ const Tetris = () => {
     const [ dropTime, setDropTime] = useState(null)
     const [ gameOver, setGaemOver] = useState(false)
 
+    const [player] = usePlayer()
+
     console.log('re-render')
     return (
         <StyledTetrisWrapper>
