@@ -18,5 +18,5 @@ export const usePlayer = () => {
         console.log(player.pos.x)
     }
 
-    return [player]
+    return [player, updatePlayerPos]
 }
