@@ -59,7 +59,7 @@ const Tetris = () => {
             <StyledTetris>
             <Stage stage={stage} />
             <aside>
-            j   {gameOver ? (
+               {gameOver ? (
                     <Display gameOver={gameOver} text = "Game Over" />
             ): (
                 <div>
