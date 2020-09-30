@@ -7,6 +7,6 @@ export const createStage = () =>
     )
 
 
-export const checkCollision = () =>{
+export const checkCollision = (player, stage, {x: moveX, y: moveY}) =>{
 
 }
