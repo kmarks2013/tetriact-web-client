@@ -10,6 +10,10 @@ export const usePlayer = () => {
         collided: false
     })
 
+    const rotate = () => {
+
+    }
+
     const updatePlayerPos = ({x , y, collided}) => {
         setPlayer(prev => ({
             ...prev,
