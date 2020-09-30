@@ -15,7 +15,6 @@ const Tetris = () => {
     const [player, updatePlayerPos, resetPlayer] = usePlayer()
     const [stage, setStage] = useStage(player, resetPlayer)
 
-    console.log('re-render')
 
     const movePlayer = dir => {
         console.log(player.pos.x, 'fire')
