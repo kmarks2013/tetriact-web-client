@@ -14,8 +14,8 @@ export const usePlayer = () => {
 
     }
 
-    const playerRotate = () => {
-        
+    const playerRotate = (stage, dir) => {
+
     }
 
     const updatePlayerPos = ({x , y, collided}) => {
