@@ -5,7 +5,7 @@ import StartButton from './StartButton'
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import { usePlayer } from '../hooks/usePlayer'
 import { useStage } from '../hooks/useStage'
-import {createStage} from '../gameHelpers'
+import {createStage, checkCollision} from '../gameHelpers'
 
 
 const Tetris = () => {
