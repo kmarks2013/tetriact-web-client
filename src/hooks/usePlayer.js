@@ -27,6 +27,7 @@ export const usePlayer = () => {
         const clonedPlayer = JSON.parse(JSON.stringify(player))
         clonedPlayer.tetromino = rotate(clonedPlayer.tetromino, dir)
 
+        setPlayer(clonedPlayer)
     }
 
     const updatePlayerPos = ({x , y, collided}) => {
