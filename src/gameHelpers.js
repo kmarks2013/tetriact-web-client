@@ -12,6 +12,14 @@ export const checkCollision = (player, stage, {x: moveX, y: moveY}) =>{
         for(let w = 0; w < player.tetromino[h].length; w +=1) {
             // 1. checking that we are on an actual tetromino cell.
             if(player.tetromino[h][w] !== 0) {
+                if(
+                    //.2 check that our move is inside the game area height (h)
+                    // shouldn't go thorugh bottom of the play area
+                    //.3 make sure that tetromino doesn't move outisde game area width (w)
+                    //.4 make sure cell isn't check to clear
+                    ){
+                }
+
             }
 
         }
