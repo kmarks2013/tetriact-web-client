@@ -17,7 +17,6 @@ const Tetris = () => {
 
 
     const movePlayer = dir => {
-        console.log(player.pos.x, 'fire')
         updatePlayerPos({ x: dir, y:0})
     }
 
