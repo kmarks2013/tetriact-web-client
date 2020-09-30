@@ -53,7 +53,6 @@ const Tetris = () => {
 
     return (
         <StyledTetrisWrapper role='button' tabIndex='0' onKeyDown={e => move(e)}>
-         {console.log(player.pos.x, 'state')}
             <StyledTetris>
             <Stage stage={stage} />
             <aside>
