@@ -32,6 +32,10 @@ const Tetris = () => {
         if (!checkCollision(player, stage, {x: 0, y : 1})){
             updatePlayerPos({ x: 0 , y: 1, collided: false})
         } else {
+            // Game Over
+            if (player.pos.y < 1){
+                console.log('GAME OVER!!!!!')
+            }
             updatePlayerPos({ x: 0 , y: 0, collided: true})
         }
     }
