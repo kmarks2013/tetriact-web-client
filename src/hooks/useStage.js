@@ -5,6 +5,11 @@ export const useStage = (player, resetPlayer) =>{
     const [stage, setStage] = useState(createStage())
 
     useEffect( () => {
+        const updateStage = prevStage => {
+
+        }
+
+        setStage(prev => updateStage(prev))
 
     }, [])
 
