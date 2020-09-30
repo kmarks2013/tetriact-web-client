@@ -29,6 +29,7 @@ export const usePlayer = () => {
 
         const pos = clonedPlayer.pos.x
         let offset = 1
+        //porbalby most advanced function from tutorial. try to understand this better
         while(checkCollision(clonedPlayer, stage, {x:0, y:0})){
             clonedPlayer.pos.x += offset
             offset = -(offset + (offset> 0 ? 1: -1))
