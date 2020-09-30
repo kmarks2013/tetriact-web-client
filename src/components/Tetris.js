@@ -17,7 +17,10 @@ const Tetris = () => {
 
 
     const movePlayer = dir => {
-        updatePlayerPos({ x: dir, y:0})
+        //change this name because it moves tetrominos left or right
+        if (!checkCollision(player, stage, {x:dir, y:0})){
+            updatePlayerPos({ x: dir, y:0})
+        }
     }
 
     const startGame = () => {
