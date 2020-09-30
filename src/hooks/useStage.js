@@ -6,6 +6,8 @@ export const useStage = (player, resetPlayer) =>{
     const [rowsCleared, setRowsCleared] = useState(0)
 
     useEffect( () => {
+        setRowsCleared(0)
+
         const updateStage = prevStage => {
             //Frst flush the stage
             //later refacotr for a for loop since it will be faster than a map.
