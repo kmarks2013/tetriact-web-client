@@ -10,7 +10,7 @@ export const usePlayer = () => {
         collided: false
     })
 
-    const rotate = () => {
+    const rotate = (matrix, dir) => {
 
     }
 
