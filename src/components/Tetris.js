@@ -61,6 +61,7 @@ const Tetris = () => {
                 dropPlayer()
             }  else if (keyCode === 38){
                 // console.log('up')
+                playerRotate(stage, 1)
             }
         }
     }
