@@ -35,6 +35,8 @@ const Tetris = () => {
             // Game Over
             if (player.pos.y < 1){
                 console.log('GAME OVER!!!!!')
+                setGameOver(true)
+                setDropTime(null)
             }
             updatePlayerPos({ x: 0 , y: 0, collided: true})
         }
