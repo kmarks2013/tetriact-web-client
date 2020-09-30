@@ -26,6 +26,7 @@ const Tetris = () => {
     const startGame = () => {
         setStage(createStage())
         resetPlayer()
+        setGameOver(false)
      }
 
      const drop = () => {
