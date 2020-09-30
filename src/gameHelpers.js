@@ -8,5 +8,7 @@ export const createStage = () =>
 
 
 export const checkCollision = (player, stage, {x: moveX, y: moveY}) =>{
-
+    for(let h = 0; h < player.tetromino.length; h +=1) {
+        }
+    }
 }
