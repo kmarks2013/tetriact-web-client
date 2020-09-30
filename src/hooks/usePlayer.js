@@ -14,6 +14,10 @@ export const usePlayer = () => {
 
     }
 
+    const playerRotate = () => {
+        
+    }
+
     const updatePlayerPos = ({x , y, collided}) => {
         setPlayer(prev => ({
             ...prev,
