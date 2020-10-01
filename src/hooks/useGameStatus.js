@@ -15,5 +15,5 @@ export const useGameStatus = rowsCleared => {
             setRows(prev => prev + rowsCleared)
 
         }
-    })
+    }, [level, linePoints, rowsCleared])
 }
