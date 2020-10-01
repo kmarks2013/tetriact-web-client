@@ -62,7 +62,7 @@ const Tetris = () => {
         if (!gameOver){
             if (keyCode === 40){
                 console.log('timer start')
-                setDropTime(1000)
+                setDropTime(1000/ (level+1) + 200)
             }
         }
     }
