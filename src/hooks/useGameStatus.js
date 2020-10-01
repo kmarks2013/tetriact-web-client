@@ -9,5 +9,11 @@ export const useGameStatus = rowsCleared => {
 
     const calcScore = useCallback(() => {
         // if we have a score:
+        if (rowsCleared > 0 ){
+            // this is based on how the og tetris calculates its score//
+            setScore( prev => prev + linePoints[rowsCleared-1] * (level + 1))
+            setRows(prev => prev + rowsCleared)
+
+        }
     })
 }
