@@ -6,6 +6,7 @@ import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import { usePlayer } from '../hooks/usePlayer'
 import { useInterval } from '../hooks/useInterval'
 import { useStage } from '../hooks/useStage'
+import { useGameStatus} from '../hooks/useGameStatus'
 import {createStage, checkCollision} from '../gameHelpers'
 
 
@@ -14,7 +15,8 @@ const Tetris = () => {
     const [ gameOver, setGameOver] = useState(false)
 
     const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer()
-    const [stage, setStage] = useStage(player, resetPlayer)
+    const [stage, setStage, rowsCleared] = useStage(player, resetPlayer)
+    const [score, setScore, rows, setRows, level, setLevel] = useGameStatus(rowsCleared)
 
 
     const movePlayer = dir => {
