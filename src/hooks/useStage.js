@@ -3,8 +3,11 @@ import { createStage } from '../gameHelpers'
 
 export const useStage = (player, resetPlayer) =>{
     const [stage, setStage] = useState(createStage())
+    const [rowsCleared, setRowsCleared] = useState(0)
 
     useEffect( () => {
+        setRowsCleared(0)
+
         const updateStage = prevStage => {
             //Frst flush the stage
             //later refacotr for a for loop since it will be faster than a map.
@@ -25,11 +28,16 @@ export const useStage = (player, resetPlayer) =>{
                 })
             })
 
+            //Then check if we collided 
+            if (player.collided) {
+                resetPlayer()
+            }
+
             return newStage
         }
 
         setStage(prev => updateStage(prev))
-    }, [])
+    }, [player, resetPlayer])
 
     return [stage, setStage]
 }
