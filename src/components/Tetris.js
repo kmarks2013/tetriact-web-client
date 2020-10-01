@@ -46,6 +46,8 @@ const Tetris = () => {
     }
 
      const dropPlayer = () => {
+         console.log('timeroff')
+         setDropTime(null)
          drop()
     }
 
