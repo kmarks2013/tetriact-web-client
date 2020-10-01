@@ -4,7 +4,7 @@ import {StyledDisplay} from './styles/StyleDisplay'
 const Display = ({ gameOver, text }) => {
     return (
         <StyledDisplay gameOver={gameOver}>
-            {text} :
+            {text}
         </StyledDisplay>
     )
 }
