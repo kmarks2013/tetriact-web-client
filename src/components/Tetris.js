@@ -38,6 +38,8 @@ const Tetris = () => {
 
         if (rows > (level + 1 ) * 10){
             setLevel(prev => prev + 1 )
+            // Also increases speed <- try out different formulas to test out speed
+            setDropTime(1000/ (level+1) + 200)
         }
         if (!checkCollision(player, stage, {x: 0, y : 1})){
             updatePlayerPos({ x: 0 , y: 1, collided: false})
