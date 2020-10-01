@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-image: url('../src/images/2679820.jpg') ;
+  background-size: cover;
 }
 
 @font-face{
