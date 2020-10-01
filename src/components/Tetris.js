@@ -41,6 +41,7 @@ const Tetris = () => {
             // Also increases speed <- try out different formulas to test out speed
             setDropTime(1000/ (level+1) + 200)
         }
+
         if (!checkCollision(player, stage, {x: 0, y : 1})){
             updatePlayerPos({ x: 0 , y: 1, collided: false})
         } else {
