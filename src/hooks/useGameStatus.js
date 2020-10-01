@@ -1,5 +1,5 @@
 import {useState, useEffect, useCallback} from 'react'
 
-export const useGameStatus = () => {
+export const useGameStatus = rowsCleared => {
 
 }
