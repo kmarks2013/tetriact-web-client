@@ -9,17 +9,16 @@ import { useStage } from '../hooks/useStage'
 import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
 
-import {createStage, checkCollision} from '../gameHelpers'
+import {createStage, checkCollision } from '../gameHelpers'
 
 
 const Tetris = () => {
-    const [ dropTime, setDropTime] = useState(null)
-    const [ gameOver, setGameOver] = useState(false)
+    const [ dropTime, setDropTime ] = useState(null)
+    const [ gameOver, setGameOver ] = useState(false)
 
-    const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer()
-    const [stage, setStage, rowsCleared] = useStage(player, resetPlayer)
-    const [score, setScore, rows, setRows, level, setLevel] = useGameStatus(rowsCleared)
-
+    const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer()
+    const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
+    const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
 
     const movePlayer = dir => {
         //change this name because it moves tetrominos left or right
