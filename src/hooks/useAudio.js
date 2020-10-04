@@ -11,5 +11,13 @@ export const useAudio = () => {
         setPlaying(true) ;
     }
 
+    useEffect(() => {
+            if (playing){
+                audio.play()
+            }
+        },
+        [playing, audio]
+    );
+
     return [playing, toggleSound];
 };
