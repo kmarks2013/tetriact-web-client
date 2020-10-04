@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Display from './Display'
 import Stage from './Stage'
 import StartButton from './StartButton'
