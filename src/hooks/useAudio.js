@@ -6,4 +6,5 @@ export const useAudio = () => {
 
     // this file will set the audio to start playing when a game starts and then restarts teh music when the game starts
 
+    return [playing];
 };
