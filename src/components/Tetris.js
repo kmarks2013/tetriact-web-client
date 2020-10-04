@@ -19,6 +19,7 @@ const Tetris = () => {
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer()
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
+    const [ playing, toggleSound ] = useAudio()
 
     const movePlayer = dir => {
         //change this name because it moves tetrominos left or right
