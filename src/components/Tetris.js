@@ -29,6 +29,7 @@ const Tetris = () => {
     }
 
     const startGame = () => {
+        toggleSound()
         setStage(createStage())
         setDropTime(1000)
         resetPlayer()
