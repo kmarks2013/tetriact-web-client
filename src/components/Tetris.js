@@ -9,6 +9,7 @@ import { useInterval } from '../hooks/useInterval'
 import { useStage } from '../hooks/useStage'
 import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
+import { useNextBlock} from '../hooks/useNextBlock'
 
 import {createStage, checkCollision, createNext } from '../gameHelpers'
 
