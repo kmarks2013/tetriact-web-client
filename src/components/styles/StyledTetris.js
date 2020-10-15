@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledTetrisWrapper = styled.div`
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-size: cover;
     overflow:hidden;
 `
@@ -13,6 +13,7 @@ export const StyledTetris = styled.div`
     padding: 40px;
     margin: 0 auto;
     max-width: 900px;
+    place-content: center;
 
     aside {
         width: 100%;
