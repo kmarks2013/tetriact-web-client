@@ -4,8 +4,8 @@ import {StyledNextBlock} from './styles/StyledNextBlock'
 
 const NextBlock = ({ nextBlockStage }) => {
     return (
-        <StyledNextBlock>
-            <Cell key='x' type='0'/>
+        <StyledNextBlock width={nextBlockStage[0].length} height={nextBlockStage.length}>
+            {nextBlockStage.map(row => row.map((cell, x) => <Cell key={x} type={cell[0]} /> ))}
         </StyledNextBlock>
     )
 }
