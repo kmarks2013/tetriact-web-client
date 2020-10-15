@@ -2,10 +2,14 @@ body {
   margin: 0;
   background-image: url('../src/images/2679820.jpg') ;
   background-size: cover;
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 @font-face{
   font-family: 'Pixel';
   src: url('./fonts/Pixel-LCD-7.woff') format('woff');
+}
+@font-face{
+  font-family: 'johnny fever';
+  src: url('./fonts/johnnyfever.ttf') format('truetype');
 }
