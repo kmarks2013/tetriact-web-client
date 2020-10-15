@@ -13,6 +13,7 @@ export const useAudio = () => {
 
     useEffect(() => {
             if (playing){
+                audio.loop = true
                 audio.play()
             }
         },
