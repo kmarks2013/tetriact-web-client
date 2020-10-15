@@ -19,7 +19,7 @@ const Tetris = () => {
     const [ gameOver, setGameOver ] = useState(false)
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer()
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
-    const [ nextBlock, setNextBlock ]= useNextBlock(player, resetPlayer)
+    const [ nextBlockStage, setNextBlockStage ]= useNextBlock(player, resetPlayer)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
     const [audio, toggleSound ] = useAudio()
 
@@ -104,7 +104,7 @@ const Tetris = () => {
             onKeyUp={keyUp}
         >
             <StyledTetris>
-            <NextBlock />
+            <NextBlock nextBlockStage={nextBlockStage} />
             <Stage stage={stage} />
             <aside>
                {gameOver ? (
