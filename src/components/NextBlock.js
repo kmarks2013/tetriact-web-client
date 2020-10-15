@@ -1,11 +1,12 @@
 import React from 'react'
+import Cell from './Cell'
 import {StyledNextBlock} from './styles/StyledNextBlock'
 
 const NextBlock = () => {
     return (
-        <div>
-                <p>next block box</p>
-        </div>
+        <StyledNextBlock>
+            <Cell key='x' type='0'/>
+        </StyledNextBlock>
     )
 }
 
