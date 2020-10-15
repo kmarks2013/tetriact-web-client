@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Display from './Display'
 import Stage from './Stage'
 import StartButton from './StartButton'
+import NextBlock from './NextBlock'
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import { usePlayer } from '../hooks/usePlayer'
 import { useInterval } from '../hooks/useInterval'
@@ -102,6 +103,7 @@ const Tetris = () => {
             onKeyUp={keyUp}
         >
             <StyledTetris>
+            <NextBlock />
             <Stage stage={stage} />
             <aside>
                {gameOver ? (
