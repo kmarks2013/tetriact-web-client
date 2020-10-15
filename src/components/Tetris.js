@@ -10,7 +10,7 @@ import { useStage } from '../hooks/useStage'
 import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
 
-import {createStage, checkCollision } from '../gameHelpers'
+import {createStage, checkCollision, createNext } from '../gameHelpers'
 
 
 const Tetris = () => {
