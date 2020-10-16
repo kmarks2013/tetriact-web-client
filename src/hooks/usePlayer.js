@@ -10,6 +10,9 @@ export const usePlayer = () => {
         collided: false
     })
 
+    const [nextTetro, setNextTetro] = useState(randomTetromino())
+    // console.log(nextTetro.shape)
+
     const rotate = (matrix, dir) => {
         // make rows become columns (transpose)
         const rotatedTetro = matrix.map((_, index) =>
