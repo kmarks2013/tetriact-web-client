@@ -74,5 +74,5 @@ export const usePlayer = () => {
             // console.log(player.tetromino, 'player')
         }, [nextTetro])
 
-    return [player, updatePlayerPos, resetPlayer, playerRotate]
+    return [player, updatePlayerPos, resetPlayer, playerRotate, nextTetro, resetTetro]
 }
