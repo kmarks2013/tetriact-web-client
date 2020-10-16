@@ -17,9 +17,9 @@ import {createStage, checkCollision, createNext } from '../gameHelpers'
 const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
     const [ gameOver, setGameOver ] = useState(false)
-    const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer()
+    const [ player, updatePlayerPos, resetPlayer, playerRotate, nextTetro, resetTetro ] = usePlayer()
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
-    const [ nextBlock, setNextBlock ]= useNextBlock(player, resetPlayer)
+    const [ nextBlockStage, setNextBlockStage ]= useNextBlock(player, resetTetro)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
     const [audio, toggleSound ] = useAudio()
 
@@ -31,10 +31,11 @@ const Tetris = () => {
     }
 
     const startGame = () => {
-        toggleSound()
+        // toggleSound()
         setStage(createStage())
-        setDropTime(1000)
+        // setDropTime(1000)
         resetPlayer()
+        resetTetro()
         setGameOver(false)
         setScore(0)
         setRows(0)
@@ -47,7 +48,7 @@ const Tetris = () => {
         if (rows > (level + 1 ) * 10){
             setLevel(prev => prev + 1 )
             // Also increases speed <- try out different formulas to test out speed
-            setDropTime(1000/ (level+1) + 200)
+            // setDropTime(1000/ (level+1) + 200)
         }
 
         if (!checkCollision(player, stage, {x: 0, y : 1})){
@@ -67,7 +68,7 @@ const Tetris = () => {
         if (!gameOver){
             if (keyCode === 40){
                 console.log('timer start')
-                setDropTime(1000/ (level+1) + 200)
+                // setDropTime(1000/ (level+1) + 200)
             }
         }
     }
@@ -92,9 +93,9 @@ const Tetris = () => {
         }
     }
 
-    useInterval(() => {
-        drop()
-    }, dropTime)
+    // useInterval(() => {
+    //     drop()
+    // }, dropTime)
 
     return (
         <StyledTetrisWrapper
@@ -104,7 +105,7 @@ const Tetris = () => {
             onKeyUp={keyUp}
         >
             <StyledTetris>
-            <NextBlock />
+            <NextBlock nextBlockStage={nextBlockStage} />
             <Stage stage={stage} />
             <aside>
                {gameOver ? (
