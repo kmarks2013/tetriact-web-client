@@ -71,7 +71,8 @@ export const usePlayer = () => {
                 tetromino: clonedTetro.shape,
                 collided: false
             })
-        }, [])
+            // console.log(player.tetromino, 'player')
+        }, [nextTetro])
 
     return [player, updatePlayerPos, resetPlayer, playerRotate]
 }
