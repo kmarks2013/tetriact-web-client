@@ -10,6 +10,7 @@ import { useStage } from '../hooks/useStage'
 import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
 import { useNextStage} from '../hooks/useNextStage'
+import { useNextTetro } from '../hooks/useNextTetro'
 
 import {createStage, checkCollision, createNext } from '../gameHelpers'
 
