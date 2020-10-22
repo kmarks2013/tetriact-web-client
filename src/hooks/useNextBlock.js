@@ -7,6 +7,8 @@ export const useNextBlock =  (player, nextTetro, resetTetro) =>{
 
     useEffect( () =>{
         //this needs to now show the next tetromino block, and then clear it on collision and then add the new one to the next stage
+        console.log(nextTetro)
+
         if (player.collided){
             resetTetro()
             console.log(player)
