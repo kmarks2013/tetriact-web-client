@@ -20,8 +20,8 @@ const Tetris = () => {
     const [ gameOver, setGameOver ] = useState(false)
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer()
     const [ nextTetro, resetTetro ] = useNextTetro()
+    const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
-    const [ nextStage ] = useNextStage(nextTetro, resetTetro, player)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
     const [audio, toggleSound ] = useAudio()
 
@@ -35,6 +35,7 @@ const Tetris = () => {
     const startGame = () => {
         // toggleSound()
         setStage(createStage())
+        setNextStage(createNext())
         // setDropTime(1000)
         resetPlayer()
         resetTetro()
@@ -69,14 +70,14 @@ const Tetris = () => {
     const keyUp = ({keyCode}) => {
         if (!gameOver){
             if (keyCode === 40){
-                console.log('timer start')
+                // console.log('timer start')
                 // setDropTime(1000/ (level+1) + 200)
             }
         }
     }
 
      const dropPlayer = () => {
-         console.log('timeroff')
+        //  console.log('timeroff')
          setDropTime(null)
          drop()
     }

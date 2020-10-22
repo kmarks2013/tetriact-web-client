@@ -3,7 +3,7 @@ import { createNext } from '../gameHelpers'
 
 export const useNextStage = ( nextTetro, resetTetro, player) => {
     const [nextStage, setNextStage] = useState(createNext())
-
+    // console.log(player)
     useEffect( () => {
 
         const updateNextStage = prevNextStage =>{
@@ -14,19 +14,26 @@ export const useNextStage = ( nextTetro, resetTetro, player) => {
             nextTetro.tetromino.forEach((row, y) => {
                 // console.log(row, y)
                 row.forEach((value, x) =>{
-                    console.log(nextTetro)
+                    // console.log(nextTetro)
                     if (value !== 0) {
                         newNextStage[y + nextTetro.pos.y][x + nextTetro.pos.x] = [value, `${player.collided ? 'merged': 'clear' }`]
                     }
                 })
             })
+
+            console.log(player)
+
+            if (player.collided) {
+                console.log('collided', player.collided )
+                resetTetro()
+                console.log(nextTetro)
+            }
             return newNextStage
         }
 
-
         setNextStage( prev =>  updateNextStage(prev))
 
-    }, [nextTetro, resetTetro])
+    }, [nextTetro, resetTetro, player])
 
-    return [nextStage]
+    return [nextStage, setNextStage]
 }
