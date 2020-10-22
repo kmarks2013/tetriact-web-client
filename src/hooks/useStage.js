@@ -28,13 +28,13 @@ export const useStage = (player, resetPlayer) =>{
                 )
 
             //renders the tetromino on re-render of stage and draws the block
+            // console.log(player.tetromino, player.pos)
             player.tetromino.forEach((row, y) => {
                 row.forEach((value, x) =>{
                     if (value !== 0) {
                         newStage[y + player.pos.y][x+ player.pos.x] = [
                             value,
-                            `${player.collided ? 'merged': 'clear'}`,
-
+                            `${player.collided ? 'merged': 'clear'}`
                         ]
                     }
                 })

@@ -21,7 +21,7 @@ const Tetris = () => {
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer()
     const [ nextTetro, resetTetro ] = useNextTetro()
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
-    const [ nextStage ] = useNextStage()
+    const [ nextStage ] = useNextStage(nextTetro, resetTetro, player)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
     const [audio, toggleSound ] = useAudio()
 
@@ -100,7 +100,7 @@ const Tetris = () => {
     // }, dropTime)
 
 
-    console.log(nextTetro)
+    // console.log(nextTetro)
     return (
         <StyledTetrisWrapper
             role='button'
