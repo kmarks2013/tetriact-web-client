@@ -102,7 +102,7 @@ const Tetris = () => {
             onKeyUp={keyUp}
         >
             <StyledTetris>
-            <NextBlock nextBlockStage={nextBlockStage} />
+            <NextStage />
             <Stage stage={stage} />
             <aside>
                {gameOver ? (
