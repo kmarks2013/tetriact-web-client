@@ -68,7 +68,6 @@ export const usePlayer = () => {
                 tetromino: randomTetromino().shape,
                 collided: false
             })
-            // console.log(player.tetromino, 'player')
         }, [])
 
     return [player, updatePlayerPos, resetPlayer, playerRotate]
