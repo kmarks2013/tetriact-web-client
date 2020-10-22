@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { createNext } from '../gameHelpers'
 
-export const useNextStage = () => {
+export const useNextStage = ( nextTetro, resetTetro) => {
     const [nextStage, setNextStage] = useState(createNext())
 
     useEffect( () => {
