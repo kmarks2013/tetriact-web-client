@@ -59,16 +59,16 @@ export const usePlayer = () => {
         console.log(newTetro, 'new')
         setNextTetro(newTetro)
         console.log(nextTetro, 'next')
-    }, [])
+    }, [nextTetro])
 
     // console.log(resetTetro, 'next')
     const resetPlayer = useCallback(() => {
             // console.log(nextTetro,'wadf')
-            const clonedTetro = JSON.parse(JSON.stringify(nextTetro))
+            // const clonedTetro = JSON.parse(JSON.stringify(nextTetro))
             // console.log(clonedTetro)
             setPlayer({
                 pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
-                tetromino: clonedTetro.shape,
+                tetromino: randomTetromino().shape,
                 collided: false
             })
             // console.log(player.tetromino, 'player')

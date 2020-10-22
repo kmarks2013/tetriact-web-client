@@ -2,14 +2,13 @@ import React, { useState } from 'react'
 import Display from './Display'
 import Stage from './Stage'
 import StartButton from './StartButton'
-import NextBlock from './NextBlock'
+import NextStage from './NextStage'
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import { usePlayer } from '../hooks/usePlayer'
 import { useInterval } from '../hooks/useInterval'
 import { useStage } from '../hooks/useStage'
 import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
-import { useNextBlock} from '../hooks/useNextBlock'
 
 import {createStage, checkCollision, createNext } from '../gameHelpers'
 
@@ -19,7 +18,6 @@ const Tetris = () => {
     const [ gameOver, setGameOver ] = useState(false)
     const [ player, updatePlayerPos, resetPlayer, playerRotate, nextTetro, resetTetro ] = usePlayer()
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
-    const [ nextBlockStage, setNextBlockStage ]= useNextBlock(player, resetTetro)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
     const [audio, toggleSound ] = useAudio()
 
@@ -35,7 +33,6 @@ const Tetris = () => {
         setStage(createStage())
         // setDropTime(1000)
         resetPlayer()
-        resetTetro()
         setGameOver(false)
         setScore(0)
         setRows(0)
@@ -105,7 +102,7 @@ const Tetris = () => {
             onKeyUp={keyUp}
         >
             <StyledTetris>
-            <NextBlock nextBlockStage={nextBlockStage} />
+            <NextStage />
             <Stage stage={stage} />
             <aside>
                {gameOver ? (
