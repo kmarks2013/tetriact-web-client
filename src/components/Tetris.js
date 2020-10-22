@@ -10,6 +10,7 @@ import { useStage } from '../hooks/useStage'
 import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
 import { useNextStage} from '../hooks/useNextStage'
+import { useNextTetro } from '../hooks/useNextTetro'
 
 import {createStage, checkCollision, createNext } from '../gameHelpers'
 
@@ -17,8 +18,10 @@ import {createStage, checkCollision, createNext } from '../gameHelpers'
 const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
     const [ gameOver, setGameOver ] = useState(false)
-    const [ player, updatePlayerPos, resetPlayer, playerRotate, nextTetro, resetTetro ] = usePlayer()
+    const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer()
+    const [ nextTetro ] = useNextTetro()
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
+    const [ nextStage ] = useNextStage()
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
     const [audio, toggleSound ] = useAudio()
 
@@ -95,6 +98,8 @@ const Tetris = () => {
     //     drop()
     // }, dropTime)
 
+
+    console.log(nextStage)
     return (
         <StyledTetrisWrapper
             role='button'
@@ -103,7 +108,7 @@ const Tetris = () => {
             onKeyUp={keyUp}
         >
             <StyledTetris>
-            <NextStage />
+            <NextStage nextStage={nextStage} />
             <Stage stage={stage} />
             <aside>
                {gameOver ? (
