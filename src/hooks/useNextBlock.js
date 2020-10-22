@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import {createNext, NEXT_WIDTH} from '../gameHelpers'
 
 
-export const useNextBlock =  (player, resetTetro) =>{
+export const useNextBlock =  (player, nextTetro, resetTetro) =>{
     const [nextBlockStage, setNextBlockStage] = useState(createNext()) 
 
     useEffect( () =>{
