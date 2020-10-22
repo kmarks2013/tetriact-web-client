@@ -9,7 +9,10 @@ export const useNextTetro = () => {
     })
 
     const resetTetro = useCallback(() => {
-        setNextTetro(randomTetromino().shape)
+        setNextTetro({
+            pos: {x: NEXT_WIDTH - 4, y: 0},
+            tetromino: randomTetromino().shape
+        })
     }, [])
 
     console.log(nextTetro)
