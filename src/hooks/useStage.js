@@ -27,7 +27,7 @@ export const useStage = (player, resetPlayer) =>{
                 row.map( cell => ( cell[1] === 'clear' ? [0,'clear']: cell) )
                 )
 
-            //renders the tetromino on re-render of stage
+            //renders the tetromino on re-render of stage and draws the block
             player.tetromino.forEach((row, y) => {
                 row.forEach((value, x) =>{
                     if (value !== 0) {
