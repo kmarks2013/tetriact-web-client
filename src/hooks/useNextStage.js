@@ -7,5 +7,6 @@ export const useNextStage = () => {
     useEffect( () => {
         console.log('i will set the next stage')
     },[])
+
     return [nextStage]
 }
