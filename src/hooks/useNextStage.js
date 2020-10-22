@@ -23,7 +23,10 @@ export const useNextStage = ( nextTetro, resetTetro, player) => {
             return newNextStage
         }
 
-    },[])
+
+        setNextStage( prev =>  updateNextStage(prev))
+
+    }, [nextTetro, resetTetro])
 
     return [nextStage]
 }
