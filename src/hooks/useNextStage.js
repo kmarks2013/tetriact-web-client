@@ -14,7 +14,7 @@ export const useNextStage = ( nextTetro, resetTetro, player) => {
             nextTetro.tetromino.forEach((row, y) => {
                 // console.log(row, y)
                 row.forEach((value, x) =>{
-                    console.log(nextTetro)
+                    // console.log(nextTetro)
                     if (value !== 0) {
                         newNextStage[y + nextTetro.pos.y][x + nextTetro.pos.x] = [value, `${player.collided ? 'merged': 'clear' }`]
                     }
