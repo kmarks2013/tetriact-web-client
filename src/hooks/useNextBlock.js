@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import {createNext} from '../gameHelpers'
+import {createNext, NEXT_WIDTH} from '../gameHelpers'
 
 
 export const useNextBlock =  (player, resetTetro) =>{
