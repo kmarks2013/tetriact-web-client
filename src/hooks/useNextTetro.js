@@ -15,7 +15,7 @@ export const useNextTetro = () => {
         })
     }, [])
 
-    console.log(nextTetro)
+    // console.log(nextTetro)
 
     return [nextTetro, resetTetro]
 }
