@@ -19,7 +19,7 @@ const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
     const [ gameOver, setGameOver ] = useState(false)
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer()
-    const [ nextTetro ] = useNextTetro()
+    const [ nextTetro, resetTetro ] = useNextTetro()
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
     const [ nextStage ] = useNextStage()
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
@@ -37,6 +37,7 @@ const Tetris = () => {
         setStage(createStage())
         // setDropTime(1000)
         resetPlayer()
+        resetTetro()
         setGameOver(false)
         setScore(0)
         setRows(0)
@@ -99,7 +100,7 @@ const Tetris = () => {
     // }, dropTime)
 
 
-    console.log(nextStage)
+    console.log(nextTetro)
     return (
         <StyledTetrisWrapper
             role='button'

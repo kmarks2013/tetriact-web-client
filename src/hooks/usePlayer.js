@@ -10,9 +10,6 @@ export const usePlayer = () => {
         collided: false
     })
 
-    const [nextTetro, setNextTetro] = useState(randomTetromino())
-    // console.log(nextTetro.shape)
-
     const rotate = (matrix, dir) => {
         // make rows become columns (transpose)
         const rotatedTetro = matrix.map((_, index) =>
@@ -54,25 +51,13 @@ export const usePlayer = () => {
         }))
     }
 
-    const resetTetro = useCallback(() => {
-        const newTetro = randomTetromino()
-        console.log(newTetro, 'new')
-        setNextTetro(newTetro)
-        console.log(nextTetro, 'next')
-    }, [nextTetro])
-
-    // console.log(resetTetro, 'next')
     const resetPlayer = useCallback(() => {
-            // console.log(nextTetro,'wadf')
-            // const clonedTetro = JSON.parse(JSON.stringify(nextTetro))
-            // console.log(clonedTetro)
             setPlayer({
                 pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
                 tetromino: randomTetromino().shape,
                 collided: false
             })
-            // console.log(player.tetromino, 'player')
-        }, [nextTetro])
+        }, [])
 
     return [player, updatePlayerPos, resetPlayer, playerRotate]
 }
