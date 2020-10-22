@@ -59,7 +59,7 @@ export const usePlayer = () => {
         console.log(newTetro, 'new')
         setNextTetro(newTetro)
         console.log(nextTetro, 'next')
-    }, [nextTetro])
+    }, [])
 
     // console.log(resetTetro, 'next')
     const resetPlayer = useCallback(() => {
@@ -72,7 +72,7 @@ export const usePlayer = () => {
                 collided: false
             })
             // console.log(player.tetromino, 'player')
-        }, [nextTetro])
+        }, [])
 
     return [player, updatePlayerPos, resetPlayer, playerRotate]
 }
