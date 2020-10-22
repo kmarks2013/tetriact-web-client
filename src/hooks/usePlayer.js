@@ -54,14 +54,6 @@ export const usePlayer = () => {
         }))
     }
 
-    const resetTetro = useCallback(() => {
-        const newTetro = randomTetromino()
-        console.log(newTetro, 'new')
-        setNextTetro(newTetro)
-        console.log(nextTetro, 'next')
-    }, [])
-
-    // console.log(resetTetro, 'next')
     const resetPlayer = useCallback(() => {
             setPlayer({
                 pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
