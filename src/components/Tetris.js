@@ -37,6 +37,7 @@ const Tetris = () => {
         setStage(createStage())
         // setDropTime(1000)
         resetPlayer()
+        resetTetro()
         setGameOver(false)
         setScore(0)
         setRows(0)
