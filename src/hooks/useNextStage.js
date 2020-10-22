@@ -5,7 +5,12 @@ export const useNextStage = ( nextTetro, resetTetro) => {
     const [nextStage, setNextStage] = useState(createNext())
 
     useEffect( () => {
-        console.log('i will set the next stage')
+        const updateNextStage = prevNextStage =>{
+            const newNextStage = prevNextStage.map(row =>
+                row.map( cell => (cell[1] === 'clear' ?  [0,'clear']: cell ) )
+                )
+        }
+
     },[])
 
     return [nextStage]
