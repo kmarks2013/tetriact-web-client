@@ -24,7 +24,6 @@ export const useNextStage = ( nextTetro, resetTetro, player) => {
             if (player.collided) {
                 setNextStage(createNext())
                 resetTetro()
-                console.log(nextTetro)
             }
             return newNextStage
         }
