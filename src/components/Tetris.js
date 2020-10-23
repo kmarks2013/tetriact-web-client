@@ -94,9 +94,9 @@ const Tetris = () => {
         }
     }
 
-    // useInterval(() => {
-    //     drop()
-    // }, dropTime)
+    useInterval(() => {
+        drop()
+    }, dropTime)
 
     return (
         <StyledTetrisWrapper
