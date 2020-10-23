@@ -52,12 +52,24 @@ export const usePlayer = (nextTetro) => {
     }
 
     const resetPlayer = useCallback(() => {
-            setPlayer({
-                pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
-                tetromino: randomTetromino().shape,
-                collided: false
-            })
-        }, [])
+            if (nextTetro.tetromino === TETROMINOS[0].shape){
+                console.log(nextTetro.tetromino, 'start')
+                setPlayer({
+                    pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
+                    tetromino: randomTetromino().shape,
+                    collided: false
+                })
+            } else{
+                console.log(nextTetro.tetromino, TETROMINOS[0].shape, 'next')
+                // const clonedTetro = JSON.parse(JSON.stringify(nextTetro.tetromino))
+                // console.log(clonedTetro)
+                setPlayer({
+                    pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
+                    tetromino: nextTetro.tetromino,
+                    collided: false
+                })
+            }
+        }, [nextTetro])
 
     return [player, updatePlayerPos, resetPlayer, playerRotate]
 }
