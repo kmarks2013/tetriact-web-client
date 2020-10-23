@@ -36,7 +36,7 @@ const Tetris = () => {
         // toggleSound()
         setStage(createStage())
         setNextStage(createNext())
-        // setDropTime(1000)
+        setDropTime(1200)
         resetTetro()
         resetPlayer()
         setGameOver(false)
