@@ -11,11 +11,7 @@
   font-family: johnny fever, Arial, Helvetica, sans-serif;
   font-style: italic;
   font-size: 100px;
-  background: -webkit-linear-gradient(to bottom, #7D0076);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: auto;
   height: 10vh;
-  /* color: rgb(21,0,61) ; */
-  /* text-decoration-color: brown; */
+  color: rgb(255,161,61) ;
 }

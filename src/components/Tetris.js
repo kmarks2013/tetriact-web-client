@@ -33,10 +33,10 @@ const Tetris = () => {
     }
 
     const startGame = () => {
-        // toggleSound()
+        toggleSound()
         setStage(createStage())
         setNextStage(createNext())
-        // setDropTime(1000)
+        setDropTime(1200)
         resetTetro()
         resetPlayer()
         setGameOver(false)
@@ -51,7 +51,7 @@ const Tetris = () => {
         if (rows > (level + 1 ) * 10){
             setLevel(prev => prev + 1 )
             // Also increases speed <- try out different formulas to test out speed
-            // setDropTime(1000/ (level+1) + 200)
+            setDropTime(1000/ (level+1) + 200)
         }
 
         if (!checkCollision(player, stage, {x: 0, y : 1})){
@@ -70,7 +70,7 @@ const Tetris = () => {
     const keyUp = ({keyCode}) => {
         if (!gameOver){
             if (keyCode === 40){
-                // setDropTime(1000/ (level+1) + 200)
+                setDropTime(1000/ (level+1) + 200)
             }
         }
     }
@@ -94,9 +94,9 @@ const Tetris = () => {
         }
     }
 
-    // useInterval(() => {
-    //     drop()
-    // }, dropTime)
+    useInterval(() => {
+        drop()
+    }, dropTime)
 
     return (
         <StyledTetrisWrapper
