@@ -100,8 +100,6 @@ const Tetris = () => {
     //     drop()
     // }, dropTime)
 
-
-    // console.log(nextTetro)
     return (
         <StyledTetrisWrapper
             role='button'
