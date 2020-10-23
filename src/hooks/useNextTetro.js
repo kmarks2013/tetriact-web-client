@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import { TETROMINOS, randomTetromino } from '../tetrominos'
-import { checkCollisson, NEXT_WIDTH } from '../gameHelpers'
+import { NEXT_WIDTH } from '../gameHelpers'
 
 export const useNextTetro = () => {
     const [nextTetro, setNextTetro] =useState({
