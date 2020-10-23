@@ -33,7 +33,7 @@ const Tetris = () => {
     }
 
     const startGame = () => {
-        // toggleSound()
+        toggleSound()
         setStage(createStage())
         setNextStage(createNext())
         setDropTime(1200)
