@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const StyledTitle = styled.div`
     display:flex;
     width: 100vw;
-    height: 10vh;
+    ${'' /* height: 10vh; */}
+    margin:auto;
     align-items: center;
 
     h1 {
