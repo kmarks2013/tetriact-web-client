@@ -106,6 +106,7 @@ const Tetris = () => {
             onKeyDown={e => move(e)}
             onKeyUp={keyUp}
         >
+            <Title/>
             <StyledTetris>
             <NextStage nextStage={nextStage} />
             <Stage stage={stage} />
