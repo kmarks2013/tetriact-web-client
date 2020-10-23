@@ -70,14 +70,12 @@ const Tetris = () => {
     const keyUp = ({keyCode}) => {
         if (!gameOver){
             if (keyCode === 40){
-                // console.log('timer start')
                 // setDropTime(1000/ (level+1) + 200)
             }
         }
     }
 
      const dropPlayer = () => {
-        //  console.log('timeroff')
          setDropTime(null)
          drop()
     }
@@ -100,8 +98,6 @@ const Tetris = () => {
     //     drop()
     // }, dropTime)
 
-
-    // console.log(nextTetro)
     return (
         <StyledTetrisWrapper
             role='button'
