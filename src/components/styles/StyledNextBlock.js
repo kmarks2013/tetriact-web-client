@@ -16,8 +16,8 @@ export const StyledNextBlock = styled.div`
     );
     grid-gap: 2px;
     border: 4px ridge #333;
-    width: 95px;
-    height: 84px;
+    width: 15%;
+    height: fit-content;
     max-width: 25vw;
     background-color: #222;
 `
