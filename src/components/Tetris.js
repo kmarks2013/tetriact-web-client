@@ -15,6 +15,7 @@ import { useNextStage} from '../hooks/useNextStage'
 import { useNextTetro } from '../hooks/useNextTetro'
 
 import {createStage, checkCollision, createNext } from '../gameHelpers'
+import { useScores } from '../hooks/useScores'
 
 
 const Tetris = () => {
