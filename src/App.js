@@ -8,6 +8,7 @@ function App() {
     <div className="App">
         <h1 id='title'>TETRIACT</h1>
         <Tetris/>
+        <Footer />
     </div>
   );
 }
