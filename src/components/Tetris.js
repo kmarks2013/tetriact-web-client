@@ -130,6 +130,7 @@ const Tetris = () => {
                 <StartButton  callback={startGame}  />
                 <PauseButton/>
             </aside>
+            <Status />
             </StyledTetris>
             <Footer />
         </StyledTetrisWrapper>
