@@ -128,6 +128,7 @@ const Tetris = () => {
                 </div>
             )}
                 <StartButton  callback={startGame}  />
+                <PauseButton/>
             </aside>
             </StyledTetris>
             <Footer />
