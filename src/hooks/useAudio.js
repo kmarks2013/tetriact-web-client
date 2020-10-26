@@ -18,8 +18,8 @@ export const useAudio = () => {
         song.pause()
     }
 
-    const restartAudio = () =>{
-        audio.play()
+    const restartAudio = (song) =>{
+        song.play()
     }
 
     const muteAudio = () => {
