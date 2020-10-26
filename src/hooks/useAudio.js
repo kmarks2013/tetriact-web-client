@@ -14,8 +14,8 @@ export const useAudio = () => {
         console.log('playing')
     }
 
-    const pauseAudio = () => {
-        audio.pause()
+    const pauseAudio = (song) => {
+        song.pause()
     }
 
     const restartAudio = () =>{
