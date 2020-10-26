@@ -55,6 +55,10 @@ const Tetris = () => {
         setLevel(0)
      }
 
+     const pauseGame = () => {
+         console.log('eventually i will pause the game by stopping the drop time, disabling the buttons and the background and rendering a popup, and pausing the audio', paused  )
+     }
+
      const drop = () => {
         //increase level when player has cleared 10 rows and increase speed
 
