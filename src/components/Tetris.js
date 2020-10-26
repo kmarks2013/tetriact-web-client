@@ -137,8 +137,8 @@ const Tetris = () => {
                     <Display text={`Level: ${level}`} />
                 </div>
             )}
-                <StartButton  callback={startGame}  />
-                <PauseButton  callback={pauseGame}/>
+                <Button text="Start Game" callback={startGame} />
+                <Button text="Pause Game" callback={pauseGame} />
             </aside>
             { paused || gameOver ? <Status />: null}
             </StyledTetris>
