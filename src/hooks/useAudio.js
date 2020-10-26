@@ -15,6 +15,10 @@ export const useAudio = () => {
         audio.pause()
     }
 
+    const restartAudio = () =>{
+        audio.play()
+    }
+
     useEffect(() => {
             if (playing){
                 audio.loop = true
