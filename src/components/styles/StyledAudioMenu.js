@@ -11,6 +11,4 @@ export const StyledAudioMenu = styled.div`
     border-radius: 15px;
     border: none;
     background: #333;
-    outline: none;
-    cursor: pointer;
 `
