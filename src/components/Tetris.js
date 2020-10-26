@@ -30,7 +30,7 @@ const Tetris = () => {
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
-    const [audio, toggleSound, pauseAudio ] = useAudio()
+    const [audio, toggleSound, pauseAudio, restartAudio ] = useAudio()
     const [scores] = useScores()
 
 
@@ -64,6 +64,8 @@ const Tetris = () => {
      }
 
      const resumeGame = () => {
+        setDropTime(1000/ (level+1) + 200)
+        restartAudio()
         console.log('resume game')
      }
 
@@ -127,6 +129,7 @@ const Tetris = () => {
             onKeyDown={e => move(e)}
             onKeyUp={keyUp}
         >
+            {gameOver? audio.pause(): null}
             <Title/>
             <StyledTetris>
             <NextStage nextStage={nextStage} />
