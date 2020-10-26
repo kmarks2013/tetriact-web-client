@@ -5,13 +5,13 @@ import { StyledAudioMenu } from './styles/StyledAudioMenu'
 
 const AudioMenu = () => {
     return (
-        <div>
+        <StyledAudioMenu>
             <FontAwesomeIcon icon={faPlay} />
             <FontAwesomeIcon icon={faPause} />
             <FontAwesomeIcon icon={faVolumeUp} />
             <FontAwesomeIcon icon={faVolumeDown} />
             <FontAwesomeIcon icon={faVolumeMute} />
-        </div>
+        </StyledAudioMenu>
     )
 }
 
