@@ -19,6 +19,7 @@ import { useNextTetro } from '../hooks/useNextTetro'
 
 import {createStage, checkCollision, createNext } from '../gameHelpers'
 import { useScores } from '../hooks/useScores'
+import AudioMenu from './AudioMenu'
 
 
 const Tetris = () => {
@@ -66,6 +67,7 @@ const Tetris = () => {
      const resumeGame = () => {
         setDropTime(1000/ (level+1) + 200)
         restartAudio()
+        setPaused(false)
         console.log('resume game')
      }
 
@@ -146,6 +148,7 @@ const Tetris = () => {
             )}
                 <Button text="Start Game" callback={startGame} />
                 <Button text="Pause Game" callback={pauseGame} />
+                <AudioMenu song={audio} />
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/>: null}
             { gameOver ?  <GameOverMenu/> : null }

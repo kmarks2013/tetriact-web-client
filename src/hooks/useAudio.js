@@ -8,25 +8,29 @@ export const useAudio = () => {
     // console.log(audio.loop)
     const toggleSound = ()=> {
         audio.currentTime=0
-        setPlaying(true) ;
-    }
-
-    const pauseAudio = () => {
-        audio.pause()
-    }
-
-    const restartAudio = () =>{
+        setPlaying(true)
+        audio.volume = 0.5
         audio.play()
+        console.log('playing')
     }
 
-    useEffect(() => {
-            if (playing){
-                audio.loop = true
-                audio.play()
-            }
-        },
-        [playing, audio]
-    );
+    const pauseAudio = (song) => {
+        song.pause()
+    }
 
-    return [ audio, toggleSound, pauseAudio, restartAudio ];
+    const restartAudio = (song) =>{
+        song.play()
+    }
+
+    const muteAudio = (song) => {
+        console.log(audio.volume)
+
+        if(song.volume === 0.0){
+            song.volume = 0.5
+        } else {
+            song.volume = 0.0
+        }
+    }
+
+    return [ audio, toggleSound, pauseAudio, restartAudio, muteAudio ];
 };
