@@ -5,9 +5,8 @@ export const StyledStartButton = styled.button`
     margin: 0 0 20px 0 ;
     padding: 20px;
     min-height: 30px;
-    height:10px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     border: none;
     color: white;
     background: #333;
