@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledStartButton } from './styles/StyledStartButton'
 
-const PauseButton = () => {
+const PauseButton = ({callback}) => {
     return (
         <StyledStartButton>
             Pause Game
