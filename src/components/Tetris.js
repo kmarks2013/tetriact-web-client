@@ -49,6 +49,7 @@ const Tetris = () => {
         resetTetro()
         resetPlayer()
         setGameOver(false)
+        setPaused(false)
         setScore(0)
         setRows(0)
         setLevel(0)
