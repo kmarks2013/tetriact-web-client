@@ -22,5 +22,14 @@ export const useAudio = () => {
     }
 
 
+    const muteAudio = () => {
+        console.log(audio, playing)
+        if(audio.volume === 0.0){
+            audio.volume = 0.5
+        } else {
+            audio.volume = 0.0
+        }
+    }
+
     return [ audio, toggleSound, pauseAudio, restartAudio ];
 };
