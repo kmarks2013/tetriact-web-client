@@ -148,6 +148,7 @@ const Tetris = () => {
             )}
                 <Button text="Start Game" callback={startGame} />
                 <Button text="Pause Game" callback={pauseGame} />
+                <AudioMenu />
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/>: null}
             { gameOver ?  <GameOverMenu/> : null }
