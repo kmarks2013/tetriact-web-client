@@ -8,3 +8,10 @@ export const StyledPauseMenuWrapper = styled.div`
     background: rgba( 118, 114, 138, 0.3 );
     display: flex;
 `
+
+export const StyledPauseMenu= styled.div`
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    background: #03427f;
+`
