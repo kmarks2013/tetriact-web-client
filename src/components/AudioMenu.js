@@ -1,6 +1,7 @@
 import React from 'react'
 import { faPlay, faPause, faVolumeUp, faVolumeMute, faVolumeDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { StyledAudioMenu } from './styles/StyledAudioMenu'
 
 const AudioMenu = () => {
     return (
