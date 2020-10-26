@@ -19,14 +19,6 @@ export const useAudio = () => {
         audio.play()
     }
 
-    useEffect(() => {
-            if (playing){
-                audio.loop = true
-                audio.play()
-            }
-        },
-        [playing, audio]
-    );
 
     return [ audio, toggleSound, pauseAudio, restartAudio ];
 };
