@@ -108,14 +108,18 @@ const Tetris = () => {
 
     const move = ({ keyCode }) => {
         if (!gameOver){
-            if(keyCode === 37){
-                movePlayer(-1)
-            } else if (keyCode === 39){
-                movePlayer(1)
-            } else if (keyCode === 40){
-                dropPlayer()
-            }  else if (keyCode === 38){
-                playerRotate(stage, 1)
+            if (!paused){
+                if(keyCode === 37){
+                    movePlayer(-1)
+                } else if (keyCode === 39){
+                    movePlayer(1)
+                } else if (keyCode === 40){
+                    dropPlayer()
+                }  else if (keyCode === 38){
+                    playerRotate(stage, 1)
+                }
+            } else{
+                console.log(paused)
             }
         }
     }
