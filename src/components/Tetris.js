@@ -63,6 +63,10 @@ const Tetris = () => {
         console.log(' i will pause the game by, disabling the buttons and the background and rendering a popup', paused  )
      }
 
+     const resumeGame = () => {
+        console.log('resume game')
+     }
+
      const drop = () => {
         //increase level when player has cleared 10 rows and increase speed
 
