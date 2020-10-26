@@ -24,5 +24,5 @@ export const useAudio = () => {
         [playing, audio]
     );
 
-    return [ audio, toggleSound];
+    return [ audio, toggleSound, pauseAudio ];
 };
