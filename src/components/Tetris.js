@@ -129,6 +129,7 @@ const Tetris = () => {
             onKeyDown={e => move(e)}
             onKeyUp={keyUp}
         >
+            {gameOver? audio.pause(): null}
             <Title/>
             <StyledTetris>
             <NextStage nextStage={nextStage} />
