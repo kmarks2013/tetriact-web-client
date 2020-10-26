@@ -3,10 +3,9 @@ import Title from './Title'
 import Footer from './Footer'
 import Display from './Display'
 import Stage from './Stage'
-import StartButton from './StartButton'
 import NextStage from './NextStage'
-import PauseButton from './PauseButton'
 import Status from './Status'
+import Button from './Button'
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import { usePlayer } from '../hooks/usePlayer'
 import { useInterval } from '../hooks/useInterval'
@@ -136,8 +135,8 @@ const Tetris = () => {
                     <Display text={`Level: ${level}`} />
                 </div>
             )}
-                <StartButton  callback={startGame}  />
-                <PauseButton  callback={pauseGame}/>
+                <Button text="Start Game" callback={startGame} />
+                <Button text="Pause Game" callback={pauseGame} />
             </aside>
             { paused || gameOver ? <Status />: null}
             </StyledTetris>
