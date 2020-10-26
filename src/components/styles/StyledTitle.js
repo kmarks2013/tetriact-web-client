@@ -15,5 +15,4 @@ export const StyledTitle = styled.div`
         height: 10vh;
         color: rgb(255,161,61) ;
     }
-
 `
