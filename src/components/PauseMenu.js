@@ -1,9 +1,11 @@
 import React from 'react'
+import Button from './Button'
 
 const PauseMenu = () => {
     return (
         <div>
-            This wil lbe the pause menu
+            Game Paused
+            <Button text='Resume Game' callback={() => console.log('resumeGame')} />
         </div>
     )
 }
