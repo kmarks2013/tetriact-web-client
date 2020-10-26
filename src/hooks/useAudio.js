@@ -21,7 +21,6 @@ export const useAudio = () => {
         audio.play()
     }
 
-
     const muteAudio = () => {
         console.log(audio, playing)
         if(audio.volume === 0.0){
@@ -31,5 +30,5 @@ export const useAudio = () => {
         }
     }
 
-    return [ audio, toggleSound, pauseAudio, restartAudio ];
+    return [ audio, toggleSound, pauseAudio, restartAudio, muteAudio ];
 };
