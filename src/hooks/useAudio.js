@@ -22,12 +22,13 @@ export const useAudio = () => {
         song.play()
     }
 
-    const muteAudio = () => {
-        console.log(audio, playing)
-        if(audio.volume === 0.0){
-            audio.volume = 0.5
+    const muteAudio = (song) => {
+        console.log(audio.volume)
+
+        if(song.volume === 0.0){
+            song.volume = 0.5
         } else {
-            audio.volume = 0.0
+            song.volume = 0.0
         }
     }
 
