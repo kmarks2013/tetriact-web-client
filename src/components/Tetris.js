@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Title from './Title'
+import Footer from './Footer'
 import Display from './Display'
 import Stage from './Stage'
 import StartButton from './StartButton'
@@ -105,6 +107,7 @@ const Tetris = () => {
             onKeyDown={e => move(e)}
             onKeyUp={keyUp}
         >
+            <Title/>
             <StyledTetris>
             <NextStage nextStage={nextStage} />
             <Stage stage={stage} />
@@ -121,6 +124,7 @@ const Tetris = () => {
                 <StartButton  callback={startGame}  />
             </aside>
             </StyledTetris>
+            <Footer />
         </StyledTetrisWrapper>
     )
 }
