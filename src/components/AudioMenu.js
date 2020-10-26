@@ -5,7 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AudioMenu = () => {
     return (
         <div>
-            audio menu
+            <FontAwesomeIcon icon={faPlay} />
+            <FontAwesomeIcon icon={faPause} />
+            <FontAwesomeIcon icon={faVolumeUp} />
+            <FontAwesomeIcon icon={faVolumeDown} />
+            <FontAwesomeIcon icon={faVolumeMute} />
         </div>
     )
 }
