@@ -7,11 +7,21 @@ import {StyledIcon} from './styles/StyledIcon'
 const AudioMenu = () => {
     return (
         <StyledAudioMenu>
+            <StyledIcon>
             <FontAwesomeIcon icon={faPlay} />
-            <FontAwesomeIcon icon={faPause} />
-            <FontAwesomeIcon icon={faVolumeUp} />
-            <FontAwesomeIcon icon={faVolumeDown} />
-            <FontAwesomeIcon icon={faVolumeMute} />
+            </StyledIcon>
+            <StyledIcon>
+                <FontAwesomeIcon icon={faPause} />
+            </StyledIcon>
+            <StyledIcon>
+                <FontAwesomeIcon icon={faVolumeUp} />
+            </StyledIcon>
+            <StyledIcon>
+                <FontAwesomeIcon icon={faVolumeDown} />
+            </StyledIcon>
+            <StyledIcon>
+                <FontAwesomeIcon icon={faVolumeMute} />
+            </StyledIcon>
         </StyledAudioMenu>
     )
 }
