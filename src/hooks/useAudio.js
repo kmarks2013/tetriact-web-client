@@ -9,6 +9,8 @@ export const useAudio = () => {
     const toggleSound = ()=> {
         audio.currentTime=0
         setPlaying(true) ;
+        audio.play()
+        console.log('playing')
     }
 
     const pauseAudio = () => {
