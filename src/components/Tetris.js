@@ -57,6 +57,7 @@ const Tetris = () => {
 
      const pauseGame = () => {
          setPaused(true)
+         pauseAudio()
          console.log('eventually i will pause the game by stopping the drop time, disabling the buttons and the background and rendering a popup, and pausing the audio', paused  )
      }
 
