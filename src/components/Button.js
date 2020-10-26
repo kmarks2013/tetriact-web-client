@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyledStartButton } from './styles/StyledStartButton'
+import { StyledButton } from './styles/StyledButton'
 
 
 const Button = ({text, callback}) => {
     return (
-        <StyledStartButton onClick={callback} >
+        <StyledButton onClick={callback} >
                 {text}
-        </StyledStartButton>
+        </StyledButton>
     )
 }
 

@@ -5,6 +5,8 @@ import Display from './Display'
 import Stage from './Stage'
 import NextStage from './NextStage'
 import Status from './Status'
+import GameOverMenu from './GameOverMenu'
+import PauseMenu from './PauseMenu'
 import Button from './Button'
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import { usePlayer } from '../hooks/usePlayer'
@@ -55,10 +57,14 @@ const Tetris = () => {
      }
 
      const pauseGame = () => {
-         setPaused(true)
-         pauseAudio()
-         setDropTime(null)
-         console.log('eventually i will pause the game by stopping the drop time, disabling the buttons and the background and rendering a popup, and pausing the audio', paused  )
+        setPaused(true)
+        pauseAudio()
+        setDropTime(null)
+        console.log(' i will pause the game by, disabling the buttons and the background and rendering a popup', paused  )
+     }
+
+     const resumeGame = () => {
+        console.log('resume game')
      }
 
      const drop = () => {
@@ -138,7 +144,8 @@ const Tetris = () => {
                 <Button text="Start Game" callback={startGame} />
                 <Button text="Pause Game" callback={pauseGame} />
             </aside>
-            { paused || gameOver ? <Status />: null}
+            { paused ?  <PauseMenu callback={resumeGame}/>: null}
+            { gameOver ?  <GameOverMenu/> : null }
             </StyledTetris>
             <Footer />
         </StyledTetrisWrapper>
