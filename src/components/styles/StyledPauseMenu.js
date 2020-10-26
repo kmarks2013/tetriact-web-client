@@ -9,7 +9,7 @@ export const StyledPauseMenuWrapper = styled.div`
     display: flex;
 `
 
-export const StyledPauseMenu= styled.div`
+export const StyledPauseMenu = styled.div`
     width: 50%;
     height: 50%;
     margin: auto;
