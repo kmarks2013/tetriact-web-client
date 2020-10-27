@@ -19,7 +19,7 @@ const AudioMenu = ({song}) => {
             <StyledIcon onClick={()=> increaseVolume(song)}>
                 <FontAwesomeIcon icon={faVolumeUp} />
             </StyledIcon>
-            <StyledIcon>
+            <StyledIcon onClick={() => decreaseVolume(song)}>
                 <FontAwesomeIcon icon={faVolumeDown} />
             </StyledIcon>
             <StyledIcon onClick={() => muteAudio(song)}>
