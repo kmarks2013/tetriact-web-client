@@ -56,21 +56,20 @@ const Tetris = () => {
         setLevel(0)
      }
 
-     const pauseGame = () => {
+    const pauseGame = () => {
         setPaused(true)
         pauseAudio(audio)
         setDropTime(null)
-        console.log(' i will pause the game by, disabling the buttons and the background and rendering a popup', paused  )
-     }
+    }
 
-     const resumeGame = () => {
+    const resumeGame = () => {
         setDropTime(1000/ (level+1) + 200)
         restartAudio(audio)
         setPaused(false)
         console.log('resume game')
-     }
+    }
 
-     const drop = () => {
+    const drop = () => {
         //increase level when player has cleared 10 rows and increase speed
 
         if (rows > (level + 1 ) * 10){
@@ -100,7 +99,7 @@ const Tetris = () => {
         }
     }
 
-     const dropPlayer = () => {
+    const dropPlayer = () => {
          setDropTime(null)
          drop()
     }
