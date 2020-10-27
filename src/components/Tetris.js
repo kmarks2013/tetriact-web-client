@@ -20,8 +20,6 @@ import { useNextTetro } from '../hooks/useNextTetro'
 
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import {createStage, checkCollision, createNext } from '../gameHelpers'
-import { useScores } from '../hooks/useScores'
-import AudioMenu from './AudioMenu'
 
 
 const Tetris = () => {
