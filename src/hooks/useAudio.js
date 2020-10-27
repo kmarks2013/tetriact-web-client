@@ -29,6 +29,7 @@ export const useAudio = () => {
         }
     }
 
+    const muteAudio = (song) => {
         if(song.volume === 0.0){
             song.volume = 0.5
         } else {
