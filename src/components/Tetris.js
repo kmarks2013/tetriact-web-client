@@ -59,14 +59,14 @@ const Tetris = () => {
 
      const pauseGame = () => {
         setPaused(true)
-        pauseAudio()
+        pauseAudio(audio)
         setDropTime(null)
         console.log(' i will pause the game by, disabling the buttons and the background and rendering a popup', paused  )
      }
 
      const resumeGame = () => {
         setDropTime(1000/ (level+1) + 200)
-        restartAudio()
+        restartAudio(audio)
         setPaused(false)
         console.log('resume game')
      }
