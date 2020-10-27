@@ -4,11 +4,11 @@ import Footer from './Footer'
 import Display from './Display'
 import Stage from './Stage'
 import NextStage from './NextStage'
-import Status from './Status'
 import GameOverMenu from './GameOverMenu'
 import PauseMenu from './PauseMenu'
 import Button from './Button'
-import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
+import AudioMenu from './AudioMenu'
+
 import { usePlayer } from '../hooks/usePlayer'
 import { useInterval } from '../hooks/useInterval'
 import { useStage } from '../hooks/useStage'
@@ -16,10 +16,10 @@ import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
 import { useNextStage} from '../hooks/useNextStage'
 import { useNextTetro } from '../hooks/useNextTetro'
+// import { useScores } from '../hooks/useScores'
 
+import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import {createStage, checkCollision, createNext } from '../gameHelpers'
-import { useScores } from '../hooks/useScores'
-import AudioMenu from './AudioMenu'
 
 
 const Tetris = () => {
@@ -32,7 +32,7 @@ const Tetris = () => {
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
     const [audio, toggleSound, pauseAudio, restartAudio ] = useAudio()
-    const [scores] = useScores()
+    // const [scores] = useScores()
 
 
     const movePlayer = dir => {
@@ -42,7 +42,6 @@ const Tetris = () => {
         }
     }
 
-    console.log(scores)
     const startGame = () => {
         toggleSound()
         setStage(createStage())
@@ -57,21 +56,20 @@ const Tetris = () => {
         setLevel(0)
      }
 
-     const pauseGame = () => {
+    const pauseGame = () => {
         setPaused(true)
         pauseAudio(audio)
         setDropTime(null)
-        console.log(' i will pause the game by, disabling the buttons and the background and rendering a popup', paused  )
-     }
+    }
 
-     const resumeGame = () => {
+    const resumeGame = () => {
         setDropTime(1000/ (level+1) + 200)
         restartAudio(audio)
         setPaused(false)
         console.log('resume game')
-     }
+    }
 
-     const drop = () => {
+    const drop = () => {
         //increase level when player has cleared 10 rows and increase speed
 
         if (rows > (level + 1 ) * 10){
@@ -101,7 +99,7 @@ const Tetris = () => {
         }
     }
 
-     const dropPlayer = () => {
+    const dropPlayer = () => {
          setDropTime(null)
          drop()
     }
@@ -109,15 +107,15 @@ const Tetris = () => {
     const move = ({ keyCode }) => {
         console.log(paused)
         if (!gameOver && !paused){
-                if(keyCode === 37){
-                    movePlayer(-1)
-                } else if (keyCode === 39){
-                    movePlayer(1)
-                } else if (keyCode === 40){
-                    dropPlayer()
-                }  else if (keyCode === 38){
-                    playerRotate(stage, 1)
-                }
+            if(keyCode === 37){
+                movePlayer(-1)
+            } else if (keyCode === 39){
+                movePlayer(1)
+            } else if (keyCode === 40){
+                dropPlayer()
+            }  else if (keyCode === 38){
+                playerRotate(stage, 1)
+            }
         }
     }
 
