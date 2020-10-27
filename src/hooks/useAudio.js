@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import { useState } from 'react'
 
 export const useAudio = () => {
     const [audio] = useState(new Audio('https://upload.wikimedia.org/wikipedia/commons/e/e5/Tetris_theme.ogg'));
