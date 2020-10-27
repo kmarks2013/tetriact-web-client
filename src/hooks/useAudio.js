@@ -11,6 +11,7 @@ export const useAudio = () => {
         audio.currentTime=0
         audio.play()
         console.log('playing')
+        console.log(audio.volume)
     }
 
     const pauseAudio = (song) => {
