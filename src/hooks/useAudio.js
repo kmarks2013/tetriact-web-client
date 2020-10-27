@@ -32,9 +32,9 @@ export const useAudio = () => {
     }
 
     const muteAudio = (song) => {
+        //need to update this function to keep track of the volume. will need to add volume to state
         if(song.volume === 0.0){
             song.volume = 0.5
-            console.log(song.volume)
         } else {
             song.volume = 0.0
             console.log(song.volume)
