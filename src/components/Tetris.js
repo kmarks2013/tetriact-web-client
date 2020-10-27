@@ -42,7 +42,6 @@ const Tetris = () => {
         }
     }
 
-    console.log(scores)
     const startGame = () => {
         toggleSound()
         setStage(createStage())
