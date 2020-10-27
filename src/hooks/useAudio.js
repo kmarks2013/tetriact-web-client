@@ -5,6 +5,8 @@ export const useAudio = () => {
 
     // this file will set the audio to start playing when a game starts and then restarts teh music when the game starts
     // console.log(audio.loop)
+    audio.volume = 0.5
+
     const toggleSound = ()=> {
         audio.currentTime=0
         setPlaying(true)
