@@ -6,7 +6,7 @@ import {StyledIcon} from './styles/StyledIcon'
 import { useAudio } from '../hooks/useAudio';
 
 const AudioMenu = ({song}) => {
-    const [ audio, toggleSound, pauseAudio, restartAudio, muteAudio, increaseVolume, decreaseVolume ] = useAudio()
+    const { pauseAudio, restartAudio, muteAudio, increaseVolume, decreaseVolume } = useAudio()
 
     return (
         <StyledAudioMenu>
