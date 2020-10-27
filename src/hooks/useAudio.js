@@ -22,8 +22,12 @@ export const useAudio = () => {
         song.play()
     }
 
-    const muteAudio = (song) => {
-        console.log(audio.volume)
+    const increaseVoulme = (song) => {
+        if (song.volume < 1.0){
+            // console.log(song.volume + .1)
+            song.volume = song.volume +.1
+        }
+    }
 
         if(song.volume === 0.0){
             song.volume = 0.5
