@@ -45,5 +45,5 @@ export const useAudio = () => {
         }
     }
 
-    return [ audio, toggleSound, pauseAudio, restartAudio, muteAudio, increaseVoulme ];
+    return [ audio, toggleSound, pauseAudio, restartAudio, muteAudio, increaseVoulme, decreaseVolume ];
 };
