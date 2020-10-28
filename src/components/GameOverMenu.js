@@ -1,4 +1,5 @@
 import React from 'react'
+import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 
 const GameOverMenu = () => {
     return (
