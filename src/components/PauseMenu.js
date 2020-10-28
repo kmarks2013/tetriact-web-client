@@ -4,12 +4,12 @@ import { StyledPopUpWrapper, StyledPauseMenu } from './styles/StyledPopUps'
 
 const PauseMenu = ({callback}) => {
     return (
-        <StyledPauseMenuWrapper>
+        <StyledPopUpWrapper>
             <StyledPauseMenu>
                 Game Paused
                 <Button text='Resume Game' callback={callback} />
             </StyledPauseMenu>
-        </StyledPauseMenuWrapper>
+        </StyledPopUpWrapper>
     )
 }
 
