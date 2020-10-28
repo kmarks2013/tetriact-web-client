@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './Button'
-import { StyledPauseMenuWrapper, StyledPauseMenu } from './styles/StyledPauseMenu'
+import { StyledPopUpWrapper, StyledPauseMenu } from './styles/StyledPopUps'
 
 const PauseMenu = ({callback}) => {
     return (
