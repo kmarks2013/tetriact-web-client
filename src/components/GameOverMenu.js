@@ -9,6 +9,11 @@ const GameOverMenu = ({callback, score}) => {
         setGamerTag(e.target.value)
     }
 
+    const handleSubmit = () => {
+        e.preventDefault()
+        console.log('submitted')
+    }
+
     return (
         <StyledPopUpWrapper>
             {console.log(gamerTag)}
