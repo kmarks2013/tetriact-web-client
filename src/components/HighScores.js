@@ -1,10 +1,17 @@
 import React from 'react'
+import { StyledPopUpWrapper, StyledHighScores } from './styles/StyledPopUps'
+
 
 const HighScores = () => {
     return (
-        <div>
-            Adds a basic render for the high scores
-        </div>
+        <StyledPopUpWrapper>
+            <StyledHighScores>
+                <h2>
+                    Adds a basic render for the high scores
+                </h2>
+            </StyledHighScores>
+        </StyledPopUpWrapper>
+
     )
 }
 
