@@ -8,7 +8,7 @@ const GameOverMenu = ({callback, score}) => {
             <StyledGameOverMenu>
 
                 <p>
-                this will be the gameover menu
+                To save your score enter a name below:
                 </p>
                 <p>
                 To see if you scored in the top 10 enter a name below:
