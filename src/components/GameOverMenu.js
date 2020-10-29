@@ -22,7 +22,7 @@ const GameOverMenu = ({callback, score}) => {
                 To save your score enter a name below:
                 </h4>
                 <form>
-                    <input type='text' value={gamerTag} name='gamerTag'/>
+                    <input onChange={handleChange} type='text' value={gamerTag}/>
                 </form>
                 <p>
                 This screen will also allow a player to restart from scratch, or close their window so they can look at their game.
