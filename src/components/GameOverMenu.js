@@ -5,6 +5,9 @@ import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 const GameOverMenu = ({callback, score}) => {
     const [gamerTag, setGamerTag] = useState('')
 
+    const handleChange = (e) => {
+        setGamerTag(e.target.value)
+    }
 
     return (
         <StyledPopUpWrapper>
