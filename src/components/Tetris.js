@@ -149,15 +149,11 @@ const Tetris = () => {
             <NextStage nextStage={nextStage} />
             <Stage stage={stage} />
             <aside>
-               {gameOver ? (
-                    <Display gameOver={gameOver} text = "Game Over" />
-            ): (
                 <div>
                     <Display text={`Score: ${score}`} />
                     <Display text={`Rows: ${rows}`}/>
                     <Display text={`Level: ${level}`} />
                 </div>
-            )}
                 <Button width={100} text="Start Game" callback={startGame} />
                 <Button width={100} text="Pause Game" callback={pauseGame} />
                 <AudioMenu song={audio} />
