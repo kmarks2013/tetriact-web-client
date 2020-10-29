@@ -27,8 +27,8 @@ export const StyledPauseMenu = styled.div`
     }
 `
 export const StyledGameOverMenu = styled.div`
-    width: 50%;
-    height: 50%;
+    width: auto;
+    height: auto;
     margin: auto;
     background: #03427f;
     color: white;
