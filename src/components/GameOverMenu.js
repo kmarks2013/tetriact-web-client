@@ -2,7 +2,7 @@ import React from 'react'
 import Button from './Button'
 import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 
-const GameOverMenu = () => {
+const GameOverMenu = ({callback, score}) => {
     return (
         <StyledPopUpWrapper>
             <StyledGameOverMenu>
