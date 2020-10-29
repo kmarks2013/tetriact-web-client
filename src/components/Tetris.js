@@ -150,7 +150,7 @@ const Tetris = () => {
                 <AudioMenu song={audio} />
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/>: null}
-            { gameOver ?  <GameOverMenu/> : null }
+            { gameOver ?  <GameOverMenu callback={startGame} score={score}/> : null }
             </StyledTetris>
             <Footer />
         </StyledTetrisWrapper>
