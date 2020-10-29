@@ -25,4 +25,5 @@ export const StyledGameOverMenu = styled.div`
     height: 50%;
     margin: auto;
     background: #03427f;
+    color: white;
 `
