@@ -38,7 +38,7 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard }) => {
                 </form>
 
                 <Button text='Play Again?' callback={newGame}/>
-                <p>X</p>
+                <p onClick={closeMenu}>X</p>
 
             </StyledGameOverMenu>
         </StyledPopUpWrapper>
