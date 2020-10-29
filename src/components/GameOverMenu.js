@@ -13,7 +13,7 @@ const GameOverMenu = ({callback, score}) => {
                 To save your score enter a name below:
                 </p>
                 <p>
-                To see if you scored in the top 10 enter a name below:
+                This will then be a form. it will need to know the score of the game.
                 </p>
                 <p>
                 This will then be a form.
