@@ -16,7 +16,7 @@ const GameOverMenu = ({callback, score}) => {
                 This will then be a form. it will need to know the score of the game.
                 </p>
                 <p>
-                This will then be a form.
+                {score}
                 </p>
                 <p>
                 the form once complete will then take you to the high scores screen.
