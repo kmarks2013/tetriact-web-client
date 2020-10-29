@@ -30,7 +30,7 @@ const Tetris = () => {
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer(nextTetro)
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
-    const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
+    const { score, setScore, rows, setRows, level, setLevel } = useGameStatus(rowsCleared)
     const {audio, toggleSound, pauseAudio, restartAudio } = useAudio()
     // const [scores] = useScores()
 
