@@ -7,6 +7,7 @@ import { useGameStatus } from '../hooks/useGameStatus'
 
 const GameOverMenu = ({newGame, closeMenu, clearBoard }) => {
     const [gamerTag, setGamerTag] = useState('')
+    const {score} = useGameStatus()
 
     const handleChange = (e) => {
         setGamerTag(e.target.value)
