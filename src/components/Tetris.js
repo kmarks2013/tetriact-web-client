@@ -8,6 +8,7 @@ import GameOverMenu from './GameOverMenu'
 import PauseMenu from './PauseMenu'
 import Button from './Button'
 import AudioMenu from './AudioMenu'
+import HighScores from './HighScores'
 
 import { usePlayer } from '../hooks/usePlayer'
 import { useInterval } from '../hooks/useInterval'
