@@ -32,6 +32,8 @@ export const StyledGameOverMenu = styled.div`
     margin: auto;
     background: #03427f;
     color: white;
+    background: #000;
+    opacity: 0.8;
 
     h2 {
         font-family: Pixel, Arial, Helvetica, sans-serif;
