@@ -6,7 +6,9 @@ const GameOverMenu = ({callback, score}) => {
     return (
         <StyledPopUpWrapper>
             <StyledGameOverMenu>
-
+                <h1>
+                Game Over!
+                </h1>
                 <p>
                 To save your score enter a name below:
                 </p>
