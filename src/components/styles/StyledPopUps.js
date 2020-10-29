@@ -40,7 +40,7 @@ export const StyledGameOverMenu = styled.div`
         font-size: 50px;
         margin: auto;
         padding: 20px;
-        color: white ;
+        color: red ;
     }
 
     h3{
