@@ -3,6 +3,9 @@ import Button from './Button'
 import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 
 const GameOverMenu = ({callback, score}) => {
+    const [gamerTag, setGamerTag] = useState('')
+
+
     return (
         <StyledPopUpWrapper>
             <StyledGameOverMenu>
