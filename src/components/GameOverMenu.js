@@ -11,6 +11,7 @@ const GameOverMenu = ({callback, score}) => {
 
     return (
         <StyledPopUpWrapper>
+            {console.log(gamerTag)}
             <StyledGameOverMenu>
                 <h2>
                 Game Over...
