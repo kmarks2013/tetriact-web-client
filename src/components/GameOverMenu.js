@@ -9,12 +9,14 @@ const GameOverMenu = ({callback, score}) => {
                 <h2>
                 Game Over!
                 </h2>
+                <h3>
+                Your Score was: {score}!
+                </h3>
                 <p>
                 To save your score enter a name below:
-                </p>
-                <p>
                 This will then be a form. it will need to know the score of the game.
                 </p>
+
                 <p>
                 {score}
                 </p>
