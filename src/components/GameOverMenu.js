@@ -24,6 +24,9 @@ const GameOverMenu = ({callback, score}) => {
                 This screen will also allow a player to restart from scratch, or close their window so they can look at their game.
                 </p>
 
+                <Button text='Play Again?' callback={() =>console.log('restart the game')}/>
+                <p>X</p>
+
             </StyledGameOverMenu>
         </StyledPopUpWrapper>
 
