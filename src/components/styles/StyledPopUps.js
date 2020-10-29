@@ -16,7 +16,9 @@ export const StyledPauseMenu = styled.div`
     ${'' /* display: flex; */}
     ${'' /* flex-driection: flex-wrap; */}
     margin: auto;
-    background: #03427f;
+    align-content: center;
+    background: #000;
+    opacity: 0.8;
 `
 export const StyledGameOverMenu = styled.div`
     width: 50%;
