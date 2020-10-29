@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import Button from './Button'
 import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 
-const GameOverMenu = ({newGame, closeMenu, score }) => {
+import { useGameStatus } from '../hooks/useGameStatus'
+
+
+const GameOverMenu = ({newGame, closeMenu, clearBoard }) => {
     const [gamerTag, setGamerTag] = useState('')
 
     const handleChange = (e) => {
