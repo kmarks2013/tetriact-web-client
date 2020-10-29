@@ -27,7 +27,7 @@ const GameOverMenu = ({callback, score}) => {
                 <h4>
                 To save your score enter a name below:
                 </h4>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <input onChange={handleChange} type='text' value={gamerTag}/>
                     <input type="submit"/>
                 </form>
