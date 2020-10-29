@@ -16,13 +16,9 @@ const GameOverMenu = ({callback, score}) => {
                 To save your score enter a name below:
                 </h4>
                 <p>
-                {score}
-                </p>
-                <p>
                 the form once complete will then take you to the high scores screen.
                 </p>
                 <p>
-
                 This screen will also allow a player to restart from scratch, or close their window so they can look at their game.
                 </p>
 
