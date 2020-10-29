@@ -12,6 +12,7 @@ const GameOverMenu = ({callback, score}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('submitted')
+        setGamerTag('')
     }
 
     return (
