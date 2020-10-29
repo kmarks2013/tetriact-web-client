@@ -145,8 +145,8 @@ const Tetris = () => {
                     <Display text={`Level: ${level}`} />
                 </div>
             )}
-                <Button text="Start Game" callback={startGame} />
-                <Button text="Pause Game" callback={pauseGame} />
+                <Button width={100} text="Start Game" callback={startGame} />
+                <Button width={100} text="Pause Game" callback={pauseGame} />
                 <AudioMenu song={audio} />
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/>: null}
