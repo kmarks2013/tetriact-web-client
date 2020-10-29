@@ -29,6 +29,7 @@ const GameOverMenu = ({callback, score}) => {
                 </h4>
                 <form>
                     <input onChange={handleChange} type='text' value={gamerTag}/>
+                    <input type="submit"/>
                 </form>
                 <p>
                 This screen will also allow a player to restart from scratch, or close their window so they can look at their game.
