@@ -17,6 +17,7 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard }) => {
         e.preventDefault()
         console.log('submitted', gamerTag)
         setGamerTag('')
+        clearBoard()
     }
 
     return (
