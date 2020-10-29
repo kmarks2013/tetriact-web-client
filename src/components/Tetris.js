@@ -66,6 +66,15 @@ const Tetris = () => {
         setGameOver(false)
     }
 
+    const clearBoard = () => {
+        setStage(createStage())
+        setNextStage(createNext())
+        setGameOver(false)
+        setScore(0)
+        setRows(0)
+        setLevel(0)
+    }
+
     const resumeGame = () => {
         setDropTime(1000/ (level+1) + 200)
         restartAudio(audio)
