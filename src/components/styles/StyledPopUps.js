@@ -19,6 +19,15 @@ export const StyledPauseMenu = styled.div`
     align-content: center;
     background: #000;
     opacity: 0.8;
+
+    h2 {
+        font-family: Pixel, Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-size: 50px;
+        margin: auto;
+        padding: 20px;
+        color: white ;
+    }
 `
 export const StyledGameOverMenu = styled.div`
     width: 50%;
