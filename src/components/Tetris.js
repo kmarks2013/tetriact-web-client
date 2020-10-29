@@ -62,6 +62,10 @@ const Tetris = () => {
         setDropTime(null)
     }
 
+    const closeGameOver = () => {
+        setGameOver(false)
+    }
+
     const resumeGame = () => {
         setDropTime(1000/ (level+1) + 200)
         restartAudio(audio)
