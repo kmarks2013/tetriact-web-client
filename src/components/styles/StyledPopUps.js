@@ -42,4 +42,12 @@ export const StyledGameOverMenu = styled.div`
         padding: 20px;
         color: white ;
     }
+
+    h3{
+        font-family: Pixel, Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        margin: auto;
+        padding: 20px;
+        color: white ;
+    }
 `
