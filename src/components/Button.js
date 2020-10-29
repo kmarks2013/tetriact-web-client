@@ -2,9 +2,9 @@ import React from 'react'
 import { StyledButton } from './styles/StyledButton'
 
 
-const Button = ({text, callback}) => {
+const Button = ({text, callback, width}) => {
     return (
-        <StyledButton onClick={callback} >
+        <StyledButton width={width} onClick={callback} >
                 {text}
         </StyledButton>
     )

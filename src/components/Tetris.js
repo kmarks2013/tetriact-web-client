@@ -24,14 +24,14 @@ import {createStage, checkCollision, createNext } from '../gameHelpers'
 
 const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
-    const [ gameOver, setGameOver ] = useState(false)
+    const [ gameOver, setGameOver ] = useState(true)
     const [ paused, setPaused ] = useState(false)
     const [ nextTetro, resetTetro ] = useNextTetro()
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer(nextTetro)
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
     const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
-    const [audio, toggleSound, pauseAudio, restartAudio ] = useAudio()
+    const {audio, toggleSound, pauseAudio, restartAudio } = useAudio()
     // const [scores] = useScores()
 
 
@@ -145,12 +145,12 @@ const Tetris = () => {
                     <Display text={`Level: ${level}`} />
                 </div>
             )}
-                <Button text="Start Game" callback={startGame} />
-                <Button text="Pause Game" callback={pauseGame} />
+                <Button width={100} text="Start Game" callback={startGame} />
+                <Button width={100} text="Pause Game" callback={pauseGame} />
                 <AudioMenu song={audio} />
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/>: null}
-            { gameOver ?  <GameOverMenu/> : null }
+            { gameOver ?  <GameOverMenu callback={startGame} score={score}/> : null }
             </StyledTetris>
             <Footer />
         </StyledTetrisWrapper>

@@ -5,7 +5,8 @@ export const StyledButton = styled.button`
     margin: 0 0 13px 0 ;
     padding: 20px;
     min-height: 30px;
-    width: 100%;
+    width: ${props => props.width}%;
+    height: auto;
     border-radius: 15px;
     border: none;
     color: white;
