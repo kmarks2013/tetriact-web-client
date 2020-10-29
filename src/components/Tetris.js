@@ -72,6 +72,7 @@ const Tetris = () => {
         setStage(createStage())
         setNextStage(createNext())
         setGameOver(false)
+        setScoreBoard(true)
         setScore(0)
         setRows(0)
         setLevel(0)
