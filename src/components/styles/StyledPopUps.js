@@ -59,3 +59,20 @@ export const StyledGameOverMenu = styled.div`
         color: white ;
     }
 `
+export const StyledHighScores = styled.div`
+    width: 50%;
+    height: auto;
+    flex-driectoin: column;
+    margin: auto;
+    align-content: center;
+    background: #000;
+    opacity: 0.8;
+
+    h2 {
+        font-family: Pixel, Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        margin: auto;
+        padding: 20px;
+        color: white ;
+    }
+`
