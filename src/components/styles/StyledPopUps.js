@@ -43,7 +43,7 @@ export const StyledGameOverMenu = styled.div`
         color: red ;
     }
 
-    h3{
+    h3 {
         font-family: Pixel, Arial, Helvetica, sans-serif;
         font-size: 24px;
         margin: auto;
