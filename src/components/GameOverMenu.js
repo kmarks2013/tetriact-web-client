@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Button from './Button'
 import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 
-import { useGameStatus } from '../hooks/useGameStatus'
+import { useScores } from '../hooks/useScores'
 
 
 const GameOverMenu = ({newGame, closeMenu, clearBoard }) => {
