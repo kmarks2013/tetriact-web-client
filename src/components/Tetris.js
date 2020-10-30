@@ -17,7 +17,6 @@ import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
 import { useNextStage} from '../hooks/useNextStage'
 import { useNextTetro } from '../hooks/useNextTetro'
-// import { useScores } from '../hooks/useScores'
 
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import {createStage, checkCollision, createNext } from '../gameHelpers'
