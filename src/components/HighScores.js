@@ -6,6 +6,8 @@ import { useScores } from '../hooks/useScores'
 const HighScores = () => {
     const {scores, topTen} = useScores()
 
+    // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
+
     return (
         <StyledPopUpWrapper>
         {console.log(scores, topTen)}
