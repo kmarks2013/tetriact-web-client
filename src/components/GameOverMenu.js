@@ -9,8 +9,6 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
     const [gamerTag, setGamerTag] = useState('')
     const {scores} = useScores()
 
-
-
     const handleChange = (e) => {
         setGamerTag(e.target.value)
     }
