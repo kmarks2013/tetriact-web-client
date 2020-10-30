@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './Button'
-// import { StyledGameOverMenu } from './styles/StyledPopUps'
+import { StyledGameOverMenu } from './styles/StyledPopUps'
 
 export const PlayerForm = ({score, newGame}) => {
     return (
