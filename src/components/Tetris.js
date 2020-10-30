@@ -162,7 +162,7 @@ const Tetris = () => {
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/> : null}
             { gameOver ?  <GameOverMenu newGame={startGame} closeMenu={closeGameOver} clearBoard={clearBoard} score={score}/> : null }
-            { scoreBoard ? <HighScores /> : null}
+            {/* { scoreBoard ? <HighScores /> : null} */}
             </StyledTetris>
             <Footer />
         </StyledTetrisWrapper>
