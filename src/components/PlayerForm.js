@@ -5,7 +5,7 @@ import { StyledGameOverMenu } from './styles/StyledPopUps'
 export const PlayerForm = ({score, newGame}) => {
     const [gamerTag, setGamerTag] = useState('')
 
-    const hangleChange = (e) => {
+    const handleChange = (e) => {
         setGamerTag(e.target.value)
     }
 
