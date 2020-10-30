@@ -62,6 +62,7 @@ export const StyledGameOverMenu = styled.div`
 export const StyledHighScores = styled.div`
     width: 50%;
     margin: auto;
+    height: auto;
     align-content: center;
     background: #000;
     opacity: 0.8;
