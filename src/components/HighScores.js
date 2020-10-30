@@ -15,6 +15,7 @@ const HighScores = () => {
                 <h2>
                     High Scores:
                 </h2>
+                { scores.length ?
                     <table>
                         <tbody>
                             { scores.length ?
