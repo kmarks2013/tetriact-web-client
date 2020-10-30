@@ -20,6 +20,7 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
 
     return (
         <StyledPopUpWrapper>
+            {console.log(form)}
             {/* <StyledGameOverMenu>
                 <h2>
                 Game Over...
