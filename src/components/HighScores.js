@@ -25,7 +25,7 @@ const HighScores = () => {
                                             <td>{top.score}</td>
                                         </tr>
                                 )
-                            }) : null
+                            }) : <h3> Loading Scores...</h3>
                         }
                     </table>
             </StyledHighScores>
