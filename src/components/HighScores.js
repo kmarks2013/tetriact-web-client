@@ -17,16 +17,18 @@ const HighScores = () => {
                     High Scores:
                 </h2>
                     <table>
-                        { scores.length ?
-                            topTen.map( top => {
-                                return  (<tr>
-                                            <td> {i++}. </td>
-                                            <td>{top.gamertag}</td>
-                                            <td>{top.score}</td>
-                                        </tr>
-                                )
-                            }) : <h3> Loading Scores...</h3>
-                        }
+                        <tbody>
+                            { scores.length ?
+                                topTen.map( top => {
+                                    return  (<tr key={top.id}>
+                                                <td> {i++}. </td>
+                                                <td>{top.gamertag}</td>
+                                                <td>{top.score}</td>
+                                            </tr>
+                                    )
+                                }) : <h3> Loading Scores...</h3>
+                            }
+                        </tbody>
                     </table>
             </StyledHighScores>
         </StyledPopUpWrapper>
