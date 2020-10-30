@@ -8,6 +8,7 @@ const HighScores = () => {
 
     return (
         <StyledPopUpWrapper>
+        {console.log(scores, topTen)}
             <StyledHighScores>
                 <h2>
                     High Scores:
