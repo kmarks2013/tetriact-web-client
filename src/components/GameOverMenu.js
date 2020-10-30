@@ -3,6 +3,7 @@ import Button from './Button'
 import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 
 import { useScores } from '../hooks/useScores'
+import { PlayerForm } from './PlayerForm'
 
 
 const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
@@ -17,13 +18,13 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
         e.preventDefault()
         console.log('submitted', gamerTag)
         setGamerTag('')
-        clearBoard(player)
+        clearBoard()
 
     }
 
     return (
         <StyledPopUpWrapper>
-            <StyledGameOverMenu>
+            {/* <StyledGameOverMenu>
                 <h2>
                 Game Over...
                 </h2>
@@ -40,7 +41,8 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
                 <Button text='Play Again?' callback={newGame}/>
                 <p onClick={closeMenu}>X</p>
 
-            </StyledGameOverMenu>
+            </StyledGameOverMenu> */}
+            <PlayerForm />
         </StyledPopUpWrapper>
 
     )
