@@ -29,6 +29,5 @@ export const useScores = () => {
         )
     }, [])
 
-
     return {scores, topTen}
 }
