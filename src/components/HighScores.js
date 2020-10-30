@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledPopUpWrapper, StyledHighScores } from './styles/StyledPopUps'
+import { useScores } from '../hooks/useScores'
 
 
 const HighScores = () => {
