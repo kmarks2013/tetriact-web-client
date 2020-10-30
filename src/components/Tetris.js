@@ -26,7 +26,7 @@ const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
     const [ gameOver, setGameOver ] = useState(false)
     const [ paused, setPaused ] = useState(false)
-    const [ scoreBoard, setScoreBoard] = useState(false)
+    const [ scoreBoard, setScoreBoard] = useState(true)
     const [ nextTetro, resetTetro ] = useNextTetro()
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer(nextTetro)
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
