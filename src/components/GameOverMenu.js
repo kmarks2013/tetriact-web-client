@@ -11,11 +11,7 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
     const [gamerTag, setGamerTag] = useState('')
     const {scores} = useScores()
 
-    const handleChange = (e) => {
-        setGamerTag(e.target.value)
-    }
-
-    const handleSubmit = ( e, tag ) => {
+    const handleSubmit = ( e ) => {
         e.preventDefault()
         console.log('submitted', tag)
         // clearBoard()
