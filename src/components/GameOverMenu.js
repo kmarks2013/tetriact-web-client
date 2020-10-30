@@ -5,7 +5,7 @@ import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 import { useScores } from '../hooks/useScores'
 
 
-const GameOverMenu = ({newGame, closeMenu, clearBoard }) => {
+const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
     const [gamerTag, setGamerTag] = useState('')
     const {scores} = useScores()
 
