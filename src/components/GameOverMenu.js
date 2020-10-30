@@ -4,6 +4,7 @@ import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
 
 import { useScores } from '../hooks/useScores'
 import { PlayerForm } from './PlayerForm'
+import HighScores from './HighScores'
 
 
 const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
