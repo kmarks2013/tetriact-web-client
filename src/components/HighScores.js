@@ -15,6 +15,17 @@ const HighScores = () => {
                 <h2>
                     High Scores:
                 </h2>
+                    <table>
+                        { scores.length ?
+                            topTen.map( top => {
+                                return  (<tr>
+                                            <td>{top.gamertag}</td>
+                                            <td>{top.score}</td>
+                                        </tr>
+                                )
+                            }) : null
+                        }
+                    </table>
             </StyledHighScores>
         </StyledPopUpWrapper>
 
