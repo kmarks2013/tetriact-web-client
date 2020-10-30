@@ -12,7 +12,7 @@ const scoreReducer = (state, action) => {
 
 
 export const useScores = () => {
-    const [state, dispatch] = useReducer(scoreReducer, {scores:'hi'})
+    const [state, dispatch] = useReducer(scoreReducer, {scores:[]})
     const scores = state.scores
 
     useEffect( () => {
