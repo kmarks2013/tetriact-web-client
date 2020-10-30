@@ -18,16 +18,14 @@ const HighScores = () => {
                 { scores.length ?
                     <table>
                         <tbody>
-                            { scores.length ?
-                                topTen.map( top => {
-                                    return  (<tr key={top.id}>
-                                                <td> {i++}. </td>
-                                                <td>{top.gamertag}</td>
-                                                <td>{top.score}</td>
-                                            </tr>
-                                    )
-                                }) : <h3> Loading Scores...</h3>
-                            }
+                            {topTen.map( top => {
+                                return  (<tr key={top.id}>
+                                        <td> {i++}. </td>
+                                        <td>{top.gamertag}</td>
+                                        <td>{top.score}</td>
+                                    </tr>
+                                )
+                            })}
                         </tbody>
                     </table>
             </StyledHighScores>
