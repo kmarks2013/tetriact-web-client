@@ -13,7 +13,7 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
 
     const handleSubmit = ( e ) => {
         e.preventDefault()
-        console.log('submitted', tag)
+        console.log('submitted', gamerTag)
         // clearBoard()
     }
 
