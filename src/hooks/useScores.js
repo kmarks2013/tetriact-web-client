@@ -5,6 +5,8 @@ const scoreReducer = (state, action) => {
     switch (action.type) {
         case 'get_scores':
             return {...state, scores: action.payload}
+        default:
+            return state
     }
 }
 
