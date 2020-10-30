@@ -14,6 +14,7 @@ export const PlayerForm = ({score, newGame}) => {
                 <input type='text' />
                 <input type='submit' />
             </form>
+            <Button text='Play Again?' callback={newGame} />
         </div>
     )
 }
