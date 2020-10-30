@@ -2,7 +2,7 @@ import React from 'react'
 import { StyledGameOverMenu } from './styles/StyledPopUps'
 
 
-export const PlayerForm = () => {
+export const PlayerForm = ({score, newGame}) => {
     return (
         <div>
             <h2> Game Over... </h2>
