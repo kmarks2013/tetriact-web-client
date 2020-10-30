@@ -86,7 +86,7 @@ export const StyledHighScores = styled.div`
     table {
         ${'' /* margin: auto; */}
         font-family: Pixel, Arial, Helvetica, sans-serif;
-        font-size: 12;
+        font-size: 16px;
         margin: auto;
         padding: 0px 20px 20px 20px;
         color: white;
