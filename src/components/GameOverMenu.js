@@ -38,10 +38,10 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
                     <input type="submit"/>
                 </form>
                 <Button text='Play Again?' callback={newGame}/>
-                <p onClick={closeMenu}>X</p>
 
             </StyledGameOverMenu> */}
             <PlayerForm score={score} newGame={newGame} />
+            <p onClick={closeMenu}>X</p>
         </StyledPopUpWrapper>
 
     )
