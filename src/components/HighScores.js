@@ -4,6 +4,8 @@ import { useScores } from '../hooks/useScores'
 
 
 const HighScores = () => {
+    const {scores, topTen} = useScores()
+
     return (
         <StyledPopUpWrapper>
             <StyledHighScores>
