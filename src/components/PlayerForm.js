@@ -3,9 +3,11 @@ import Button from './Button'
 import { StyledGameOverMenu } from './styles/StyledPopUps'
 
 export const PlayerForm = ({score, newGame}) => {
+    const [gamerTag, setGamerTag] = useState('')
+
     return (
         <StyledGameOverMenu>
-            {console.log(score, newGame)}
+            {console.log(gamerTag)}
             <h2> Game Over... </h2>
             <h3> Your Score Was: a score </h3>
             <h4> To save your score enter a name below:</h4>
