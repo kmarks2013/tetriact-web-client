@@ -19,7 +19,6 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
         console.log('submitted', gamerTag)
         setGamerTag('')
         clearBoard()
-
     }
 
     return (
