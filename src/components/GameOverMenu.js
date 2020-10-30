@@ -41,7 +41,7 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
                 <p onClick={closeMenu}>X</p>
 
             </StyledGameOverMenu> */}
-            <PlayerForm score={score} />
+            <PlayerForm score={score} newGame={newGame} />
         </StyledPopUpWrapper>
 
     )
