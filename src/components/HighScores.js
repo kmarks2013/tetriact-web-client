@@ -28,6 +28,9 @@ const HighScores = () => {
                             })}
                         </tbody>
                     </table>
+                :
+                <h3> Loading Scores...</h3>
+                }
             </StyledHighScores>
     )
 }
