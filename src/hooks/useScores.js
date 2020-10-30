@@ -15,6 +15,9 @@ export const useScores = () => {
     const [state, dispatch] = useReducer(scoreReducer, {scores:[]})
     const scores = state.scores
 
+
+    const topTen = scores.slice(0,10)
+
     useEffect( () => {
         console.log(state)
         fetch('http://localhost:3000/highscores')
