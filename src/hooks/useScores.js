@@ -28,5 +28,5 @@ export const useScores = () => {
     }, [])
 
 
-    return [scores]
+    return {scores, topTen}
 }
