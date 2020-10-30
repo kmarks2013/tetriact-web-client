@@ -61,8 +61,6 @@ export const StyledGameOverMenu = styled.div`
 `
 export const StyledHighScores = styled.div`
     width: 50%;
-    height: auto;
-    flex-driectoin: column;
     margin: auto;
     align-content: center;
     background: #000;
