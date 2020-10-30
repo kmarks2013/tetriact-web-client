@@ -39,7 +39,7 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
                 <Button text='Play Again?' callback={newGame}/>
 
             </StyledGameOverMenu> */}
-            <PlayerForm score={score} newGame={newGame} handleSubmit={handleSubmit} setGamerTag={setGamerTag} gamerTag={gamerTag}/>
+            {form ? <PlayerForm score={score} newGame={newGame} handleSubmit={handleSubmit} setGamerTag={setGamerTag} gamerTag={gamerTag}/>: null}
             <p onClick={closeMenu}>X</p>
             {/* <HighScores /> */}
         </StyledPopUpWrapper>
