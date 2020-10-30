@@ -7,6 +7,7 @@ const HighScores = () => {
     const {scores, topTen} = useScores()
 
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
+    let i = 1
 
     return (
         <StyledPopUpWrapper>
