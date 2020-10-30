@@ -4,7 +4,7 @@ import { StyledGameOverMenu } from './styles/StyledPopUps'
 
 export const PlayerForm = ({score, newGame}) => {
     return (
-        <div>
+        <StyledGameOverMenu>
             {console.log(score, newGame)}
             <h2> Game Over... </h2>
             <h3> Your Score Was: a score </h3>
@@ -14,6 +14,6 @@ export const PlayerForm = ({score, newGame}) => {
                 <input type='submit' />
             </form>
             <Button text='Play Again?' callback={newGame} />
-        </div>
+        </StyledGameOverMenu>
     )
 }
