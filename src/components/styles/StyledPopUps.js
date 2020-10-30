@@ -69,7 +69,7 @@ export const StyledHighScores = styled.div`
 
     h2 {
         font-family: Pixel, Arial, Helvetica, sans-serif;
-        font-size: 50px;
+        font-size: 24px;
         margin: auto;
         padding: 20px;
         color: white ;
