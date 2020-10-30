@@ -20,6 +20,7 @@ const HighScores = () => {
                         { scores.length ?
                             topTen.map( top => {
                                 return  (<tr>
+                                            <td> {i++}. </td>
                                             <td>{top.gamertag}</td>
                                             <td>{top.score}</td>
                                         </tr>
