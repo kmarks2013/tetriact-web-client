@@ -8,7 +8,7 @@ const HighScores = () => {
         <StyledPopUpWrapper>
             <StyledHighScores>
                 <h2>
-                    Adds a basic render for the high scores
+                    High Scores:
                 </h2>
             </StyledHighScores>
         </StyledPopUpWrapper>
