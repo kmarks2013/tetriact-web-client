@@ -75,6 +75,14 @@ export const StyledHighScores = styled.div`
         color: white ;
     }
 
+        h3 {
+            font-family: Pixel, Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            margin: auto;
+            padding: 12px;
+            color: white ;
+        }
+
     table {
         ${'' /* margin: auto; */}
         font-family: Pixel, Arial, Helvetica, sans-serif;
