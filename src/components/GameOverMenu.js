@@ -39,7 +39,6 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
                     <input onChange={handleChange} type='text' value={gamerTag}/>
                     <input type="submit"/>
                 </form>
-
                 <Button text='Play Again?' callback={newGame}/>
                 <p onClick={closeMenu}>X</p>
 
