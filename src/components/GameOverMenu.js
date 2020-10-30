@@ -19,12 +19,12 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
         e.preventDefault()
         console.log('submitted', gamerTag)
         setGamerTag('')
-        clearBoard()
+        clearBoard(player)
+
     }
 
     return (
         <StyledPopUpWrapper>
-            {/* {console.log(scores)} */}
             <StyledGameOverMenu>
                 <h2>
                 Game Over...
