@@ -10,9 +10,8 @@ const HighScores = () => {
     let i = 1
 
     return (
-        <StyledPopUpWrapper>
-        {console.log(scores, topTen)}
             <StyledHighScores>
+                {console.log(scores, topTen)}
                 <h2>
                     High Scores:
                 </h2>
@@ -31,8 +30,6 @@ const HighScores = () => {
                         </tbody>
                     </table>
             </StyledHighScores>
-        </StyledPopUpWrapper>
-
     )
 }
 
