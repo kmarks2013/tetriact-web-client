@@ -14,11 +14,32 @@ const scoreReducer = (state, action) => {
 
 
 export const useScores = () => {
-    const [state, dispatch] = useReducer(scoreReducer, {scores:[]})
+    const [state, dispatch] = useReducer(scoreReducer, {scores:[], player:{}})
     const scores = state.scores
-
+    // const player = state.player
 
     const topTen = scores.slice(0,10)
+
+    // const saveScore = (gamerTag, playerScore) => {
+    //     console.log(gamerTag, playerScore)
+    //     //this will post the score to user with params of gamertag and score.
+    //     // it will then update the state of scores and console.log it.
+    //     fetch('http://localhost:3000/users/', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Accept': 'application/json',
+    //         },
+    //         body: JSON.stringify({
+    //                 gamertag: gamerTag,
+    //                 score: playerScore
+    //         })
+    //     })
+    //     .then(res => res.json())
+    //     .then( newScore => {
+    //         return dispatch({type: 'add_score', payload: newScore})
+    //     }, console.log(player,scores))
+    // }
 
     useEffect( () => {
         console.log(state)
