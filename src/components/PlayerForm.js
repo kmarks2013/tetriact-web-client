@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledGameOverMenu } from './styles/StyledPopUps'
+// import { StyledGameOverMenu } from './styles/StyledPopUps'
 
 
 export const PlayerForm = ({score, newGame}) => {
