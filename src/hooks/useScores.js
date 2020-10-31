@@ -25,6 +25,7 @@ export const useScores = () => {
     const saveScore = (gamerTag, playerScore) => {
         const formData = { gamertag: gamerTag, score: playerScore}
         console.log(formData)
+        return dispatch({type: 'add_score', payload: formData})
         //this will post the score to user with params of gamertag and score.
         // it will then update the state of scores and console.log it.
         // fetch('http://localhost:3000/users/', {
