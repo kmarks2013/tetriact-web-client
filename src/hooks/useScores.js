@@ -54,5 +54,5 @@ export const useScores = () => {
         )
     }, [])
 
-    return {scores, topTen}
+    return {scores, topTen, saveScore, player}
 }
