@@ -18,7 +18,7 @@ const scoreReducer = (state, action) => {
 export const useScores = () => {
     const [state, dispatch] = useReducer(scoreReducer, {scores:[], player:null})
     const scores = state.scores
-    // const player = state.player
+    const player = state.player
 
     const topTen = scores.slice(0,10)
 
