@@ -11,7 +11,7 @@ const HighScores = ({player, scores, topTen}) => {
 
     return (
             <StyledHighScores>
-                {console.log(scores, topTen)}
+                { player ? console.log(player): console.log('what')}
                 <h2>
                     High Scores:
                 </h2>
