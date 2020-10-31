@@ -16,7 +16,7 @@ const scoreReducer = (state, action) => {
 
 
 export const useScores = () => {
-    const [state, dispatch] = useReducer(scoreReducer, {scores:[], player:{}})
+    const [state, dispatch] = useReducer(scoreReducer, {scores:[], player:null})
     const scores = state.scores
     // const player = state.player
 
