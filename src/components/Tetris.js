@@ -8,6 +8,7 @@ import GameOverMenu from './GameOverMenu'
 import PauseMenu from './PauseMenu'
 import Button from './Button'
 import AudioMenu from './AudioMenu'
+import HighScores from './HighScores'
 
 import { usePlayer } from '../hooks/usePlayer'
 import { useInterval } from '../hooks/useInterval'
@@ -16,7 +17,6 @@ import { useGameStatus } from '../hooks/useGameStatus'
 import { useAudio } from '../hooks/useAudio'
 import { useNextStage} from '../hooks/useNextStage'
 import { useNextTetro } from '../hooks/useNextTetro'
-// import { useScores } from '../hooks/useScores'
 
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import {createStage, checkCollision, createNext } from '../gameHelpers'
@@ -26,13 +26,13 @@ const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
     const [ gameOver, setGameOver ] = useState(true)
     const [ paused, setPaused ] = useState(false)
+    const [ scoreBoard, setScoreBoard] = useState(false)
     const [ nextTetro, resetTetro ] = useNextTetro()
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer(nextTetro)
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
-    const [ score, setScore, rows, setRows, level, setLevel ] = useGameStatus(rowsCleared)
+    const { score, setScore, rows, setRows, level, setLevel } = useGameStatus(rowsCleared)
     const {audio, toggleSound, pauseAudio, restartAudio } = useAudio()
-    // const [scores] = useScores()
 
 
     const movePlayer = dir => {
@@ -50,16 +50,31 @@ const Tetris = () => {
         resetTetro()
         resetPlayer()
         setGameOver(false)
+        setScoreBoard(false)
         setPaused(false)
         setScore(0)
         setRows(0)
         setLevel(0)
-     }
+    }
 
     const pauseGame = () => {
         setPaused(true)
         pauseAudio(audio)
         setDropTime(null)
+    }
+
+    const closeGameOver = () => {
+        setGameOver(false)
+    }
+
+    const clearBoard = () => {
+        setStage(createStage())
+        setNextStage(createNext())
+        setGameOver(false)
+        setScoreBoard(true)
+        setScore(0)
+        setRows(0)
+        setLevel(0)
     }
 
     const resumeGame = () => {
@@ -136,21 +151,18 @@ const Tetris = () => {
             <NextStage nextStage={nextStage} />
             <Stage stage={stage} />
             <aside>
-               {gameOver ? (
-                    <Display gameOver={gameOver} text = "Game Over" />
-            ): (
                 <div>
                     <Display text={`Score: ${score}`} />
                     <Display text={`Rows: ${rows}`}/>
                     <Display text={`Level: ${level}`} />
                 </div>
-            )}
                 <Button width={100} text="Start Game" callback={startGame} />
                 <Button width={100} text="Pause Game" callback={pauseGame} />
                 <AudioMenu song={audio} />
             </aside>
-            { paused ?  <PauseMenu callback={resumeGame}/>: null}
-            { gameOver ?  <GameOverMenu callback={startGame} score={score}/> : null }
+            { paused ?  <PauseMenu callback={resumeGame}/> : null}
+            { gameOver ?  <GameOverMenu newGame={startGame} closeMenu={closeGameOver} clearBoard={clearBoard} score={score}/> : null }
+            {/* { scoreBoard ? <HighScores /> : null} */}
             </StyledTetris>
             <Footer />
         </StyledTetrisWrapper>

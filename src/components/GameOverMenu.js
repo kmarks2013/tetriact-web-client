@@ -1,34 +1,37 @@
 import React, { useState } from 'react'
 import Button from './Button'
-import { StyledPopUpWrapper, StyledGameOverMenu } from './styles/StyledPopUps'
+import { StyledPopUpWrapper } from './styles/StyledPopUps'
 
-const GameOverMenu = ({callback, score}) => {
+import { useScores } from '../hooks/useScores'
+import { PlayerForm } from './PlayerForm'
+import HighScores from './HighScores'
+
+
+const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
     const [gamerTag, setGamerTag] = useState('')
+    const [form, setForm] = useState(true)
+    const [highScores, setHighScores] = useState(false)
+    const {scores, saveScore, topTen, player} = useScores()
 
+    const handleSubmit = ( e ) => {
+        e.preventDefault()
+        console.log('submitted', gamerTag)
+        setForm(false)
+        setHighScores(true)
+        saveScore(gamerTag, score)
+        // clearBoard()
+    }
 
     return (
         <StyledPopUpWrapper>
-            <StyledGameOverMenu>
-                <h2>
-                Game Over...
-                </h2>
-                <h3>
-                Your Score was: {score}!
-                </h3>
-                <h4>
-                To save your score enter a name below:
-                </h4>
-                <form>
-                    <input type='text' value={gamerTag} name='gamerTag'/>
-                </form>
-                <p>
-                This screen will also allow a player to restart from scratch, or close their window so they can look at their game.
-                </p>
+            {console.log(scores)}
+            {console.log(player)}
+            {console.log(form)}
+            {form ? <PlayerForm score={score} newGame={newGame} handleSubmit={handleSubmit} setGamerTag={setGamerTag} gamerTag={gamerTag}/>:  null }
 
-                <Button text='Play Again?' callback={() =>console.log('restart the game')}/>
-                <p>X</p>
-
-            </StyledGameOverMenu>
+            { highScores ? <HighScores  scores={scores} topTen={topTen}  player={player} />  : null}
+            <p onClick={closeMenu}>X</p>
+            {/* <HighScores /> */}
         </StyledPopUpWrapper>
 
     )
