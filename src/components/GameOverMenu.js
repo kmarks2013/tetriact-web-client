@@ -10,7 +10,8 @@ import HighScores from './HighScores'
 const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
     const [gamerTag, setGamerTag] = useState('')
     const [form, setForm] = useState(true)
-    const {scores} = useScores()
+    const [highScores, setHighScores] = useState(false)
+    const {scores, saveScore, topTen, player} = useScores()
 
     const handleSubmit = ( e ) => {
         e.preventDefault()
