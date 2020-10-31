@@ -17,6 +17,8 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
         e.preventDefault()
         console.log('submitted', gamerTag)
         setForm(false)
+        setHighScores(true)
+        saveScore(gamerTag, score)
         // clearBoard()
     }
 
