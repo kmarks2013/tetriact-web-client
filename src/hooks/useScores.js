@@ -25,24 +25,24 @@ export const useScores = () => {
     const saveScore = (gamerTag, playerScore) => {
         const formData = { gamertag: gamerTag, score: playerScore}
         console.log(formData)
-        return dispatch({type: 'add_score', payload: formData})
+        // return dispatch({type: 'add_score', payload: formData})
         //this will post the score to user with params of gamertag and score.
         // it will then update the state of scores and console.log it.
-        // fetch('http://localhost:3000/users/', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Accept': 'application/json',
-        //     },
-        //     body: JSON.stringify({
-        //             gamertag: gamerTag,
-        //             score: playerScore
-        //     })
-        // })
-        // .then(res => res.json())
-        // .then( newScore => {
-        //     return dispatch({type: 'add_score', payload: newScore})
-        // })
+        fetch('http://localhost:3000/users/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify({
+                    gamertag: gamerTag,
+                    score: playerScore
+            })
+        })
+        .then(res => res.json())
+        .then( newScore => {
+            return dispatch({type: 'add_score', payload: newScore})
+        })
     }
 
     useEffect( () => {
