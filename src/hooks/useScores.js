@@ -33,10 +33,7 @@ export const useScores = () => {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
             },
-            body: JSON.stringify({
-                    gamertag: gamerTag,
-                    score: playerScore
-            })
+            body: JSON.stringify(formData)
         })
         .then(res => res.json())
         .then( newScore => {
