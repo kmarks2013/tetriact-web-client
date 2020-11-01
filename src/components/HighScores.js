@@ -35,7 +35,7 @@ return (
     <StyledHighScores>
     {console.log(topTen)}
                 {/* {renderScores()} */}
-                { console.log(scores, topTen, player)}
+                {/* { console.log(scores, topTen, playddfer)} */}
                 <h2>
                     High Scores:
                 </h2>
