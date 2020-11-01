@@ -33,7 +33,7 @@ const HighScores = ({player}) => {
 
 return (
     <StyledHighScores>
-    {topScores()}
+    {scores.length ? console.log(topScores().length) : console.log('hi')}
     {console.log(topTen)}
                 {/* {renderScores()} */}
                 {/* { console.log(scores, topTen, playddfer)} */}
