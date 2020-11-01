@@ -31,6 +31,7 @@ export const useScores = (gamePlayer) => {
                 newScores = [...topTen, gamePlayer]
                 console.log(newScores)
             }
+            return newScores
         } else{
             return
         }
