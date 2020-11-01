@@ -33,12 +33,16 @@ return (
                 {/* { scores.length && player ?
                     <div>
                             {topTen.map( top => {
-                                return  (<tr key={top.id}>
-                                        <td> {i++}. </td>
-                                        <td>{top.gamertag}</td>
-                                        <td>{top.score}</td>
-                                    </tr>
-                                )
+                            return ( <div>
+                               {top.id === player.id ?
+                                    <p style={{color: 'white'}}>{player.gamertag} -player</p>
+                                :
+                                    <p style={{color: 'white'}}>{top.gamertag} -top</p>
+                                }
+                                {console.log(top.id, player.id, 'ternary')}
+                                return <p>{top.gamerTag}</p>
+                             </div>
+                            )
                             })}
                         </tbody>
                     </table>
