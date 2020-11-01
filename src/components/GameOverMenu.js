@@ -11,7 +11,7 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
     const [gamerTag, setGamerTag] = useState('')
     const [form, setForm] = useState(true)
     const [highScores, setHighScores] = useState(false)
-    const {scores, saveScore, topTen, player} = useScores()
+    const {saveScore, player} = useScores()
 
     const handleSubmit = ( e ) => {
         e.preventDefault()
