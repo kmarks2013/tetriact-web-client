@@ -5,7 +5,7 @@ import { useScores } from '../hooks/useScores'
 
 // const HighScores = ({player, scores, topTen}) => {
 const HighScores = ({player}) => {
-    const {scores, topTen} = useScores()
+    const {scores, topTen, topScores} = useScores(player)
 
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
     let i = 1
@@ -33,13 +33,14 @@ const HighScores = ({player}) => {
 
 return (
     <StyledHighScores>
+    {topScores()}
     {console.log(topTen)}
                 {/* {renderScores()} */}
-                { console.log(scores, topTen, player)}
+                {/* { console.log(scores, topTen, playddfer)} */}
                 <h2>
                     High Scores:
                 </h2>
-                {/* { scores.length && player ?
+                { scores.length && player ?
                     <div>
                             {topTen.map( top => {
                             return ( <div>
@@ -56,7 +57,7 @@ return (
                     </div>
                 :
                 <h3> Loading Scores...</h3>
-                } */}
+                }
             </StyledHighScores>
     )
 }

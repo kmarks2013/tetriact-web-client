@@ -20,8 +20,26 @@ export const useScores = (gamePlayer) => {
 
     const topTen = scores.slice(0,10)
 
+
+    const topScores = () =>{
+        if (scores.length){
+            let newScores = []
+            if(topTen.some(top => top.id === gamePlayer.id)){
+                newScores = [...topTen]
+                console.log(newScores)
+            } else {
+                newScores = [...topTen, gamePlayer]
+                console.log(newScores)
+            }
+        } else{
+            return
+        }
+    }
+
+    // topScores()
+
     const saveScore = (gamerTag, playerScore) => {
-        const formData = { gamertag: gamerTag, score: 40000}
+        const formData = { gamertag: gamerTag, score: 50000}
         console.log(formData)
         //this will post the score to user with params of gamertag and score.
         // it will then update the state of scores and console.log it.
@@ -39,15 +57,21 @@ export const useScores = (gamePlayer) => {
         })
     }
 
+    console.log(gamePlayer)
+
     useEffect( () => {
-        if (gamePlayer){}
-        console.log(state)
-        fetch('http://localhost:3000/highscores')
-        .then(res => res.json())
-        .then( scores => 
-            dispatch({type:"get_scores", payload:scores}) 
-        )
+        if (gamePlayer){
+            console.log(state)
+            fetch('http://localhost:3000/highscores')
+            .then(res => res.json())
+            .then( scores =>
+                dispatch({type:"get_scores", payload:scores})
+            )
+        } else{
+            console.log(gamePlayer)
+            console.log('que')
+        }
     }, [gamePlayer])
 
-    return {scores, topTen, saveScore, player}
+    return {scores, topTen, saveScore, player, topScores}
 }
