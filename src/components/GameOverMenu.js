@@ -26,8 +26,10 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
 
             {form ? <PlayerForm score={score} newGame={newGame} handleSubmit={handleSubmit} setGamerTag={setGamerTag} gamerTag={gamerTag}/>:  null }
 
-            { highScores ? <HighScores  scores={scores} topTen={topTen}  player={player} />  : null}
-            <p onClick={closeMenu}>X</p>
+            { highScores ? <HighScores player={player} />  : null}
+            <div>
+                <p onClick={closeMenu}>X</p>
+            </div>
             {/* <HighScores /> */}
         </StyledPopUpWrapper>
 
