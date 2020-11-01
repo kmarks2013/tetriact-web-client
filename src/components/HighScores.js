@@ -47,7 +47,7 @@ return (
                     </div>
                 :
                 <h3> Loading Scores...</h3>
-                }
+                } */}
             </StyledHighScores>
     )
 }
