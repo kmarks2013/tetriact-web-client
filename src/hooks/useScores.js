@@ -6,7 +6,6 @@ const scoreReducer = (state, action) => {
         case 'get_scores':
             return {...state, scores: action.payload}
         case 'add_score':
-            console.log('hit', action.payload)
             return {...state, player: action.payload}
         default:
             return state
