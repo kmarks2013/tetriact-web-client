@@ -118,7 +118,6 @@ const Tetris = () => {
     }
 
     const move = ({ keyCode }) => {
-        console.log(paused)
         if (!gameOver && !paused){
             if(keyCode === 37){
                 movePlayer(-1)
