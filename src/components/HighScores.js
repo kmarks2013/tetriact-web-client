@@ -10,9 +10,23 @@ const HighScores = ({player}) => {
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
     let i = 1
 
-    return (
-            <StyledHighScores>
-                { player ? console.log(player): console.log('what')}
+
+    {/* <table>
+        <tbody> */}
+    {/* return  (<tr key={top.id}>
+            <td> {i++}. </td>
+            <td>{top.gamertag}</td>
+            <td>{top.score}</td>
+        </tr>
+    ) */}
+    {/* </tbody> */}
+{/* </table> */}
+
+return (
+    <StyledHighScores>
+    {console.log(topTen)}
+                {/* {renderScores()} */}
+                { console.log(scores, topTen, player)}
                 <h2>
                     High Scores:
                 </h2>
