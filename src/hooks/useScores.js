@@ -39,15 +39,19 @@ export const useScores = (gamePlayer) => {
         })
     }
 
-    useEffect( () => {
-        if (gamePlayer){}
-        console.log(state)
-        fetch('http://localhost:3000/highscores')
-        .then(res => res.json())
-        .then( scores => 
-            dispatch({type:"get_scores", payload:scores}) 
-        )
-    }, [gamePlayer])
+    // useEffect( () => {
+    //     if (gamePlayer){
+    //         console.log(state)
+    //         fetch('http://localhost:3000/highscores')
+    //         .then(res => res.json())
+    //         .then( scores =>
+    //             dispatch({type:"get_scores", payload:scores})
+    //         )
+    //     } else{
+    //         console.log(gamePlayer)
+    //         console.log('que')
+    //     }
+    // }, [gamePlayer])
 
     return {scores, topTen, saveScore, player}
 }
