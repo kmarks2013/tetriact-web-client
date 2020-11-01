@@ -42,7 +42,7 @@ return (
                 </h2>
                 { scores.length && player ?
                     <div>
-                            {topTen.map( top => {
+                            {topScores().map( top => {
                             return ( <div>
                                {top.id === player.id ?
                                     <p style={{color: 'white'}}>{player.gamertag} -player</p>
