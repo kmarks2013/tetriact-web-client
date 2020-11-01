@@ -44,8 +44,7 @@ return (
                              </div>
                             )
                             })}
-                        </tbody>
-                    </table>
+                    </div>
                 :
                 <h3> Loading Scores...</h3>
                 }
