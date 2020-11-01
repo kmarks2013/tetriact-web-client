@@ -20,6 +20,24 @@ export const useScores = (gamePlayer) => {
 
     const topTen = scores.slice(0,10)
 
+
+    const topScores = () =>{
+        if (scores.length){
+            let newScores = []
+            if(topTen.some(top => top.id === gamePlayer.id)){
+                newScores = [...topTen]
+                console.log(newScores)
+            } else {
+                newScores = [...topTen, gamePlayer]
+                console.log(newScores)
+            }
+        } else{
+            return
+        }
+    }
+
+    // topScores()
+
     const saveScore = (gamerTag, playerScore) => {
         const formData = { gamertag: gamerTag, score: 40000}
         console.log(formData)
