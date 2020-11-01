@@ -5,7 +5,7 @@ import { useScores } from '../hooks/useScores'
 
 // const HighScores = ({player, scores, topTen}) => {
 const HighScores = ({player}) => {
-    const {scores, topTen} = useScores()
+    const {scores, topTen} = useScores(player)
 
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
     let i = 1
