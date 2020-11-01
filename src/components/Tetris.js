@@ -81,7 +81,6 @@ const Tetris = () => {
         setDropTime(1000/ (level+1) + 200)
         restartAudio(audio)
         setPaused(false)
-        console.log('resume game')
     }
 
     const drop = () => {
@@ -98,7 +97,6 @@ const Tetris = () => {
         } else {
             // Game Over
             if (player.pos.y < 1){
-                console.log('GAME OVER!!!!!')
                 setGameOver(true)
                 setDropTime(null)
             }
@@ -120,7 +118,6 @@ const Tetris = () => {
     }
 
     const move = ({ keyCode }) => {
-        console.log(paused)
         if (!gameOver && !paused){
             if(keyCode === 37){
                 movePlayer(-1)
