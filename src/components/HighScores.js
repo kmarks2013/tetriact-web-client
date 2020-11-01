@@ -39,7 +39,7 @@ return (
                 <h2>
                     High Scores:
                 </h2>
-                {/* { scores.length && player ?
+                { scores.length && player ?
                     <div>
                             {topTen.map( top => {
                             return ( <div>
@@ -56,7 +56,7 @@ return (
                     </div>
                 :
                 <h3> Loading Scores...</h3>
-                } */}
+                }
             </StyledHighScores>
     )
 }
