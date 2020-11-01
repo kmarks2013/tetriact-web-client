@@ -4,7 +4,6 @@ import {useReducer, useEffect} from 'react'
 const scoreReducer = (state, action) => {
     switch (action.type) {
         case 'get_scores':
-            console.log('miss')
             return {...state, scores: action.payload}
         case 'add_score':
             console.log('hit', action.payload)
