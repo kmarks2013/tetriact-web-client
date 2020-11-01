@@ -40,6 +40,7 @@ export const useScores = (gamePlayer) => {
     }
 
     useEffect( () => {
+        if (gamePlayer){}
         console.log(state)
         fetch('http://localhost:3000/highscores')
         .then(res => res.json())
