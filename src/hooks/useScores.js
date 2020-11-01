@@ -46,7 +46,7 @@ export const useScores = (gamePlayer) => {
         .then( scores => 
             dispatch({type:"get_scores", payload:scores}) 
         )
-    }, [])
+    }, [gamePlayer])
 
     return {scores, topTen, saveScore, player}
 }
