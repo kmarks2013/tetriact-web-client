@@ -10,6 +10,15 @@ const HighScores = ({player}) => {
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
     let i = 1
 
+    // const renderScores = () => {
+    //     let newScores = []
+    //     topTen
+    //     if (topTen.includes(player)){
+    //         console.log('hi')
+    //     } else{
+    //         console.log('bye')
+    //     }
+    // }
 
     {/* <table>
         <tbody> */}
