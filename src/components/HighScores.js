@@ -30,9 +30,8 @@ return (
                 <h2>
                     High Scores:
                 </h2>
-                { scores.length ?
-                    <table>
-                        <tbody>
+                {/* { scores.length && player ?
+                    <div>
                             {topTen.map( top => {
                                 return  (<tr key={top.id}>
                                         <td> {i++}. </td>
