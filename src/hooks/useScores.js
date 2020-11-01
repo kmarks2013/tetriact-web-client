@@ -39,7 +39,7 @@ export const useScores = (gamePlayer) => {
     // topScores()
 
     const saveScore = (gamerTag, playerScore) => {
-        const formData = { gamertag: gamerTag, score: 40000}
+        const formData = { gamertag: gamerTag, score: 50000}
         console.log(formData)
         //this will post the score to user with params of gamertag and score.
         // it will then update the state of scores and console.log it.
