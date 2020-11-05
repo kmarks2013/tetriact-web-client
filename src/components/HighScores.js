@@ -23,7 +23,7 @@ const HighScores = ({player}) => {
         // }
         
 
-    {/* <table>
+        {/* <table>
         <tbody> */}
     {/* return  (<tr key={top.id}>
             <td> {i++}. </td>
