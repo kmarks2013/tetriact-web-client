@@ -44,6 +44,7 @@ return (
 
                 {/* {renderScores()} */}
                 {/* { console.log(scores, topTen, playddfer)} */}
+                                    {/* {scores.findIndex(score =>  score.id === player.id) } */}
                 <h2>
                     High Scores:
                 </h2>
@@ -52,7 +53,7 @@ return (
                             {topScores().map( top => {
                             return ( <div>
                                {top.id === player.id ?
-                                    <p style={{color: 'white'}}>{player.gamertag} -player</p>
+                                    <p style={{color: 'red'}}>{playerIndex} {player.gamertag} {player.score}</p>
                                 :
                                     <p style={{color: 'white'}}>{top.gamertag} -top</p>
                                 }
