@@ -13,7 +13,7 @@ const HighScores = ({player}) => {
 
     const playerIndex = scores.findIndex(score => score.id === player.id) + 1
     // const renderScores = () => {
-    //     let newScores = []
+        //     let newScores = []
     //     topTen
     //     if (topTen.includes(player)){
     //         console.log('hi')
