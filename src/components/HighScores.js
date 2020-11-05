@@ -10,6 +10,9 @@ const HighScores = ({player}) => {
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
     let i = 1
 
+
+    const playerIndex = scores.findIndex(score => score.id === player.id) + 1
+
     // const renderScores = () => {
     //     let newScores = []
     //     topTen
@@ -33,21 +36,26 @@ const HighScores = ({player}) => {
 
 return (
     <StyledHighScores>
-    {topScores()}
-    {console.log(topTen)}
+    {scores.length ? console.log(topScores().length) : console.log('hi')}
+
+    {console.log(playerIndex)}
+
+    {console.log(scores.findIndex(score =>  score.id === player.id) +1, 'my index', scores)}
+
                 {/* {renderScores()} */}
                 {/* { console.log(scores, topTen, playddfer)} */}
+                                    {/* {scores.findIndex(score =>  score.id === player.id) } */}
                 <h2>
                     High Scores:
                 </h2>
                 { scores.length && player ?
                     <div>
-                            {topTen.map( top => {
+                            {topScores().map( top => {
                             return ( <div>
                                {top.id === player.id ?
-                                    <p style={{color: 'white'}}>{player.gamertag} -player</p>
+                                    <p style={{color: 'red'}}>{playerIndex} {player.gamertag} {player.score}</p>
                                 :
-                                    <p style={{color: 'white'}}>{top.gamertag} -top</p>
+                                    <p style={{color: 'white'}}> {i++} {top.gamertag} {top.score}</p>
                                 }
                                 {console.log(top.id, player.id, 'ternary')}
                                 return <p>{top.gamerTag}</p>

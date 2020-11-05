@@ -31,6 +31,7 @@ export const useScores = (gamePlayer) => {
                 newScores = [...topTen, gamePlayer]
                 console.log(newScores)
             }
+            return newScores
         } else{
             return
         }
@@ -39,7 +40,7 @@ export const useScores = (gamePlayer) => {
     // topScores()
 
     const saveScore = (gamerTag, playerScore) => {
-        const formData = { gamertag: gamerTag, score: 50000}
+        const formData = { gamertag: gamerTag, score: 10000}
         console.log(formData)
         //this will post the score to user with params of gamertag and score.
         // it will then update the state of scores and console.log it.
@@ -67,6 +68,7 @@ export const useScores = (gamePlayer) => {
             .then( scores =>
                 dispatch({type:"get_scores", payload:scores})
             )
+            console.log(scores)
         } else{
             console.log(gamePlayer)
             console.log('que')
