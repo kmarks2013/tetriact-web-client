@@ -20,6 +20,16 @@ export const useScores = (gamePlayer) => {
 
     const topTen = scores.slice(0,10)
 
+    const gameScores = () => {
+        if (scores.length) {
+            let newScores = []
+            if (topTen.find(score => score.id === gamePlayer.id)){
+                return newScores = topTen
+            } else{
+                return newScores
+            }
+        }
+    }
 
     const topScores = () =>{
         if (scores.length){
