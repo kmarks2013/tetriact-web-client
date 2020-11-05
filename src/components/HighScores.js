@@ -55,7 +55,7 @@ return (
                                {top.id === player.id ?
                                     <p style={{color: 'red'}}>{playerIndex} {player.gamertag} {player.score}</p>
                                 :
-                                    <p style={{color: 'white'}}>{top.gamertag} -top</p>
+                                    <p style={{color: 'white'}}> {i++} {top.gamertag} {top.score}</p>
                                 }
                                 {console.log(top.id, player.id, 'ternary')}
                                 return <p>{top.gamerTag}</p>
