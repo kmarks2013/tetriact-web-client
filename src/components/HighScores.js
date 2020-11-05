@@ -18,9 +18,10 @@ const HighScores = ({player}) => {
     //     if (topTen.includes(player)){
     //         console.log('hi')
     //     } else{
-    //         console.log('bye')
-    //     }
-    // }
+        //         console.log('bye')
+        //     }
+        // }
+        
 
     {/* <table>
         <tbody> */}
