@@ -42,18 +42,40 @@ return (
                 </h2>
                 { scores.length && player ?
                     <div>
-                            {topScores().map( top => {
-                            return ( <div>
-                               {top.id === player.id ?
-                                    <p style={{color: 'red'}}>{playerIndex} {player.gamertag} {player.score}</p>
-                                :
-                                    <p style={{color: 'white'}}> {i++} {top.gamertag} {top.score}</p>
-                                }
-                                {console.log(top.id, player.id, 'ternary')}
-                                return <p>{top.gamerTag}</p>
-                             </div>
-                            )
-                            })}
+                        {gameScores().length ?
+                        // mapthorugh game scores to render out the top 10
+                            <>
+                                {gameScores().map( score => {
+                                    return (
+                                        <>
+                                        {score.id === player.id?
+                                            <p style={{color: 'red'}}>{player.gamertag}</p>
+                                        :
+                                            <p style={{color: 'white'}}> {score.score} </p>
+                                        }
+                                        </>
+                                    )
+                                })}
+                           {/* <p>hi</p> */}
+                            </>
+                        :
+                            <>
+                                {topScores().map( top => {
+                                    return (
+                                    <>
+                                    {top.id === player.id ?
+                                            <p style={{color: 'red'}}>{playerIndex} {player.gamertag} {player.score}</p>
+                                        :
+                                            <p style={{color: 'white'}}> {i++} {top.gamertag} {top.score}</p>
+                                        }
+                                        {console.log(top.id, player.id, 'ternary')}
+                                        {/* return <p>{top.gamerTag}</p> */}
+                                    </>
+                                    )
+                                })}
+                            <p>no</p>
+                            </>
+                        }
                     </div>
                 :
                 <h3> Loading Scores...</h3>
