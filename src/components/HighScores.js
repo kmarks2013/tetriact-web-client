@@ -36,15 +36,7 @@ const HighScores = ({player}) => {
 
 return (
     <StyledHighScores>
-    {scores.length ? console.log(topScores().length) : console.log('hi')}
 
-    {console.log(playerIndex)}
-
-    {console.log(scores.findIndex(score =>  score.id === player.id) +1, 'my index', scores)}
-
-                {/* {renderScores()} */}
-                {/* { console.log(scores, topTen, playddfer)} */}
-                                    {/* {scores.findIndex(score =>  score.id === player.id) } */}
                 <h2>
                     High Scores:
                 </h2>
