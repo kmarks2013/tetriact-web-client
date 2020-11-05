@@ -32,7 +32,7 @@ const HighScores = ({player}) => {
             </tr>
     ) */}
     {/* </tbody> */}
-{/* </table> */}
+    {/* </table> */}
 
 return (
     <StyledHighScores>
