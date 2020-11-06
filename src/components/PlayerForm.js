@@ -10,6 +10,10 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}
         setGamerTag(e.target.value)
     }
 
+    const showAlert = () => {
+        alert.show(`Are you sure? You won't be able to save your score if you continue!`)
+    }
+
     return (
         <StyledGameOverMenu>
             <h2> Game Over... </h2>
