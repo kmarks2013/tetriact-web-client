@@ -4,7 +4,9 @@ export const StyledFooter = styled.div`
     display: flex;
     width: 100vw;
 
-    a{
+    a, p{
+    margin: auto;
+    padding: 0;
     color: white;
     }
 `
