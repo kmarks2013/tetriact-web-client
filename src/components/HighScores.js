@@ -32,7 +32,6 @@ return (
                 { scores.length && player ?
                     <div>
                         {gameScores().length ?
-                        // mapthorugh game scores to render out the top 10
                             <>
                                 <table>
                                     <tbody>
