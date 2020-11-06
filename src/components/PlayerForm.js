@@ -4,7 +4,7 @@ import { StyledGameOverMenu } from './styles/StyledPopUps'
 import { useAlert } from 'react-alert'
 
 export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}) => {
-    // const [gamerTag, setGamerTag] = useState('')
+    const alert = useAlert()
 
     const handleChange = (e) => {
         setGamerTag(e.target.value)
