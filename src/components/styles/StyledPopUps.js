@@ -109,17 +109,16 @@ export const StyledHighScores = styled.div`
 
 export const StyledCloseButton = styled.button`
     box-sizing: border-box;
-    margin: 0 0 13px 0 ;
-    padding: 20px;
-    min-height: 30px;
-    width: ${props => props.width}%;
-    height: auto;
+    ${'' /* min-height: 30px; */}
+    width: 2.5%;
+    height: 20px;
     border-radius: 15px;
     border: none;
-    color: white;
-    background: #333;
+    color: black;
+    background: white;
     font-family: Pixel, Arial, Helvetica, sans-serif;
     font-size: 1rem;
     outline: none;
     cursor: pointer;
+
 `
