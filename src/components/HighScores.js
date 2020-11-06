@@ -49,7 +49,7 @@ const HighScores = ({player}) => {
                         <>
                             <table>
                                 <tbody>
-                                {topScores().map( top => {
+                                    {topScores().map( top => {
                                         return(
                                             <>
                                                 {top.id === player.id ?
@@ -74,7 +74,7 @@ const HighScores = ({player}) => {
                     }
                 </div>
             :
-            <h3> Loading Scores...</h3>
+                <h3> Loading Scores...</h3>
             }
         </StyledHighScores>
     )
