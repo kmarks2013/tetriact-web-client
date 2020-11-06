@@ -3,7 +3,6 @@ import Button from './Button'
 import { StyledGameOverMenu } from './styles/StyledPopUps'
 
 export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}) => {
-    const alert = useAlert()
 
     const handleChange = (e) => {
         setGamerTag(e.target.value)
