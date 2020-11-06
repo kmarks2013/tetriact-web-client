@@ -31,7 +31,6 @@ const HighScores = ({player}) => {
                                                         <td>{i++}</td>
                                                         <td>{player.gamertag}</td>
                                                         <td>{player.score}</td>
-                                                    {/* <p style={{color: 'red'}}>{player.gamertag}</p> */}
                                                     </tr>
                                                 :
                                                     <tr style={{color: 'white'}} key={player.id}>
