@@ -61,28 +61,29 @@ return (
                             </>
                         :
                             <>
-                                    <table>
-                                        <tbody>
-                                           {topScores().map( top => {
-                                              return( <>
-                                                   {top.id === player.id ?
+                                <table>
+                                    <tbody>
+                                       {topScores().map( top => {
+                                            return(
+                                                <>
+                                                    {top.id === player.id ?
                                                         <tr style={{color: 'red'}}>
                                                             <td>{playerIndex}</td>
                                                             <td>{player.gamertag}</td>
                                                             <td>{player.score}</td>
                                                         </tr>
-                                                        :
+                                                    :
                                                         <tr style={{color: 'white'}}>
                                                             <td>{i++}</td>
                                                             <td>{top.gamertag}</td>
                                                             <td>{top.score}</td>
                                                         </tr>
-                                                   }
-                                               </>
-                                               )
-                                            })}
-                                        </tbody>
-                                    </table>
+                                                    }
+                                                </>
+                                            )
+                                        })}
+                                    </tbody>
+                                </table>
                             </>
                         }
                     </div>
