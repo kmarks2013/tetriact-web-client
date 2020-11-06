@@ -20,6 +20,16 @@ export const useScores = (gamePlayer) => {
 
     const topTen = scores.slice(0,10)
 
+    const gameScores = () => {
+        if (scores.length) {
+            let newScores = []
+            if (topTen.find(score => score.id === gamePlayer.id)){
+                return newScores = topTen
+            } else{
+                return newScores
+            }
+        }
+    }
 
     const topScores = () =>{
         if (scores.length){
@@ -40,7 +50,7 @@ export const useScores = (gamePlayer) => {
     // topScores()
 
     const saveScore = (gamerTag, playerScore) => {
-        const formData = { gamertag: gamerTag, score: 10000}
+        const formData = { gamertag: gamerTag, score: playerScore}
         console.log(formData)
         //this will post the score to user with params of gamertag and score.
         // it will then update the state of scores and console.log it.
@@ -58,7 +68,7 @@ export const useScores = (gamePlayer) => {
         })
     }
 
-    console.log(gamePlayer)
+    // console.log(gamePlayer)
 
     useEffect( () => {
         if (gamePlayer){
@@ -75,5 +85,5 @@ export const useScores = (gamePlayer) => {
         }
     }, [gamePlayer])
 
-    return {scores, topTen, saveScore, player, topScores}
+    return {scores, topTen, saveScore, player, topScores, gameScores}
 }
