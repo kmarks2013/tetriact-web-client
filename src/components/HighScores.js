@@ -23,14 +23,6 @@ const HighScores = ({player}) => {
         // }
         
 
-    //  <table>
-    //     <tbody>
-    //         <tr key={top.id}>
-    //         <td> {i++}. </td>
-    //         </tr>
-    //     </tbody>
-    // </table>
-
 return (
     <StyledHighScores>
 
