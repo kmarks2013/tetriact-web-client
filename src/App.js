@@ -12,9 +12,11 @@ const options = {
 
 function App() {
   return (
-    <div className="App">
-        <Tetris/>
-    </div>
+    <AlertProvider template={AlertTemplate} {...options}>
+      <div className="App">
+          <Tetris/>
+      </div>
+    </AlertProvider>
   );
 }
 
