@@ -64,6 +64,12 @@ export const StyledGameOverMenu = styled.div`
         padding-bottom: 15px ;
     }
 
+    label, input {
+        font-family: Pixel, Arial, Helvetica, sans-serif;
+        padding: 0px 10px 0px 10px;
+        margin: auto;
+        ${'' /* display: inline-block; */}
+    }
 `
 
 export const StyledHighScores = styled.div`
