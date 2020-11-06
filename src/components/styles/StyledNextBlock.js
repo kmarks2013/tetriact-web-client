@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledNextBlock = styled.div`
-    margin: 40px 40px 0 0;
+    ${'' /* margin: 40px 40px 0 0; */}
     display: grid;
     grid-template-rows: repeat(
         ${props => props.height},
