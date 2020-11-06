@@ -26,6 +26,7 @@ export const StyledPauseMenu = styled.div`
         color: white ;
     }
 `
+
 export const StyledGameOverMenu = styled.div`
     width: auto;
     height: auto;
@@ -59,6 +60,7 @@ export const StyledGameOverMenu = styled.div`
         color: white ;
     }
 `
+
 export const StyledHighScores = styled.div`
     width: 50%;
     margin: auto;
