@@ -59,6 +59,11 @@ export const StyledGameOverMenu = styled.div`
         padding: 20px;
         color: white ;
     }
+
+    form {
+        padding-bottom: 15px ;
+    }
+
 `
 
 export const StyledHighScores = styled.div`
