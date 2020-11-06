@@ -95,3 +95,20 @@ export const StyledHighScores = styled.div`
         width: 75%;
     }
 `
+
+export const StyledCloseButton = styled.button`
+    box-sizing: border-box;
+    margin: 0 0 13px 0 ;
+    padding: 20px;
+    min-height: 30px;
+    width: ${props => props.width}%;
+    height: auto;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background: #333;
+    font-family: Pixel, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+`
