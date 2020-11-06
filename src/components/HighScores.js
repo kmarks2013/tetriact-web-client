@@ -10,10 +10,7 @@ const HighScores = ({player}) => {
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
     let i = 1
 
-
     const playerIndex = scores.findIndex(score => score.id === player.id) + 1
-
-        
 
     return (
         <StyledHighScores>
