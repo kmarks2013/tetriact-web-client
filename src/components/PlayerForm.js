@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Button from './Button'
 import { StyledGameOverMenu } from './styles/StyledPopUps'
-import { useAlert } from 'react-alert'
 
 export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}) => {
     const alert = useAlert()
