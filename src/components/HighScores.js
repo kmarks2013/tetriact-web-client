@@ -37,7 +37,6 @@ const HighScores = ({player}) => {
                                                         <td>{i++}</td>
                                                         <td>{score.gamertag}</td>
                                                         <td>{score.score}</td>
-                                                    {/* <p style={{color: 'white'}}> {score.score} </p> */}
                                                     </tr>
                                                 }
                                             </>
