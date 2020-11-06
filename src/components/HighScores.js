@@ -35,27 +35,27 @@ return (
                             <>
                                 <table>
                                     <tbody>
-                                    {gameScores().map( score => {
-                                        return (
-                                            <>
-                                            {score.id === player.id?
-                                                <tr style={{color: 'red'}} key={player.id}>
-                                                <td>{i++}</td>
-                                                <td>{player.gamertag}</td>
-                                                <td>{player.score}</td>
-                                                {/* <p style={{color: 'red'}}>{player.gamertag}</p> */}
-                                                </tr>
-                                            :
-                                                <tr style={{color: 'white'}} key={player.id}>
-                                                <td>{i++}</td>
-                                                <td>{score.gamertag}</td>
-                                                <td>{score.score}</td>
-                                                {/* <p style={{color: 'white'}}> {score.score} </p> */}
-                                                </tr>
-                                            }
-                                            </>
-                                        )
-                                    })}
+                                        {gameScores().map( score => {
+                                            return(
+                                                <>
+                                                    {score.id === player.id?
+                                                        <tr style={{color: 'red'}} key={player.id}>
+                                                            <td>{i++}</td>
+                                                            <td>{player.gamertag}</td>
+                                                            <td>{player.score}</td>
+                                                        {/* <p style={{color: 'red'}}>{player.gamertag}</p> */}
+                                                        </tr>
+                                                    :
+                                                        <tr style={{color: 'white'}} key={player.id}>
+                                                            <td>{i++}</td>
+                                                            <td>{score.gamertag}</td>
+                                                            <td>{score.score}</td>
+                                                        {/* <p style={{color: 'white'}}> {score.score} </p> */}
+                                                        </tr>
+                                                    }
+                                                </>
+                                            )
+                                        })}
                                     </tbody>
                                 </table>
                             </>
