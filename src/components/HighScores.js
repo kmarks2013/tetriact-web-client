@@ -82,9 +82,11 @@ return (
                                                             <td>{player.score}</td>
                                                         </tr>
                                                         :
-                                                       <p>
-                                                       {top.gamertag}
-                                                       </p>
+                                                        <tr style={{color: 'white'}}>
+                                                            <td>{i++}</td>
+                                                            <td>{top.gamertag}</td>
+                                                            <td>{top.score}</td>
+                                                        </tr>
                                                    }
                                                </>
                                                )
