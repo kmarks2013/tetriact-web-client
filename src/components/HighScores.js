@@ -71,20 +71,27 @@ return (
                             </>
                         :
                             <>
-                                {topScores().map( top => {
-                                    return (
-                                    <>
-                                    {top.id === player.id ?
-                                            <p style={{color: 'red'}}>{playerIndex} {player.gamertag} {player.score}</p>
-                                        :
-                                            <p style={{color: 'white'}}> {i++} {top.gamertag} {top.score}</p>
-                                        }
-                                        {console.log(top.id, player.id, 'ternary')}
-                                        {/* return <p>{top.gamerTag}</p> */}
-                                    </>
-                                    )
-                                })}
-                            <p>no</p>
+                                    <table>
+                                        <tbody>
+                                           {topScores().map( top => {
+                                              return( <>
+                                                   {top.id === player.id ?
+                                                        <tr style={{color: 'red'}}>
+                                                            <td>{playerIndex}</td>
+                                                            <td>{player.gamertag}</td>
+                                                            <td>{player.score}</td>
+                                                        </tr>
+                                                        :
+                                                       <p>
+                                                       {top.gamertag}
+                                                       </p>
+                                                   }
+                                               </>
+                                               )
+                                            })}
+                            {/* <p>no</p> */}
+                                        </tbody>
+                                    </table>
                             </>
                         }
                     </div>
