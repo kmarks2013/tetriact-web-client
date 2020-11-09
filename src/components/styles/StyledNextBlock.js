@@ -12,7 +12,7 @@ export const StyledNextBlock = styled.div`
     );
     grid-gap: 2px;
     border: 4px ridge #333;
-    width: 15%;
+    width: 100%;
     height: fit-content;
     max-width: 25vw;
     background-color: #222;
