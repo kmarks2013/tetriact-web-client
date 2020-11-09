@@ -1,12 +1,14 @@
 import React from 'react'
 import Cell from './Cell'
 import {StyledNextBlock} from './styles/StyledNextBlock'
+import {StyledStage} from './styles/StyledStage'
+import { NEXT_VW } from '../gameHelpers'
 
 const NextStage = ({ nextStage }) => {
     return (
-        <StyledNextBlock width={nextStage[0].length} height={nextStage.length}>
+        <StyledStage width={nextStage[0].length} vw={NEXT_VW} height={nextStage.length}>
             {nextStage.map(row => row.map((cell, x) => <Cell key={x} type={cell[0]} /> ))}
-        </StyledNextBlock>
+        </StyledStage>
     )
 }
 

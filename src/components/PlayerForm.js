@@ -1,17 +1,11 @@
 import React, {useState} from 'react'
 import Button from './Button'
 import { StyledGameOverMenu } from './styles/StyledPopUps'
-import { useAlert } from 'react-alert'
 
 export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}) => {
-    const alert = useAlert()
 
     const handleChange = (e) => {
         setGamerTag(e.target.value)
-    }
-
-    const showAlert = () => {
-        alert.show(`Are you sure? You won't be able to save your score if you continue!`)
     }
 
     return (
@@ -20,10 +14,13 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}
             <h3> Your Score Was: {score} </h3>
             <h4> To save your score enter a name below:</h4>
             <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} type='text' vlaue={gamerTag} />
+                <label>Gamertag:
+                    <input onChange={handleChange} type='text' vlaue={gamerTag} />
+                </label>
+                {/* <label>Submit:</label> */}
                 <input type='submit' />
             </form>
-            <Button text='Play Again?' callback={showAlert} />
+            <Button text='Play Again?' callback={newGame} />
         </StyledGameOverMenu>
     )
 }

@@ -26,6 +26,7 @@ export const StyledPauseMenu = styled.div`
         color: white ;
     }
 `
+
 export const StyledGameOverMenu = styled.div`
     width: auto;
     height: auto;
@@ -47,7 +48,7 @@ export const StyledGameOverMenu = styled.div`
         font-family: Pixel, Arial, Helvetica, sans-serif;
         font-size: 24px;
         margin: auto;
-        padding: 20px;
+        ${'' /* padding: 20px; */}
         color: white ;
     }
 
@@ -58,7 +59,19 @@ export const StyledGameOverMenu = styled.div`
         padding: 20px;
         color: white ;
     }
+
+    form {
+        padding-bottom: 15px ;
+    }
+
+    label, input {
+        font-family: Pixel, Arial, Helvetica, sans-serif;
+        padding: 0px 10px 0px 10px;
+        margin: auto;
+        ${'' /* display: inline-block; */}
+    }
 `
+
 export const StyledHighScores = styled.div`
     width: 50%;
     margin: auto;
@@ -92,4 +105,20 @@ export const StyledHighScores = styled.div`
         color: white;
         width: 75%;
     }
+`
+
+export const StyledCloseButton = styled.button`
+    box-sizing: border-box;
+    ${'' /* min-height: 30px; */}
+    width: 2.5%;
+    height: 20px;
+    border-radius: 15px;
+    border: none;
+    color: black;
+    background: white;
+    font-family: Pixel, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+
 `
