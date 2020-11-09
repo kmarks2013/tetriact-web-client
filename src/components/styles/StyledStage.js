@@ -8,7 +8,7 @@ export const StyledStage = styled.div`
         calc(${props => props.vw}vw / ${props => props.cellWidth})
     );
     grid-template-columns: repeat(
-        ${props => props.width}, 1fr
+        ${props => props.cellWidth}, 1fr
     );
     grid-gap: 2px;
     border: 4px ridge #333;
