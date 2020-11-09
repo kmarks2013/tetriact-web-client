@@ -1,6 +1,7 @@
 import React from 'react'
 import Cell from './Cell'
 import {StyledStage} from './styles/StyledStage'
+import { STAGE_VW } from '../gameHelpers'
 
 const Stage = ({ stage }) => {
     return (
