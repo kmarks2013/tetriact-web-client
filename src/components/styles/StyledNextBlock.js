@@ -14,6 +14,6 @@ export const StyledNextBlock = styled.div`
     border: 4px ridge #333;
     width: 100%;
     height: fit-content;
-    max-width: 25vw;
+    max-width: 10.5vw;
     background-color: #222;
 `
