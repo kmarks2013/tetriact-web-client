@@ -14,5 +14,6 @@ export const StyledStage = styled.div`
     border: 4px ridge #333;
     width: 100%;
     max-width: ${props=> props.vw}vw;
+    height:fit-content;
     background-color: #222;
 `
