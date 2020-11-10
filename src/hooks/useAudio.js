@@ -9,6 +9,7 @@ export const useAudio = () => {
     const toggleSound = ()=> {
         audio.currentTime=0
         audio.volume = vol
+        audio.loop = true
         audio.play()
     }
 
