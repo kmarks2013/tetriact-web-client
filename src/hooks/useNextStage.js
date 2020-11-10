@@ -9,7 +9,6 @@ export const useNextStage = ( nextTetro, resetTetro, player) => {
             const newNextStage = prevNextStage.map(row =>
                 row.map( cell => (cell[1] === 'clear' ?  [0,'clear']: cell ) )
                 )
-            // console.log (newNextStage)
             nextTetro.tetromino.forEach((row, y) => {
                 // console.log(row, y)
                 row.forEach((value, x) =>{
