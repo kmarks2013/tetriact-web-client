@@ -22,11 +22,11 @@ const TetrisAlert = ({ style, options, message, close }) => (
 
 function App() {
   return (
-    <AlertProvider template={AlertTemplate} {...options}>
+    // <AlertProvider template={AlertTemplate} {...options}>
       <div className="App">
           <Tetris/>
       </div>
-    </AlertProvider>
+    // </AlertProvider>
   );
 }
 
