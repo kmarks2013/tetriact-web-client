@@ -71,6 +71,10 @@ export const StyledGameOverMenu = styled.div`
         margin: auto;
         ${'' /* display: inline-block; */}
     }
+
+    input {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 `
 
 export const StyledHighScores = styled.div`
