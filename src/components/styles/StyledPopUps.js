@@ -11,7 +11,7 @@ export const StyledPopUpWrapper = styled.div`
 `
 
 export const StyledPauseMenu = styled.div`
-    width: 50%;
+    width: auto;
     height: auto;
     flex-driectoin: column;
     margin: auto;
