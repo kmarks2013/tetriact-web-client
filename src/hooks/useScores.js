@@ -69,14 +69,14 @@ export const useScores = (gamePlayer) => {
         if (gamePlayer){
             fetch('http://localhost:3000/highscores')
             .then(res => res.json())
-            .then( scores =>
-                dispatch({type:"get_scores", payload:scores})
+            .then( allScores =>
+                dispatch({type:"get_scores", payload:allScores})
             )
             console.log(scores)
         } else {
             return null
         }
-    }, [ gamePlayer, scores ])
+    }, [ gamePlayer ])
 
     return {scores, topTen, saveScore, player, topScores, gameScores}
 }
