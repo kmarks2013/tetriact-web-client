@@ -14,8 +14,8 @@ const HighScores = ({player, closeMenu}) => {
 
     return (
         <StyledHighScores>
-            <StyledCloseButton onClick={closeMenu}>
-                <button>X</button>
+            <StyledCloseButton margin={485} onClick={closeMenu}>
+                X
             </StyledCloseButton>
             <h2>
                 High Scores:
