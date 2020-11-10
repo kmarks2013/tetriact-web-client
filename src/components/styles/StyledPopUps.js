@@ -25,6 +25,12 @@ export const StyledPauseMenu = styled.div`
         padding: 40px;
         color: white ;
     }
+
+    div {
+        width: 100%;
+        margin: auto;
+        padding: 0 100px 0 100px;
+    }
 `
 
 export const StyledGameOverMenu = styled.div`
