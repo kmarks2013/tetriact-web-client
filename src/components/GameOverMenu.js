@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyledPopUpWrapper, StyledCloseButton } from './styles/StyledPopUps'
+import { StyledPopUpWrapper } from './styles/StyledPopUps'
 
 import { useScores } from '../hooks/useScores'
 import { PlayerForm } from './PlayerForm'
