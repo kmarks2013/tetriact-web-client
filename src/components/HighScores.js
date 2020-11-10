@@ -4,7 +4,7 @@ import { useScores } from '../hooks/useScores'
 
 
 // const HighScores = ({player, scores, topTen}) => {
-const HighScores = ({player}) => {
+const HighScores = ({player, closeMenu}) => {
     const {scores, topTen, topScores, gameScores} = useScores(player)
 
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
