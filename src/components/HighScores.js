@@ -56,13 +56,13 @@ const HighScores = ({player, closeMenu}) => {
                                         return(
                                             <>
                                                 {top.id === player.id ?
-                                                    <tr style={{color: 'red'}}>
+                                                    <tr style={{color: 'red'}} key={player.id}>
                                                         <td>{playerIndex}</td>
                                                         <td>{player.gamertag}</td>
                                                         <td>{player.score}</td>
                                                     </tr>
                                                 :
-                                                    <tr style={{color: 'white'}}>
+                                                    <tr style={{color: 'white'}} key={top.id} >
                                                         <td>{i++}</td>
                                                         <td>{top.gamertag}</td>
                                                         <td>{top.score}</td>
