@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Button from './Button'
 import { StyledGameOverMenu, StyledCloseButton } from './styles/StyledPopUps'
 
-export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}) => {
+export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag, closeMenu}) => {
 
     const handleChange = (e) => {
         setGamerTag(e.target.value)
