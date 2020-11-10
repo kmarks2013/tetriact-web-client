@@ -13,7 +13,6 @@ export const StyledPopUpWrapper = styled.div`
 export const StyledPauseMenu = styled.div`
     width: auto;
     height: auto;
-    flex-driectoin: column;
     margin: auto;
     align-content: center;
     background: #000;
