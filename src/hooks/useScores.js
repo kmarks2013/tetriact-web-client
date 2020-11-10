@@ -51,7 +51,7 @@ export const useScores = (gamePlayer) => {
         console.log(formData)
         //this will post the score to user with params of gamertag and score.
         // it will then update the state of scores and console.log it.
-        fetch('http://localhost:3000/users/', {
+        fetch('https://tetriact-api.herokuapp.com/users/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
