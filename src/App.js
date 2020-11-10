@@ -4,11 +4,9 @@ import Tetris from './components/Tetris';
 
 function App() {
   return (
-    // <AlertProvider template={AlertTemplate} {...options}>
       <div className="App">
           <Tetris/>
       </div>
-    // </AlertProvider>
   );
 }
 
