@@ -65,8 +65,6 @@ export const useScores = (gamePlayer) => {
         })
     }
 
-    // console.log(gamePlayer)
-
     useEffect( () => {
         if (gamePlayer){
             console.log(state)
