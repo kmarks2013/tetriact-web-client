@@ -151,9 +151,9 @@ const Tetris = () => {
                     <Display text={`Rows: ${rows}`}/>
                     <Display text={`Level: ${level}`} />
                 </div>
-                <Button width={100} text="Start Game" callback={startGame} />
-                <Button width={100} text="Pause Game" callback={pauseGame} />
-                <AudioMenu song={audio} />
+                <Button width={100} margin={0} text="Start Game" callback={startGame} />
+                {start ? <Button width={100} margin={0} text="Pause Game" callback={pauseGame} />: null}
+                {start ? <AudioMenu song={audio} /> : null}
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/> : null}
             { gameOver ?  <GameOverMenu newGame={startGame} closeMenu={closeGameOver} clearBoard={clearBoard} score={score}/> : null }
