@@ -53,14 +53,12 @@ export const usePlayer = (nextTetro) => {
 
     const resetPlayer = useCallback(() => {
             if (nextTetro.tetromino === TETROMINOS[0].shape){
-                console.log(nextTetro.tetromino, 'start')
                 setPlayer({
                     pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
                     tetromino: randomTetromino().shape,
                     collided: false
                 })
             } else{
-                console.log(nextTetro.tetromino, TETROMINOS[0].shape, 'next')
                 setPlayer({
                     pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
                     tetromino: nextTetro.tetromino,

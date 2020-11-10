@@ -51,7 +51,7 @@ export const useScores = (gamePlayer) => {
         console.log(formData)
         //this will post the score to user with params of gamertag and score.
         // it will then update the state of scores and console.log it.
-        fetch('http://localhost:3000/users/', {
+        fetch('https://tetriact-api.herokuapp.com/users/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -67,16 +67,13 @@ export const useScores = (gamePlayer) => {
 
     useEffect( () => {
         if (gamePlayer){
-            fetch('http://localhost:3000/highscores')
+            fetch('https://tetriact-api.herokuapp.com/highscores')
             .then(res => res.json())
-            .then( scores =>
-                dispatch({type:"get_scores", payload:scores})
+            .then( allScores =>
+                dispatch({type:"get_scores", payload:allScores})
             )
-            console.log(scores)
-        } else {
-            return null
         }
-    }, [ gamePlayer, scores ])
+    }, [ gamePlayer ])
 
     return {scores, topTen, saveScore, player, topScores, gameScores}
 }
