@@ -1,6 +1,5 @@
 import React from 'react'
 import Cell from './Cell'
-import {StyledNextBlock} from './styles/StyledNextBlock'
 import {StyledStage} from './styles/StyledStage'
 import { NEXT_VW } from '../gameHelpers'
 
