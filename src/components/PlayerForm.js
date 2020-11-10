@@ -10,7 +10,7 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag,
 
     return (
         <StyledGameOverMenu>
-            <StyledCloseButton onClick={closeMenu}>
+            <StyledCloseButton margin={550} onClick={closeMenu}>
                     X
             </StyledCloseButton>
             <h2> Game Over... </h2>
