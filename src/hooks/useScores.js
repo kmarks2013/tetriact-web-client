@@ -72,9 +72,6 @@ export const useScores = (gamePlayer) => {
             .then( allScores =>
                 dispatch({type:"get_scores", payload:allScores})
             )
-            console.log(scores)
-        } else {
-            return null
         }
     }, [ gamePlayer ])
 
