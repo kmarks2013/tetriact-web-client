@@ -73,9 +73,8 @@ export const useScores = (gamePlayer) => {
                 dispatch({type:"get_scores", payload:scores})
             )
             console.log(scores)
-        } else{
-            console.log(gamePlayer)
-            console.log('que')
+        } else {
+            return null
         }
     }, [gamePlayer])
 
