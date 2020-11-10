@@ -17,7 +17,6 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
         setForm(false)
         setHighScores(true)
         saveScore(gamerTag, score)
-        // clearBoard()
     }
 
     return (
