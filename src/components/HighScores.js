@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledPopUpWrapper, StyledHighScores, StyledCloseButton } from './styles/StyledPopUps'
+import { StyledHighScores, StyledCloseButton } from './styles/StyledPopUps'
 import { useScores } from '../hooks/useScores'
 
 
