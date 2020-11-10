@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Button from './Button'
 import { StyledPopUpWrapper, StyledCloseButton } from './styles/StyledPopUps'
 
 import { useScores } from '../hooks/useScores'
