@@ -76,7 +76,7 @@ export const useScores = (gamePlayer) => {
         } else {
             return null
         }
-    }, [gamePlayer])
+    }, [ gamePlayer, scores ])
 
     return {scores, topTen, saveScore, player, topScores, gameScores}
 }
