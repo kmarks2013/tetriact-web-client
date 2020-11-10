@@ -3,7 +3,6 @@ import { createNext } from '../gameHelpers'
 
 export const useNextStage = ( nextTetro, resetTetro, player) => {
     const [nextStage, setNextStage] = useState(createNext())
-    // console.log(player)
     useEffect( () => {
 
         const updateNextStage = prevNextStage =>{
