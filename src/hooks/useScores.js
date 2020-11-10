@@ -46,8 +46,6 @@ export const useScores = (gamePlayer) => {
         }
     }
 
-    // topScores()
-
     const saveScore = (gamerTag, playerScore) => {
         const formData = { gamertag: gamerTag, score: playerScore}
         console.log(formData)
