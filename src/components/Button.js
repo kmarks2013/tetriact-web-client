@@ -4,7 +4,7 @@ import { StyledButton } from './styles/StyledButton'
 
 const Button = ({text, callback, width, margin}) => {
     return (
-        <StyledButton width={width} onClick={callback} >
+        <StyledButton width={width} margin={margin} onClick={callback} >
                 {text}
         </StyledButton>
     )
