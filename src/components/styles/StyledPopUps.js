@@ -108,11 +108,14 @@ export const StyledHighScores = styled.div`
     }
 `
 
+
+
 export const StyledCloseButton = styled.button`
     box-sizing: border-box;
     ${'' /* min-height: 30px; */}
-    width: 2.5%;
-    height: 20px;
+    margin: 0px 0px 0px 550px;
+    width: 5%;
+    height: 5%;
     border-radius: 15px;
     border: none;
     color: black;
