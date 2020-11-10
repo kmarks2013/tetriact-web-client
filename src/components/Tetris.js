@@ -23,7 +23,8 @@ import {createStage, checkCollision, createNext } from '../gameHelpers'
 
 const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
-    const [ gameOver, setGameOver ] = useState(true)
+    const [ gameOver, setGameOver ] = useState(false)
+    const [ start, setStart] = useState(false)
     const [ paused, setPaused ] = useState(false)
     const [ scoreBoard, setScoreBoard] = useState(false)
     const [ nextTetro, resetTetro ] = useNextTetro()
