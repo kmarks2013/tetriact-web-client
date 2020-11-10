@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import Button from './Button'
-import { StyledPopUpWrapper, StyledCloseButton } from './styles/StyledPopUps'
+import { StyledPopUpWrapper } from './styles/StyledPopUps'
 
 import { useScores } from '../hooks/useScores'
 import { PlayerForm } from './PlayerForm'
@@ -18,16 +17,12 @@ const GameOverMenu = ({newGame, closeMenu, clearBoard, score }) => {
         setForm(false)
         setHighScores(true)
         saveScore(gamerTag, score)
-        // clearBoard()
     }
 
     return (
         <StyledPopUpWrapper>
-
-            {form ? <PlayerForm score={score} newGame={newGame} handleSubmit={handleSubmit} setGamerTag={setGamerTag} gamerTag={gamerTag}/>:  null }
-            { highScores ? <HighScores player={player} />  : null}
-            <StyledCloseButton onClick={closeMenu}>X</StyledCloseButton>
-            {/* <HighScores /> */}
+            {form ? <PlayerForm score={score} newGame={newGame} handleSubmit={handleSubmit} closeMenu={closeMenu} setGamerTag={setGamerTag} gamerTag={gamerTag}/>:  null }
+            { highScores ? <HighScores player={player} closeMenu={closeMenu} />  : null}
         </StyledPopUpWrapper>
 
     )

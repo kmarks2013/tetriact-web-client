@@ -1,11 +1,11 @@
 import React from 'react'
-import { StyledPopUpWrapper, StyledHighScores } from './styles/StyledPopUps'
+import { StyledHighScores, StyledCloseButton } from './styles/StyledPopUps'
 import { useScores } from '../hooks/useScores'
 
 
 // const HighScores = ({player, scores, topTen}) => {
-const HighScores = ({player}) => {
-    const {scores, topTen, topScores, gameScores} = useScores(player)
+const HighScores = ({player, closeMenu}) => {
+    const {scores, topScores, gameScores} = useScores(player)
 
     // i will need to lsit out the top ten socres... may make sense to get the top ten from useScores instead...
     let i = 1
@@ -14,6 +14,9 @@ const HighScores = ({player}) => {
 
     return (
         <StyledHighScores>
+            <StyledCloseButton margin={485} onClick={closeMenu}>
+                X
+            </StyledCloseButton>
             <h2>
                 High Scores:
             </h2>

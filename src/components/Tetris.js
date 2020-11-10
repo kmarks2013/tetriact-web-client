@@ -8,7 +8,6 @@ import GameOverMenu from './GameOverMenu'
 import PauseMenu from './PauseMenu'
 import Button from './Button'
 import AudioMenu from './AudioMenu'
-import HighScores from './HighScores'
 
 import { usePlayer } from '../hooks/usePlayer'
 import { useInterval } from '../hooks/useInterval'
@@ -24,9 +23,9 @@ import {createStage, checkCollision, createNext } from '../gameHelpers'
 
 const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
-    const [ gameOver, setGameOver ] = useState(true)
+    const [ gameOver, setGameOver ] = useState(false)
+    const [ start, setStart] = useState(false)
     const [ paused, setPaused ] = useState(false)
-    const [ scoreBoard, setScoreBoard] = useState(false)
     const [ nextTetro, resetTetro ] = useNextTetro()
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer(nextTetro)
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
@@ -50,8 +49,8 @@ const Tetris = () => {
         resetTetro()
         resetPlayer()
         setGameOver(false)
-        setScoreBoard(false)
         setPaused(false)
+        setStart(true)
         setScore(0)
         setRows(0)
         setLevel(0)
@@ -71,7 +70,6 @@ const Tetris = () => {
         setStage(createStage())
         setNextStage(createNext())
         setGameOver(false)
-        setScoreBoard(true)
         setScore(0)
         setRows(0)
         setLevel(0)
@@ -153,13 +151,12 @@ const Tetris = () => {
                     <Display text={`Rows: ${rows}`}/>
                     <Display text={`Level: ${level}`} />
                 </div>
-                <Button width={100} text="Start Game" callback={startGame} />
-                <Button width={100} text="Pause Game" callback={pauseGame} />
-                <AudioMenu song={audio} />
+                <Button width={100} margin={0} text="Start Game" callback={startGame} />
+                {start ? <Button width={100} margin={0} text="Pause Game" callback={pauseGame} />: null}
+                {start ? <AudioMenu song={audio} /> : null}
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/> : null}
             { gameOver ?  <GameOverMenu newGame={startGame} closeMenu={closeGameOver} clearBoard={clearBoard} score={score}/> : null }
-            {/* { scoreBoard ? <HighScores /> : null} */}
             </StyledTetris>
             <Footer />
         </StyledTetrisWrapper>

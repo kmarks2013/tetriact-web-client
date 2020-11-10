@@ -7,12 +7,12 @@ export const StyledPopUpWrapper = styled.div`
     height: 100%;
     background: rgba( 118, 114, 138, 0.3 );
     display: flex;
+    z-index: 1;
 `
 
 export const StyledPauseMenu = styled.div`
-    width: 50%;
+    width: auto;
     height: auto;
-    flex-driectoin: column;
     margin: auto;
     align-content: center;
     background: #000;
@@ -22,8 +22,14 @@ export const StyledPauseMenu = styled.div`
         font-family: Pixel, Arial, Helvetica, sans-serif;
         font-size: 50px;
         margin: auto;
-        padding: 20px;
+        padding: 40px;
         color: white ;
+    }
+
+    div {
+        width: 100%;
+        margin: auto;
+        padding: 0 100px 0 100px;
     }
 `
 
@@ -68,7 +74,10 @@ export const StyledGameOverMenu = styled.div`
         font-family: Pixel, Arial, Helvetica, sans-serif;
         padding: 0px 10px 0px 10px;
         margin: auto;
-        ${'' /* display: inline-block; */}
+    }
+
+    input {
+        font-family: Arial, Helvetica, sans-serif;
     }
 `
 
@@ -107,11 +116,14 @@ export const StyledHighScores = styled.div`
     }
 `
 
+
+
 export const StyledCloseButton = styled.button`
     box-sizing: border-box;
     ${'' /* min-height: 30px; */}
-    width: 2.5%;
-    height: 20px;
+    margin: 0px 0px 0px ${props => props.margin}px;
+    width: 5%;
+    height: 5%;
     border-radius: 15px;
     border: none;
     color: black;

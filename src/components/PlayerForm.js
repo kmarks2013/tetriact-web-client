@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Button from './Button'
-import { StyledGameOverMenu } from './styles/StyledPopUps'
+import { StyledGameOverMenu, StyledCloseButton } from './styles/StyledPopUps'
 
-export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}) => {
+export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag, closeMenu}) => {
 
     const handleChange = (e) => {
         setGamerTag(e.target.value)
@@ -10,6 +10,9 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}
 
     return (
         <StyledGameOverMenu>
+            <StyledCloseButton margin={550} onClick={closeMenu}>
+                    X
+            </StyledCloseButton>
             <h2> Game Over... </h2>
             <h3> Your Score Was: {score} </h3>
             <h4> To save your score enter a name below:</h4>
@@ -17,7 +20,6 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag}
                 <label>Gamertag:
                     <input onChange={handleChange} type='text' vlaue={gamerTag} />
                 </label>
-                {/* <label>Submit:</label> */}
                 <input type='submit' />
             </form>
             <Button text='Play Again?' callback={newGame} />

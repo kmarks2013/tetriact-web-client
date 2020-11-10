@@ -61,8 +61,6 @@ export const usePlayer = (nextTetro) => {
                 })
             } else{
                 console.log(nextTetro.tetromino, TETROMINOS[0].shape, 'next')
-                // const clonedTetro = JSON.parse(JSON.stringify(nextTetro.tetromino))
-                // console.log(clonedTetro)
                 setPlayer({
                     pos: { x: STAGE_WIDTH / 2 - 2, y: 0},
                     tetromino: nextTetro.tetromino,

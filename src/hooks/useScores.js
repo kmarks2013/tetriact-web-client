@@ -1,6 +1,5 @@
 import {useReducer, useEffect} from 'react'
 
-
 const scoreReducer = (state, action) => {
     switch (action.type) {
         case 'get_scores':
@@ -47,8 +46,6 @@ export const useScores = (gamePlayer) => {
         }
     }
 
-    // topScores()
-
     const saveScore = (gamerTag, playerScore) => {
         const formData = { gamertag: gamerTag, score: playerScore}
         console.log(formData)
@@ -68,22 +65,18 @@ export const useScores = (gamePlayer) => {
         })
     }
 
-    // console.log(gamePlayer)
-
     useEffect( () => {
         if (gamePlayer){
-            console.log(state)
             fetch('http://localhost:3000/highscores')
             .then(res => res.json())
             .then( scores =>
                 dispatch({type:"get_scores", payload:scores})
             )
             console.log(scores)
-        } else{
-            console.log(gamePlayer)
-            console.log('que')
+        } else {
+            return null
         }
-    }, [gamePlayer])
+    }, [ gamePlayer, scores ])
 
     return {scores, topTen, saveScore, player, topScores, gameScores}
 }
