@@ -7,6 +7,7 @@ export const StyledPopUpWrapper = styled.div`
     height: 100%;
     background: rgba( 118, 114, 138, 0.3 );
     display: flex;
+    z-index: 1;
 `
 
 export const StyledPauseMenu = styled.div`
