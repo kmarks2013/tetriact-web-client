@@ -67,7 +67,7 @@ export const useScores = (gamePlayer) => {
 
     useEffect( () => {
         if (gamePlayer){
-            fetch('http://localhost:3000/highscores')
+            fetch('https://tetriact-api.herokuapp.com/highscores')
             .then(res => res.json())
             .then( allScores =>
                 dispatch({type:"get_scores", payload:allScores})
