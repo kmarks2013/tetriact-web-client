@@ -74,7 +74,6 @@ export const StyledGameOverMenu = styled.div`
         font-family: Pixel, Arial, Helvetica, sans-serif;
         padding: 0px 10px 0px 10px;
         margin: auto;
-        ${'' /* display: inline-block; */}
     }
 
     input {
