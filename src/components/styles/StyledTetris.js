@@ -7,6 +7,7 @@ export const StyledTetrisWrapper = styled.div`
     height: 100vh;
     background: url(${bckgImg}) #000;
     background-size: cover;
+    background-repeat: no-repeat;
     overflow:hidden;
 `
 
