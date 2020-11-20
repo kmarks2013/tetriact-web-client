@@ -27,6 +27,12 @@ To see more information about the api please see below:
 ### Demo
 
 ### Installation
+    Clone the repo and CD inside of the directory
+    npm install
+    npm start
+
+Be sure to visit the repo for the [backend](https://github.com/kmarks2013/tetriact-api) and follow those instructions!
+
 
 ### Technologies Used
 
