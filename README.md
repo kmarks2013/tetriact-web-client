@@ -11,7 +11,7 @@ I have always been a big fan of tetris and wanted to attempt to build it using r
 
 ### Front-end
 
-TETRIACT was built using React and uses React Hooks to create state and utilzie functional components. It uses the Styled Components Library for styling.
+The TETRIACT client was built using React and uses React Hooks to create state and utilzie functional components. It uses the Styled Components Library for styling.
 
 The music and background image are sourced from:
 [Wikimedia](https://commons.wikimedia.org/wiki/File:Tetris_theme.ogg) and [FreePik](https://www.freepik.com/vectors/background) respectively.
