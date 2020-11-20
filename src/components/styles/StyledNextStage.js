@@ -10,8 +10,8 @@ export const StyledNextStage = styled.div`
     grid-template-columns: repeat(
         ${props => props.width}, 1fr
     );
-    grid-gap: 2px;
-    border: 4px ridge #333;
+    grid-gap: 1px;
+    border: 2px ridge #333;
     width: 100%;
     height: fit-content;
     max-width: 10.5vw;
