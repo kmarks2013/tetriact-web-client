@@ -18,6 +18,12 @@ The music and background image are sourced from:
 
 ### Back-end
 
+The TETRIACT api is built with Ruby on Rails and uses PostgresSql for its database.
+
+To see more information about the api please see below:
+
+[TETRIACT Api](https://github.com/kmarks2013/tetriact-api)
+
 ### Demo
 
 ### Installation
