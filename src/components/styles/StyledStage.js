@@ -13,7 +13,7 @@ export const StyledStage = styled.div`
     grid-gap: 1px;
     border: 2px ridge #333;
     width: 100%;
-    max-width: ${props=> props.vw}vw;
+    max-width: 25vw;
     height:fit-content;
     background-color: #222;
 `
