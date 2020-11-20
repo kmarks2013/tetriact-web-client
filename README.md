@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TETRIACT
 
-## Available Scripts
+## What is TETRIACT?
+TETRIACT is a Web-Based Tetris emulator built in a an arcade style.
 
-In the project directory, you can run:
+A user can play the game, save their gamertags and scores, and see where they rank in the top ten.
 
-### `npm start`
+### Motivation
+I have always been a big fan of tetris and wanted to attempt to build it using react.  I also wanted to learn more about hooks, and a new way of styling which is why I chose to follow this [tutorial](https://www.youtube.com/watch?v=ZGOaCxX8HIU&t=322s&ab_channel=freeCodeCamp.org) for much of the game logic.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Front-end
 
-### `npm test`
+The TETRIACT client was built using React and uses React Hooks to create state and utilzie functional components. It uses the Styled Components Library for styling.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The music and background image are sourced from:
+[Wikimedia](https://commons.wikimedia.org/wiki/File:Tetris_theme.ogg) and [FreePik](https://www.freepik.com/vectors/background) respectively.
 
-### `npm run build`
+### Back-end
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The TETRIACT api is built with Ruby on Rails and uses PostgresSql for its database.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To see more information about the api please see below:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[TETRIACT Api](https://github.com/kmarks2013/tetriact-api)
 
-### `npm run eject`
+### Demo
+To Be Added
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installation
+    Clone the repo and CD inside of the directory
+    npm install
+    npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Be sure to visit the repo for the [backend](https://github.com/kmarks2013/tetriact-api) and follow those instructions!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Technologies Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. React
+2. React-Hooks
+3. Styled-Components
 
-## Learn More
+### Future Updates
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Responsvie Styling
+2. Instructions
+3. Music should maintain state before after pause
+4. On game Resart game should keep props from before for audio
+5. Custom designed SVG background
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Special Thanks
+I would love to thank [Thomas Weibenfalk](weibenfalk.com) and [FreeCodeCamp](https://www.freecodecamp.org/news/react-hooks-tetris-game/) for their amazing tutorial, [Wikimedia](https://commons.wikimedia.org/wiki/File:Tetris_theme.ogg) for allowing me to use the Tetris Theme, and [Freepik](https://www.freepik.com/vectors/background") for their amazing vector background!
