@@ -49,3 +49,4 @@ Be sure to visit the repo for the [backend](https://github.com/kmarks2013/tetria
 5. Custom designed SVG background
 
 ### Special Thanks
+I would love to thank [Thomas Weibenfalk](weibenfalk.com) and [FreeCodeCamp](https://www.freecodecamp.org/news/react-hooks-tetris-game/) for their amazing tutorial, [Wikimedia](https://commons.wikimedia.org/wiki/File:Tetris_theme.ogg) for allowing me to use the Tetris Theme, and [Freepik](https://www.freepik.com/vectors/background") for their amazing vector background!
