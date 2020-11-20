@@ -1,6 +1,7 @@
 import React from 'react'
 import Cell from './Cell'
 import { NEXT_VW } from '../gameHelpers'
+import {StyledNextStage} from './styles/StyledNextStage'
 
 const NextStage = ({ nextStage }) => {
     return (
