@@ -34,7 +34,8 @@ export const useAudio = () => {
 
     const decreaseVolume = (song) => {
         if (song.volume > 0.0){
-            song.volume = Math.round((song.volume -.1)* 10)/10
+            song.volume = Math.round((song.volume -.05)* 100)/100
+            console.log(song.volume)
             setVol(song.volume)
         } else{
             return
