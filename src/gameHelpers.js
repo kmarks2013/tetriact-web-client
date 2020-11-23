@@ -2,8 +2,6 @@ export const STAGE_WIDTH = 12
 export const STAGE_HEIGHT = 20
 export const NEXT_WIDTH = 5
 export const NEXT_HEIGHT = 4
-export const STAGE_VW = 25
-export const NEXT_VW = 10.5
 
 
 export const createStage = () =>

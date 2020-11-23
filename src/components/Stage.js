@@ -1,11 +1,10 @@
 import React from 'react'
 import Cell from './Cell'
 import {StyledStage} from './styles/StyledStage'
-import { STAGE_VW } from '../gameHelpers'
 
 const Stage = ({ stage }) => {
     return (
-        <StyledStage width={stage[0].length} vw={STAGE_VW} height={stage.length}>
+        <StyledStage width={stage[0].length} height={stage.length}>
             {stage.map(row => row.map((cell, x) => <Cell key={x} type={cell[0]} /> ))}
         </StyledStage>
     )
