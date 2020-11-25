@@ -145,6 +145,7 @@ const Tetris = () => {
             <Title/>
             <StyledTetris>
             <NextStage nextStage={nextStage} />
+            <Instructions/>
             <Stage stage={stage} />
             <aside>
                 <div>
