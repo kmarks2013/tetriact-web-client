@@ -19,6 +19,7 @@ import { useNextTetro } from '../hooks/useNextTetro'
 
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import {createStage, checkCollision, createNext } from '../gameHelpers'
+import { Instructions } from './Instructions'
 
 
 const Tetris = () => {
