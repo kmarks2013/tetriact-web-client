@@ -17,3 +17,7 @@ export const StyledInstructions = styled.div`
     font-family: Pixel, Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
 `
+export const StyledInstructionsText = styled.div`
+    ${'' /* font-size: 0.7rem; */}
+    margin-top: 8%;
+`
