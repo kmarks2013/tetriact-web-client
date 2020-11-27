@@ -3,7 +3,7 @@ import React from 'react'
 export const Instructions = () => {
     return (
         <div>
-            <p> I will be te button instructions.</p>
+            <h3>Gameplay Instructions</h3>
         </div>
     )
 }
