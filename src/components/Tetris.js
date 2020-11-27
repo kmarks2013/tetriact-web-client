@@ -142,6 +142,7 @@ const Tetris = () => {
             tabIndex='0'
             onKeyDown={e => move(e)}
             onKeyUp={keyUp}
+            ref={unPauseRef}
         >
             {gameOver? audio.pause(): null}
             <Title/>
