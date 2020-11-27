@@ -4,10 +4,9 @@ export const StyledInstructions = styled.div`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    ${'' /* align-content: flex-start; */}
     align-items: flex-start;
     margin: 0;
-    padding: 20px;
+    padding: 20px 0px 0px 10px;
     border: 4px solid #333;
     min-height: 30px;
     width: 100%;
