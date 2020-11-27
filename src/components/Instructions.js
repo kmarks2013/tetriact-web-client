@@ -8,6 +8,7 @@ export const Instructions = () => {
             <h3>Gameplay Instructions</h3>
             <p>Rotate Tetromino: Up Arrow</p>
             <p>Move Tetromino Left: Left Arrow</p>
+            <p>Move Tetromino Right: Right Arrow</p>
         </div>
     )
 }
