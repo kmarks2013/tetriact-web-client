@@ -9,14 +9,11 @@ export const Instructions = () => {
     return (
         <StyledInstructions>
             <h2>How To Play:</h2>
-            <StyledInstructionsText>Rotate: Up Arrow</StyledInstructionsText>
-            {/* <p>Rotate: Up Arrow</p> */}
-            <StyledInstructionsText>Move Left: Left</StyledInstructionsText>
-            {/* <p>Move Left: Left </p> */}
-            <StyledInstructionsText>Move Right: Right</StyledInstructionsText>
-            {/* <p>Move Right: Right </p> */}
-            <StyledInstructionsText>Drop: Down Arrow</StyledInstructionsText>
-            {/* <p>Drop: Down Arrow</p> */}
+
+            <StyledInstructionsText>Rotate: <FontAwesomeIcon icon={faArrowUp} /> key</StyledInstructionsText>
+            <StyledInstructionsText>Move Left: <FontAwesomeIcon icon={faArrowLeft} /> key</StyledInstructionsText>
+            <StyledInstructionsText>Move Right: <FontAwesomeIcon icon={faArrowRight} /> key</StyledInstructionsText>
+            <StyledInstructionsText>Drop: <FontAwesomeIcon icon={faArrowDown}  /> key</StyledInstructionsText>
         </StyledInstructions>
     )
 }
