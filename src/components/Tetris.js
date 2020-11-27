@@ -82,6 +82,8 @@ const Tetris = () => {
         setDropTime(1000/ (level+1) + 200)
         restartAudio(audio)
         setPaused(false)
+        console.log(unPauseRef)
+        unPauseRef.current.focus()
     }
 
     const drop = () => {
