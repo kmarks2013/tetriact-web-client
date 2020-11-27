@@ -149,8 +149,11 @@ const Tetris = () => {
             {gameOver? audio.pause(): null}
             <Title/>
             <StyledTetris>
+            <aside>
+
             <NextStage nextStage={nextStage} />
             <Instructions/>
+            </aside>
             <Stage stage={stage} />
             <aside>
                 <div>
