@@ -6,11 +6,15 @@ import { StyledInstructions, StyledInstructionsText } from './styles/StyledInstr
 export const Instructions = () => {
     return (
         <StyledInstructions>
-            <h3>How To Play:</h3>
-            <p>Rotate Tetromino: Up Arrow</p>
-            <p>Move Tetromino Left: Left Arrow</p>
-            <p>Move Tetromino Right: Right Arrow</p>
-            <p>Drop Tetromino: Down Arrow</p>
+            <h2>How To Play:</h2>
+            <StyledInstructionsText>Rotate: Up Arrow</StyledInstructionsText>
+            {/* <p>Rotate: Up Arrow</p> */}
+            <StyledInstructionsText>Move Left: Left</StyledInstructionsText>
+            {/* <p>Move Left: Left </p> */}
+            <StyledInstructionsText>Move Right: Right</StyledInstructionsText>
+            {/* <p>Move Right: Right </p> */}
+            <StyledInstructionsText>Drop: Down Arrow</StyledInstructionsText>
+            {/* <p>Drop: Down Arrow</p> */}
         </StyledInstructions>
     )
 }
