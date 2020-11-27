@@ -1,4 +1,6 @@
 import React from 'react'
+import { faArrowUp, faArrowDown, faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StyledInstructions, StyledInstructionsText } from './styles/StyledInstructions';
 
