@@ -42,6 +42,8 @@ const Tetris = () => {
         }
     }
 
+    const unPauseRef = useRef()
+
     const startGame = () => {
         toggleSound()
         setStage(createStage())
