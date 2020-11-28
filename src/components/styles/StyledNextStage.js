@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const StyledNextStage = styled.div`
-    margin-left: 41%;
     display: grid;
     grid-template-rows: repeat(
         ${props => props.height},
