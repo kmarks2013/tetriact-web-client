@@ -116,8 +116,6 @@ export const StyledHighScores = styled.div`
 export const StyledCloseButton = styled.button`
     box-sizing: border-box;
     align-self: flex-end;
-    ${'' /* min-height: 30px; */}
-    ${'' /* margin: 0px 0px 0px ${props => props.margin}px; */}
     width: 4%;
     height: 4%;
     border-radius: 15px;
