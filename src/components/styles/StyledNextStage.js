@@ -15,6 +15,7 @@ export const StyledNextStage = styled.div`
     height: fit-content;
     max-width: 10.5vw;
     background-color: #222;
+
     @media (min-width: 1536px){
         grid-template-rows: repeat(
         ${props => props.height},
