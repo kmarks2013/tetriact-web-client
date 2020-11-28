@@ -50,3 +50,19 @@ export const StyledPlayerForm = styled.div`
         font-family: Arial, Helvetica, sans-serif;
     }
 `
+
+export const StyledPlayerFormButton = styled.button`
+        box-sizing: border-box;
+        margin: auto ;
+        padding: 20px;
+        min-height: 30px;
+        height: auto;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        background: #333;
+        font-family: Pixel, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        outline: none;
+        cursor: pointer;
+`
