@@ -5,8 +5,8 @@ export const StyledInstructions = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0;
-    padding: 20px 0px 0px 10px;
+    margin-top: 10%; 
+    padding: 20px 10px 20px 10px;
     border: 4px solid #333;
     min-height: 30px;
     width: 100%;
