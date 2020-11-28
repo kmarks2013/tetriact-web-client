@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledCloseButton } from './styles/StyledPopUps'
 import { useScores } from '../hooks/useScores'
-
+import {StyledHighScores} from './styles/StyledHighScores'
 
 // const HighScores = ({player, scores, topTen}) => {
 const HighScores = ({player, closeMenu}) => {
