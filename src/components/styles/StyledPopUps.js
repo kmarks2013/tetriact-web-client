@@ -11,10 +11,11 @@ export const StyledPopUpWrapper = styled.div`
 `
 
 export const StyledPauseMenu = styled.div`
+    display: flex;
+    flex-direction: column;
     width: auto;
     height: auto;
     margin: auto;
-    align-content: center;
     background: #000;
     opacity: 0.8;
 
@@ -24,12 +25,6 @@ export const StyledPauseMenu = styled.div`
         margin: auto;
         padding: 40px;
         color: white ;
-    }
-
-    div {
-        width: 100%;
-        margin: auto;
-        padding: 0 100px 0 100px;
     }
 `
 
@@ -120,10 +115,11 @@ export const StyledHighScores = styled.div`
 
 export const StyledCloseButton = styled.button`
     box-sizing: border-box;
+    align-self: flex-end;
     ${'' /* min-height: 30px; */}
-    margin: 0px 0px 0px ${props => props.margin}px;
-    width: 5%;
-    height: 5%;
+    ${'' /* margin: 0px 0px 0px ${props => props.margin}px; */}
+    width: 4%;
+    height: 4%;
     border-radius: 15px;
     border: none;
     color: black;

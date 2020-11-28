@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Title from './Title'
 import Footer from './Footer'
 import Display from './Display'
@@ -19,13 +19,15 @@ import { useNextTetro } from '../hooks/useNextTetro'
 
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 import {createStage, checkCollision, createNext } from '../gameHelpers'
+import { Instructions } from './Instructions'
+import { StyledSideBar } from './styles/StyledSideBar'
 
 
 const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
     const [ gameOver, setGameOver ] = useState(false)
     const [ start, setStart] = useState(false)
-    const [ paused, setPaused ] = useState(false)
+    const [ paused, setPaused ] = useState(true)
     const [ nextTetro, resetTetro ] = useNextTetro()
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer(nextTetro)
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
@@ -40,6 +42,8 @@ const Tetris = () => {
             updatePlayerPos({ x: dir, y:0})
         }
     }
+
+    const unPauseRef = useRef()
 
     const startGame = () => {
         toggleSound()
@@ -79,6 +83,8 @@ const Tetris = () => {
         setDropTime(1000/ (level+1) + 200)
         restartAudio(audio)
         setPaused(false)
+        console.log(unPauseRef)
+        unPauseRef.current.focus()
     }
 
     const drop = () => {
@@ -139,11 +145,15 @@ const Tetris = () => {
             tabIndex='0'
             onKeyDown={e => move(e)}
             onKeyUp={keyUp}
+            ref={unPauseRef}
         >
             {gameOver? audio.pause(): null}
             <Title/>
             <StyledTetris>
+            <StyledSideBar>
             <NextStage nextStage={nextStage} />
+            <Instructions/>
+            </StyledSideBar>
             <Stage stage={stage} />
             <aside>
                 <div>
