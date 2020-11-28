@@ -5,7 +5,7 @@ import { StyledButton } from './styles/StyledButton'
 export const Button = ({text, callback, width, margin}) => {
     return (
         <StyledButton width={width} margin={margin} onClick={callback} >
-                {text}
+            {text}
         </StyledButton>
     )
 }
