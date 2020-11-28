@@ -10,4 +10,10 @@ export const Button = ({text, callback, width, margin}) => {
     )
 }
 
-export default Button
+export const PauseButton =({text, callback}) =>{
+    return (
+        <StyledUnpauseButton onClick={callback}>
+            {text}
+        </StyledUnpauseButton>
+    )
+}
