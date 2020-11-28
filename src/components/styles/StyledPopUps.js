@@ -92,8 +92,6 @@ export const StyledHighScores = styled.div`
     }
 `
 
-
-
 export const StyledCloseButton = styled.button`
     box-sizing: border-box;
     align-self: flex-end;
