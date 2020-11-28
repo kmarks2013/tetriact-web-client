@@ -1,6 +1,7 @@
 import React from 'react'
-import Button from './Button'
-import { StyledGameOverMenu, StyledCloseButton } from './styles/StyledPopUps'
+import { PlayerFormButton } from './Button'
+import { StyledPlayerForm } from './styles/StyledPlayerForm'
+import { StyledCloseButton } from './styles/StyledPopUps'
 
 export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag, closeMenu}) => {
 
@@ -9,10 +10,8 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag,
     }
 
     return (
-        <StyledGameOverMenu>
-            <StyledCloseButton margin={550} onClick={closeMenu}>
-                    X
-            </StyledCloseButton>
+        <StyledPlayerForm>
+            <StyledCloseButton onClick={closeMenu}>X</StyledCloseButton>
             <h2> Game Over... </h2>
             <h3> Your Score Was: {score} </h3>
             <h4> To save your score enter a name below:</h4>
@@ -20,9 +19,11 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag,
                 <label>Gamertag:
                     <input onChange={handleChange} type='text' vlaue={gamerTag} />
                 </label>
+                <PlayerFormButton text="Save Your Score!">
                 <input type='submit' />
+                </PlayerFormButton>
             </form>
-            <Button text='Play Again?' callback={newGame} />
-        </StyledGameOverMenu>
+            <PlayerFormButton text='Play Again?' callback={newGame} />
+        </StyledPlayerForm>
     )
 }

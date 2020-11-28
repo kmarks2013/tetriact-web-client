@@ -6,7 +6,7 @@ import Stage from './Stage'
 import NextStage from './NextStage'
 import GameOverMenu from './GameOverMenu'
 import PauseMenu from './PauseMenu'
-import Button from './Button'
+import {Button} from './Button'
 import AudioMenu from './AudioMenu'
 
 import { usePlayer } from '../hooks/usePlayer'
@@ -27,7 +27,7 @@ const Tetris = () => {
     const [ dropTime, setDropTime ] = useState(null)
     const [ gameOver, setGameOver ] = useState(false)
     const [ start, setStart] = useState(false)
-    const [ paused, setPaused ] = useState(true)
+    const [ paused, setPaused ] = useState(false)
     const [ nextTetro, resetTetro ] = useNextTetro()
     const [ player, updatePlayerPos, resetPlayer, playerRotate ] = usePlayer(nextTetro)
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)

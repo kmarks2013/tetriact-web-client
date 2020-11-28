@@ -1,16 +1,14 @@
 import React from 'react'
-import Button from './Button'
-import { StyledPopUpWrapper, StyledPauseMenu, StyledCloseButton } from './styles/StyledPopUps'
-
+import { PauseButton } from './Button'
+import { StyledPopUpWrapper, StyledCloseButton } from './styles/StyledPopUps'
+import { StyledPauseMenu} from './styles/StyledPauseMenu'
 const PauseMenu = ({callback}) => {
     return (
         <StyledPopUpWrapper>
             <StyledPauseMenu >
-            <StyledCloseButton onClick={callback}>
-                    X
-            </StyledCloseButton>
+            <StyledCloseButton onClick={callback}>X</StyledCloseButton>
                 <h2> Game Paused </h2>
-                <Button text='Resume Game' width={45} margin={0} callback={callback} />
+                <PauseButton text='Resume Game' callback={callback}/>
             </StyledPauseMenu>
         </StyledPopUpWrapper>
     )
