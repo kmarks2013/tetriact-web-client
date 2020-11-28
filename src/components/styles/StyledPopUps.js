@@ -16,7 +16,6 @@ export const StyledPauseMenu = styled.div`
     width: auto;
     height: auto;
     margin: auto;
-    align-content: center;
     background: #000;
     opacity: 0.8;
 
