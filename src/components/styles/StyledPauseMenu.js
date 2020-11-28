@@ -24,7 +24,6 @@ export const StyledUnpauseButton = styled.button`
         margin: auto ;
         padding: 20px;
         min-height: 30px;
-        width: 45%;
         height: auto;
         border-radius: 15px;
         border: none;
