@@ -6,7 +6,7 @@ import Stage from './Stage'
 import NextStage from './NextStage'
 import GameOverMenu from './GameOverMenu'
 import PauseMenu from './PauseMenu'
-import Button from './Button'
+import {Button} from './Button'
 import AudioMenu from './AudioMenu'
 
 import { usePlayer } from '../hooks/usePlayer'
