@@ -10,7 +10,7 @@ const PauseMenu = ({callback}) => {
                     X
             </StyledCloseButton>
                 <h2> Game Paused </h2>
-                <Button text='Resume Game' width={45} margin={120} callback={callback} />
+                <Button text='Resume Game' width={45} margin={0} callback={callback} />
             </StyledPauseMenu>
         </StyledPopUpWrapper>
     )
