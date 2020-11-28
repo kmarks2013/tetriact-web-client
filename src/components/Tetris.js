@@ -150,11 +150,10 @@ const Tetris = () => {
             {gameOver? audio.pause(): null}
             <Title/>
             <StyledTetris>
-            <aside>
-
+            <StyledSideBar>
             <NextStage nextStage={nextStage} />
             <Instructions/>
-            </aside>
+            </StyledSideBar>
             <Stage stage={stage} />
             <aside>
                 <div>
