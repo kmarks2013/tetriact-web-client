@@ -27,7 +27,6 @@ export const StyledHighScores = styled.div`
         }
 
     table {
-        ${'' /* margin: auto; */}
         font-family: Pixel, Arial, Helvetica, sans-serif;
         font-size: 16px;
         margin: auto;
