@@ -6,7 +6,7 @@ const PauseMenu = ({callback}) => {
     return (
         <StyledPopUpWrapper>
             <StyledPauseMenu >
-            <StyledCloseButton margin={545} onClick={callback}>
+            <StyledCloseButton onClick={callback}>
                     X
             </StyledCloseButton>
                 <h2> Game Paused </h2>
