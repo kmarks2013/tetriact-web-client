@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './Button'
+import {Button} from './Button'
 import { StyledGameOverMenu, StyledCloseButton } from './styles/StyledPopUps'
 
 export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag, closeMenu}) => {
