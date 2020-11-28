@@ -4,6 +4,9 @@ export const StyledPlayerForm = styled.div`
     width: auto;
     height: auto;
     margin: auto;
+    padding: 0 0 13px 0;
+    display: flex;
+    flex-direction: column;
     background: #03427f;
     color: white;
     background: #000;
