@@ -15,7 +15,12 @@ export const StyledInstructions = styled.div`
     background: #000;
     font-family: Pixel, Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
+
+    h2{
+        text-decoration: underline;
+    }
 `
+
 export const StyledInstructionsText = styled.div`
     ${'' /* font-size: 0.7rem; */}
     margin-top: 8%;
