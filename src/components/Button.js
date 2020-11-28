@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledButton } from './styles/StyledButton'
+import { StyledUnpauseButton } from './styles/StyledPauseMenu'
 
 
 export const Button = ({text, callback, width, margin}) => {
