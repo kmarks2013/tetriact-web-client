@@ -19,7 +19,9 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag,
                 <label>Gamertag:
                     <input onChange={handleChange} type='text' vlaue={gamerTag} />
                 </label>
+                <PlayerFormButton text="Save Your Score!">
                 <input type='submit' />
+                </PlayerFormButton>
             </form>
             <PlayerFormButton text='Play Again?' callback={newGame} />
         </StyledPlayerForm>
