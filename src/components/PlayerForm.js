@@ -21,7 +21,7 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag,
                 </label>
                 <input type='submit' />
             </form>
-            <Button text='Play Again?' callback={newGame} />
-        </StyledGameOverMenu>
+            <PlayerFormButton text='Play Again?' callback={newGame} />
+        </StyledPlayerForm>
     )
 }
