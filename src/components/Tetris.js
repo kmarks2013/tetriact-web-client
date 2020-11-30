@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Title from './Title'
 import Footer from './Footer'
 import Display from './Display'
