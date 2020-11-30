@@ -9,6 +9,7 @@ const PauseMenu = ({callback}) => {
             <StyledCloseButton onClick={callback}>X</StyledCloseButton>
                 <h2> Game Paused </h2>
                 <PauseButton text='Resume Game' callback={callback}/>
+                <p> (Or press ESC to Resume )</p>
             </StyledPauseMenu>
         </StyledPopUpWrapper>
     )
