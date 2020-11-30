@@ -42,7 +42,6 @@ Be sure to visit the repo for the [backend](https://github.com/kmarks2013/tetria
 ### Future Updates
 
 1. Responsvie Styling
-2. Instructions
 3. Music should maintain state before after pause
 4. On game Resart game should keep props from before for audio
 5. Custom designed SVG background
