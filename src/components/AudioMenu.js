@@ -8,6 +8,16 @@ import { useAudio } from '../hooks/useAudio';
 const AudioMenu = ({song, setPlaying}) => {
     const { pauseAudio, restartAudio, muteAudio, increaseVolume, decreaseVolume } = useAudio()
 
+    const play = () => {
+        setPlaying(true)
+        restartAudio(song)
+    }
+
+    const pause = () => {
+        setPlaying(false)
+        pauseAudio(song)
+    }
+
     return (
         <StyledAudioMenu>
             <StyledIcon onClick={ () => restartAudio(song)} >
