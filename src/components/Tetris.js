@@ -69,12 +69,6 @@ const Tetris = () => {
         unPauseRef.current.focus()
     }
 
-    const pauseGame = () => {
-        setPaused(true)
-        pauseAudio(audio)
-        setDropTime(null)
-    }
-
     const closeGameOver = () => {
         setGameOver(false)
     }
@@ -88,9 +82,18 @@ const Tetris = () => {
         setLevel(0)
     }
 
+    const pauseGame = () => {
+        setPaused(true)
+        pauseAudio(music)
+        setDropTime(null)
+    }
+
     const resumeGame = () => {
+        if (playing){
+            restartAudio(music)
+        }
+        console.log(playing)
         setDropTime(1000/ (level+1) + 200)
-        restartAudio(audio)
         setPaused(false)
         console.log(unPauseRef)
         unPauseRef.current.focus()
