@@ -35,6 +35,13 @@ const Tetris = () => {
     const { score, setScore, rows, setRows, level, setLevel } = useGameStatus(rowsCleared)
     const {audio, toggleSound, pauseAudio, restartAudio } = useAudio()
 
+    useEffect(() => {
+        const wakeUpFetch = async () => {
+            await fetch('https://tetriact-api.herokuapp.com/highscores')
+            console.log('scores fetched')
+        }
+        wakeUpFetch()
+    }, [])
 
     const movePlayer = dir => {
         //change this name because it moves tetrominos left or right
