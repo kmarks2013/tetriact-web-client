@@ -20,10 +20,10 @@ const AudioMenu = ({song, setPlaying}) => {
 
     return (
         <StyledAudioMenu>
-            <StyledIcon onClick={ () => restartAudio(song)} >
+            <StyledIcon onClick={ () => play()} >
             <FontAwesomeIcon icon={faPlay} />
             </StyledIcon>
-            <StyledIcon  onClick={() => pauseAudio(song)} >
+            <StyledIcon  onClick={() => pause()} >
                 <FontAwesomeIcon icon={faPause} />
             </StyledIcon>
             <StyledIcon onClick={() => increaseVolume(song)}>
