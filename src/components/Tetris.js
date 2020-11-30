@@ -84,13 +84,13 @@ const Tetris = () => {
 
     const pauseGame = () => {
         setPaused(true)
-        pauseAudio(music)
+        pauseAudio(audio)
         setDropTime(null)
     }
 
     const resumeGame = () => {
         if (playing){
-            restartAudio(music)
+            restartAudio(audio)
         }
         console.log(playing)
         setDropTime(1000/ (level+1) + 200)
@@ -181,7 +181,7 @@ const Tetris = () => {
                 </div>
                 <Button width={100} margin={0} text="Start Game" callback={startGame} />
                 {start ? <Button width={100} margin={0} text="Pause Game" callback={pauseGame} />: null}
-                {start ? <AudioMenu song={audio} /> : null}
+                {start ? <AudioMenu song={audio} setPlaying={setPlaying} /> : null}
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/> : null}
             { gameOver ?  <GameOverMenu newGame={startGame} closeMenu={closeGameOver} clearBoard={clearBoard} score={score}/> : null }
