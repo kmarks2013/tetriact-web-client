@@ -58,6 +58,7 @@ const Tetris = () => {
         setScore(0)
         setRows(0)
         setLevel(0)
+        unPauseRef.current.focus()
     }
 
     const pauseGame = () => {
