@@ -58,6 +58,7 @@ const Tetris = () => {
         setScore(0)
         setRows(0)
         setLevel(0)
+        unPauseRef.current.focus()
     }
 
     const pauseGame = () => {
@@ -129,8 +130,14 @@ const Tetris = () => {
                 movePlayer(1)
             } else if (keyCode === 40){
                 dropPlayer()
-            }  else if (keyCode === 38){
+            } else if (keyCode === 38){
                 playerRotate(stage, 1)
+            } else if (keyCode === 13){
+                pauseGame()
+            }
+        } else if (paused){
+            if (keyCode === 27){
+                resumeGame()
             }
         }
     }
