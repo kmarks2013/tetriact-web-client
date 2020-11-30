@@ -14,6 +14,7 @@ export const Instructions = () => {
             <StyledInstructionsText>Move Left: <FontAwesomeIcon icon={faArrowLeft} /> key</StyledInstructionsText>
             <StyledInstructionsText>Move Right: <FontAwesomeIcon icon={faArrowRight} /> key</StyledInstructionsText>
             <StyledInstructionsText>Drop: <FontAwesomeIcon icon={faArrowDown}  /> key</StyledInstructionsText>
+            <StyledInstructionsText>Pause: Enter (Return) key</StyledInstructionsText>
         </StyledInstructions>
     )
 }
