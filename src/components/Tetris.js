@@ -135,6 +135,10 @@ const Tetris = () => {
             } else if (keyCode === 13){
                 pauseGame()
             }
+        } else if (paused){
+            if (keyCode === 27){
+                resumeGame()
+            }
         }
     }
 
