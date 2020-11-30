@@ -14,7 +14,7 @@ export const StyledPauseMenu = styled.div`
         font-family: Pixel, Arial, Helvetica, sans-serif;
         font-size: 50px;
         margin: auto;
-        padding: 40px;
+        padding: 20px 40px 20px 40px;
         color: white ;
     }
 `
