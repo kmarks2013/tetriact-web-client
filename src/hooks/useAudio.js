@@ -3,13 +3,13 @@ import { useState } from 'react'
 export const useAudio = () => {
     const [audio] = useState(new Audio('https://upload.wikimedia.org/wikipedia/commons/e/e5/Tetris_theme.ogg'));
     const [vol, setVol] = useState(0.20)
+    const [playing, setPlaying] = useState(true)
 
     // this file will set the audio to start playing when a game starts and then restarts teh music when the game starts
 
     const toggleSound = ()=> {
         audio.currentTime=0
         audio.volume = vol
-        console.log(audio.volume)
         audio.loop = true
         audio.play()
     }
@@ -51,5 +51,5 @@ export const useAudio = () => {
         }
     }
 
-    return { audio, toggleSound, pauseAudio, restartAudio, muteAudio, increaseVolume, decreaseVolume };
+    return { audio, toggleSound, pauseAudio, restartAudio, muteAudio, increaseVolume, decreaseVolume, vol, playing, setPlaying };
 };

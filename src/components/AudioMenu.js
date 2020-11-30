@@ -5,15 +5,25 @@ import { StyledAudioMenu } from './styles/StyledAudioMenu'
 import {StyledIcon} from './styles/StyledIcon'
 import { useAudio } from '../hooks/useAudio';
 
-const AudioMenu = ({song}) => {
+const AudioMenu = ({song, setPlaying}) => {
     const { pauseAudio, restartAudio, muteAudio, increaseVolume, decreaseVolume } = useAudio()
+
+    const play = () => {
+        setPlaying(true)
+        restartAudio(song)
+    }
+
+    const pause = () => {
+        setPlaying(false)
+        pauseAudio(song)
+    }
 
     return (
         <StyledAudioMenu>
-            <StyledIcon onClick={ () => restartAudio(song)} >
+            <StyledIcon onClick={ () => play()} >
             <FontAwesomeIcon icon={faPlay} />
             </StyledIcon>
-            <StyledIcon  onClick={() => pauseAudio(song)} >
+            <StyledIcon  onClick={() => pause()} >
                 <FontAwesomeIcon icon={faPause} />
             </StyledIcon>
             <StyledIcon onClick={() => increaseVolume(song)}>

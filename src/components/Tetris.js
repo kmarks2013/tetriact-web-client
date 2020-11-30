@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Title from './Title'
 import Footer from './Footer'
 import Display from './Display'
@@ -33,8 +33,17 @@ const Tetris = () => {
     const [ nextStage, setNextStage ] = useNextStage(nextTetro, resetTetro, player)
     const [ stage, setStage, rowsCleared ] = useStage(player, resetPlayer)
     const { score, setScore, rows, setRows, level, setLevel } = useGameStatus(rowsCleared)
-    const {audio, toggleSound, pauseAudio, restartAudio } = useAudio()
+    const { audio, toggleSound, pauseAudio, restartAudio, playing, setPlaying} = useAudio()
 
+    const unPauseRef = useRef()
+
+    useEffect(() => {
+        const wakeUpFetch = async () => {
+            await fetch('https://tetriact-api.herokuapp.com/highscores')
+            console.log('scores fetched')
+        }
+        wakeUpFetch()
+    }, [])
 
     const movePlayer = dir => {
         //change this name because it moves tetrominos left or right
@@ -43,7 +52,6 @@ const Tetris = () => {
         }
     }
 
-    const unPauseRef = useRef()
 
     const startGame = () => {
         toggleSound()
@@ -61,12 +69,6 @@ const Tetris = () => {
         unPauseRef.current.focus()
     }
 
-    const pauseGame = () => {
-        setPaused(true)
-        pauseAudio(audio)
-        setDropTime(null)
-    }
-
     const closeGameOver = () => {
         setGameOver(false)
     }
@@ -80,9 +82,18 @@ const Tetris = () => {
         setLevel(0)
     }
 
+    const pauseGame = () => {
+        setPaused(true)
+        pauseAudio(audio)
+        setDropTime(null)
+    }
+
     const resumeGame = () => {
+        if (playing){
+            restartAudio(audio)
+        }
+        console.log(playing)
         setDropTime(1000/ (level+1) + 200)
-        restartAudio(audio)
         setPaused(false)
         console.log(unPauseRef)
         unPauseRef.current.focus()
@@ -170,7 +181,7 @@ const Tetris = () => {
                 </div>
                 <Button width={100} margin={0} text="Start Game" callback={startGame} />
                 {start ? <Button width={100} margin={0} text="Pause Game" callback={pauseGame} />: null}
-                {start ? <AudioMenu song={audio} /> : null}
+                {start ? <AudioMenu song={audio} setPlaying={setPlaying} /> : null}
             </aside>
             { paused ?  <PauseMenu callback={resumeGame}/> : null}
             { gameOver ?  <GameOverMenu newGame={startGame} closeMenu={closeGameOver} clearBoard={clearBoard} score={score}/> : null }
