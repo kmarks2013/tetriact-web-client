@@ -28,11 +28,10 @@ I have always been a big fan of tetris and wanted to attempt to build it using r
 To Be Added
 
 ### Installation
-    Clone the repo and CD inside of the directory
-    npm install
-    npm start
+1. Clone the repo and CD inside of the directory:
 
-Be sure to visit the repo for the [backend](https://github.com/kmarks2013/tetriact-api) and follow those instructions!
+        $ git clone https://github.com/kmarks2013/tetriact-web-client.git
+        $ cd tetriact-web-client
 
 ### Technologies Used
 
