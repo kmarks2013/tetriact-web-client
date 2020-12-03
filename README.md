@@ -43,7 +43,7 @@ Be sure to visit the repo for the [backend](https://github.com/kmarks2013/tetria
 ### Technologies Used
 1. React & React-Hooks
 - [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
-3. Styled-Components
+2. Styled-Components
 - [Styled Componets](https://styled-components.com/) 
 
 ### Future Updates
