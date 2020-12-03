@@ -40,9 +40,11 @@ To Be Added
 
 Be sure to visit the repo for the [backend](https://github.com/kmarks2013/tetriact-api) and follow those instructions for isntallation and set up!
 
-1. React
-2. React-Hooks
+### Technologies Used
+1. React & React-Hooks
+- [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
 3. Styled-Components
+- [Styled Componets](https://styled-components.com/) 
 
 ### Future Updates
 
