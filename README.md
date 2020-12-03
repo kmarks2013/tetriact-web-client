@@ -33,7 +33,12 @@ To Be Added
         $ git clone https://github.com/kmarks2013/tetriact-web-client.git
         $ cd tetriact-web-client
 
-### Technologies Used
+2. Install npm packages and start server:
+
+        $ npm install
+        $ npm start
+
+Be sure to visit the repo for the [backend](https://github.com/kmarks2013/tetriact-api) and follow those instructions for isntallation and set up!
 
 1. React
 2. React-Hooks
