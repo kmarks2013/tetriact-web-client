@@ -12,7 +12,7 @@ export const Button = ({text, callback, width, margin}) => {
     )
 }
 
-export const PauseButton =({text, callback}) =>{
+export const UnpauseButton =({text, callback}) =>{
     return (
         <StyledUnpauseButton onClick={callback}>
             {text}
