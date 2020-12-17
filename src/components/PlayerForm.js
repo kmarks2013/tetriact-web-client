@@ -10,6 +10,11 @@ export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag,
         setGamerTag(e.target.value)
     }
 
+    const submitForm = () => {
+        handleSubmit()
+        setDisabled(true)
+    }
+
     return (
         <StyledPlayerForm>
             <StyledCloseButton onClick={closeMenu}>X</StyledCloseButton>
