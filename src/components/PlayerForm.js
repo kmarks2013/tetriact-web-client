@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { PlayerFormButton } from './Button'
 import { StyledPlayerForm } from './styles/StyledPlayerForm'
 import { StyledCloseButton } from './styles/StyledPopUps'
