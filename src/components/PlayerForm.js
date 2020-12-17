@@ -4,6 +4,7 @@ import { StyledPlayerForm } from './styles/StyledPlayerForm'
 import { StyledCloseButton } from './styles/StyledPopUps'
 
 export const PlayerForm = ({score, newGame, handleSubmit, setGamerTag, gamerTag, closeMenu}) => {
+    const [disabled, setDisabled] = useState(false)
 
     const handleChange = (e) => {
         setGamerTag(e.target.value)
