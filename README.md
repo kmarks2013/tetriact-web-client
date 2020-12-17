@@ -33,7 +33,7 @@ To Be Added
         $ git clone https://github.com/kmarks2013/tetriact-web-client.git
         $ cd tetriact-web-client
 
-2. Install npm packages and start server:
+2. Install npm packages and start the server:
 
         $ npm install
         $ npm start
